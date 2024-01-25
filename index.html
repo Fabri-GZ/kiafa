@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiafadestapaciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="./logo.png" type="image/png">
+</head>
+<body>
+    <div class="whatsapp-icon-container">
+		<a href="https://wa.me/541154298197" target="_BLANK" class="whatsapp-overlay"> <i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+	</div>
+    <nav class="navbar">
+        <div class="logo">
+          <img src="./logo.png" alt="Kiafadestapaciones logo">
+        </div>
+    <ul class="links">
+        <li><a href="#main" id="link-main">Inicio</a></li>
+        <li><a href="#about-us" id="link-about-us">Sobre Nosotros</a></li>
+        <li><a href="#services" id="link-services">Servicios</a></li>
+        <li><a href="#faq" id="link-faq">FAQ</a></li>
+        <li><a href="#contact" id="link-contact">Contacto</a></li>
+    </ul>
+    </nav>
+    <div class="main" id="main">
+        <div class="main-bg rellax" data-rellax-speed="-4"></div>
+        <div class="leyend">
+        <h1 class="kiafa">KIAFA DESTAPACIONES</h1>
+        <h1 class="lynd-title">Destapaciones de Cañerías</h1> 
+        <p class="lynd-txt">Servicio de destapaciones de cañerías con máquina.</p>
+        <p class="lynd-txt">!Solicitá tu presupuesto!</p>
+        <button class="contact-bttn" onclick="scrollToContact()">
+            <span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front text"><b>Contacto</b></span>
+          </button>
+        </div>
+    </div>
+    <div class="text">
+        <div class="txt-bg"></div>
+        <h3 class="title" data-aos="zoom-down" data-aos-easing="linear" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">Sobre Nosotros</h3>
+        <div class="parent">
+            <div class="cont cont1" id="about-us" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="content-img"> 
+                    <i class="fa-solid fa-map fa-fw TXT-IMG"></i>
+                </div>
+                <div class="content-container">
+                    <p><b>Brindamos servicios de destapaciones, limpieza de cañerías y video inspecciones a lo largo de  Capital Federal y ciertas zonas de GBA. </b></p>
+                </div>
+            </div>
+            <div class="cont cont2" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="content-img">
+                    <i class="fa-solid fa-gears fa-fw TXT-IMG"></i>
+                </div>
+                <div class="content-container">
+                    <p><b>Trabajamos con una máquina eléctrica y resortes complementados con diferentes elementos para desobstruir cañerías y devolverles su diámetro original.</b></p>
+                </div>
+            </div>
+            <div class="cont cont3" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="content-img">
+                    <i class="fa-solid fa-clock fa-fw TXT-IMG"></i>
+                </div>
+                <div class="content-container">
+                    <p><b>Prestamos nuestros servicios las 24hs del día. Podrán contactarnos mediante nuestro Whatsapp o Número de Teléfono <br>&lpar;+54 115 429 8197&rpar;</b></p>
+                </div>
+            </div>
+            <div class="cont cont4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="content-img">
+                    <i class="fa-solid fa-circle-check fa-fw TXT-IMG"></i>
+                </div>
+                <div class="content-container">
+                    <p><b>Gracias a nuestros casi 15 años de experiencia y nuestro material de trabajo podemos desobstruir cañerías con raíces, grasa, papel entre muchas más cosas.</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div class="services" id="services">
+        <h3 class="services-title"><b>SERVICIOS</b></h3> 
+        <div class="container">
+            <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="face face1">
+                    <div class="content">
+                        <h3 class="card-title">¿Qué servicios brindamos?</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Video inspecciones, destapación de columnas, cloacales, pluviales y ramales internos: cañerías de cocinas, rejillas de lavadero, desagüe de pileta, cocina, lavamanos, rejillas en cocinas, etc.</p>
+                            <a href="#contact">Contactanos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="face face1">
+                    <div class="content">
+                        <h3 class="card-title">¿A quiénes prestamos servicios?</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Destapación de columnas, pluviales, ramales internos y videoinspecciones en hogares, edificios, empresas, oficinas, fábricas, establecimientos y más.</p>
+                            <a href="#contact">Contactanos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
+                <div class="face face1">
+                    <div class="content">
+                        <h3 class="card-title">¿Hacemos servicios de video inspección?</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Brindamos servicios de videoinspección que permiten evaluar el estado real del interior de las cañerías mediante una serie de videos enviados por mail.</p>
+                            <a href="#contact">Contactanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faq" id="faq">
+        <h3> <b>PREGUNTAS FRECUENTES</b></h3>
+<ul id="accordion" class="accordion">
+  <li>
+    <div class="link"><i class="fa fa-briefcase"></i>¿Qué servicios ofrecemos?<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li> <b>Ofrecemos servicios de destapaciones y video inspecciones trabajando con maquinaria de alta calidad y con un personal especializado en el rubro. </b></li>
+    </ul>
+  </li>
+  <li>
+    <div class="link"><i class="fa fa-credit-card"></i>¿Qué medios de pago aceptamos?<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><b>Aceptamos una gran variedad de métodos de pago, desde efectivo y transferencia bancaria hasta Mercado Pago.</b></li>
+    </ul>
+  </li>
+  <li>
+    <div class="link"><i class="fa fa-calculator"></i>¿Cómo puedo solicitar un presupuesto?<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><b>Para solicitar un presupuesto del trabajo necesario pueden enviarnos un mensaje mediante nuestro Whatsapp, o contactándonos mediante nuestro Mail.</b></li>
+    </ul>
+  </li>
+  <li>
+    <div class="link"><i class="fa fa-building"></i>¿A quiénes prestamos servicios?<i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">
+      <li><b>Actualmente prestamos servicios a consorcios, casas particulares, empresas, oficinas, industrias, fábricas, supermercados, restaurantes, colegios, universidades y más lugares, ¡no duden en contactarnos!</b></li>
+    </ul>
+  </li>
+</ul>
+    </div>
+    <div class="contact" id="contact"> 
+        <div class="contact-txt">
+            <h3 class="contact-title">¡Contactanos!</h3>
+            <p>Podés solicitar el servicio que necesites a tráves de nuestro Whatsapp.</p>
+        </div>
+        <div class="wpp-logo">
+            <a href="https://wa.me/+541154298197" target="_blank">
+                <img src="./wpp-logo.png" alt="">
+            </a>
+        </div>
+        <div class="wpp-number">
+            <p>¡Contactanos por nuestro Número de Teléfono!</p>
+            <h3>11 5429-8197</h3>
+        </div>
+        <div class="mail-bttn">
+            <a href="mailto:kiafadestapaciones@hotmail.com" target="_blank">Enviar Mail</a>
+        </div>
+        <div class="social-media">
+        <a href="https://wa.me/541154298197" target="_blank" class="icon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Whatsapp</span>
+        </a>
+
+        <a href="https://www.instagram.com/kiafa_destapaciones/?hl=es" target="_blank" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/KIAFADESTAPACIONES" class="icon" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+
+        <a href="mailto:kiafadestapaciones@hotmail.com" class="icon" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Gmail</span></a>
+        
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+        const rellax = new Rellax(".rellax");
+    </script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var navbar = document.querySelector(".navbar");
+    
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 550) {
+            navbar.style.backgroundColor = "rgba(16, 23, 92, 0.9)";
+            navbar.style.height = "85px";
+        } else {
+            navbar.style.backgroundColor = "#18181A";
+            navbar.style.height = "95px";
+        }
+    });
+});
+    </script>
+    <script>
+        function scrollToContact() {
+          const contactSection = document.getElementById('contact');
+          
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+    </script>
+    <script>
+   
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.navbar ul li a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        links.forEach(l => l.classList.remove('active'));
+
+        this.classList.add('active');
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+
+      let closestSectionId = null;
+      let closestDistance = Infinity;
+
+      links.forEach(link => {
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop;
+          const distance = Math.abs(scrollPosition - offsetTop);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSectionId = targetId;
+          }
+        }
+      });
+
+      links.forEach(link => {
+        const targetId = link.getAttribute('href').substring(1);
+        if (targetId === closestSectionId) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  });
+      </script>
+    <script>
+  $(function() {
+  var Accordion = function(el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+
+    // Variables privadas
+    var links = this.el.find('.link');
+    // Evento
+    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+  }
+
+  Accordion.prototype.dropdown = function(e) {
+    var $el = e.data.el;
+      $this = $(this),
+      $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    if (!e.data.multiple) {
+      $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+    };
+  } 
+
+  var accordion = new Accordion($('#accordion'), false);
+});
+    </script>
+    <script>
+function toggleCard(card) {
+  const allCards = document.querySelectorAll('.card');
+  const content = card.querySelector('.content'); // Find the .content within the clicked card
+
+  if (card.classList.contains('expanded')) {
+    // If the card is already expanded, close it
+    card.classList.remove('expanded');
+    content.style.opacity = "0.5";
+    document.removeEventListener('click', closeCardOutsideClick);
+  } else {
+    // If the card is not expanded, close all other cards and expand this one
+    allCards.forEach((c) => {
+      if (c !== card && c.classList.contains('expanded')) {
+        c.classList.remove('expanded');
+        const otherCardContent = c.querySelector('.content');
+        otherCardContent.style.opacity = "0.5";
+      }
+    });
+
+    card.classList.add('expanded');
+    content.style.opacity = "1";
+    document.addEventListener('click', closeCardOutsideClick);
+  }
+}
+
+
+function closeCardOutsideClick(event) {
+  const expandedCard = document.querySelector('.card.expanded');
+  if (expandedCard && !expandedCard.contains(event.target)) {
+    const content = expandedCard.querySelector('.content');
+    content.style.opacity = "0.5";
+    expandedCard.classList.remove('expanded');
+    document.removeEventListener('click', closeCardOutsideClick);
+  }
+}
+    </script>
+    <script>    
+      document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const offset = targetElement.getBoundingClientRect().top + window.scrollY;
+        const centerOffset = offset - (window.innerHeight - targetElement.clientHeight) / 2;
+
+        window.scrollTo({
+          top: centerOffset,
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+    </script>
+</body>
+</html>
