@@ -420,7 +420,7 @@ nav ul li a {
   .social-media {
     display: inline-block;
     position:absolute;
-    top:490%;
+    top:500%;
     left:50%;
     -ms-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
@@ -656,23 +656,4 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .mail-bttn a{
-    margin: 15px 0 0;
-    text-decoration: none;
-    font-weight: 900;
-    color: #fff;
-    padding: 10px;
-    border: 1px solid #fff;
-    position: relative;
-    transition: all 0.3s ease-in;
-    font-size: 26px;
-    }
-  
-  .mail-bttn a:hover {
-    background-color: #10175c;
-    border: 2px solid #fff;
-    color: #fff;
-    scale: 1.1;
-    transition: all 0.3s ease-in;
   }
