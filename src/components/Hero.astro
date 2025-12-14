@@ -1,0 +1,30 @@
+<section class="relative min-h-screen flex items-center justify-center bg-linear-to-br from-slate-200 via-slate-100 to-slate-200 overflow-hidden">
+  
+	<div class="relative z-10 max-w-4xl px-6 text-center">
+    <h1 class="hero-title text-4xl md:text-6xl font-extrabold text-black">
+		<span class="text-blue-800">Kiafa Destapaciones</span>
+      Destapaciones de Cañerías<br />
+    </h1>
+
+    <p class="hero-subtitle mt-6 text-lg md:text-xl font-medium text-slate-800">
+      Cloacas, cañerías y desagües. Atención inmediata, sin romper de más y con garantía.
+    </p>
+
+    <div class="hero-cta mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/541154298197" target="_blank" class="inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in">
+        Contacto
+      </a>
+    </div>
+  </div>
+
+  <script>
+    import { animate } from "motion";
+  	const heroTitle = document.querySelector(".hero-title");
+  	const heroSubtitle = document.querySelector(".hero-subtitle");
+  	const heroCta = document.querySelector(".hero-cta");
+
+    if (heroTitle) animate(heroTitle, { opacity: [0, 1], y: [-50, 0] }, { duration: 0.6, ease: "easeIn" });
+    if (heroSubtitle) animate(heroSubtitle, { opacity: [0, 1], y: [-30, 0] }, { delay: 0.2, duration: 0.6, ease: "easeIn" });
+    if (heroCta) animate(heroCta, { opacity: [0, 1], y: [20, 0] }, { delay: 0.3, duration: 0.6, ease: "easeIn" });
+  </script>
+</section>
