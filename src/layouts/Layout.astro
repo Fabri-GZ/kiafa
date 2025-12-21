@@ -1,17 +1,32 @@
 ---
 import "../styles/global.css";
+
+const {
+  title = "Kiafa Destapaciones",
+  description = "Servicio profesional de destapaciones cloacales, pluviales, baños y cocinas. Atención 24 horas, sin roturas innecesarias.",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Kiafa Destapaciones</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Kiafa Destapaciones" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+
+  <body>
+    <slot />
+  </body>
 </html>
