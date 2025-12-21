@@ -1,0 +1,66 @@
+---
+import { Menu, X } from "@lucide/astro";
+---
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <a href="#inicio" class="font-extrabold text-xl tracking-tight">
+      Kiafa<span class="text-blue-600">Destapaciones</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 font-medium text-sm">
+      <li><a href="#inicio" class="hover:text-blue-600 transition">Inicio</a></li>
+      <li><a href="#nosotros" class="hover:text-blue-600 transition">Sobre nosotros</a></li>
+      <li><a href="#servicios" class="hover:text-blue-600 transition">Servicios</a></li>
+      <li><a href="#faq" class="hover:text-blue-600 transition">Preguntas frecuentes</a></li>
+
+      {/*
+      <li>
+        <a href="#opiniones" class="hover:text-blue-600 transition">
+          Opiniones
+        </a>
+      </li>
+      */}
+
+      <li>
+        <a
+          href="#contacto"
+          class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition"
+        >
+          Contacto
+        </a>
+      </li>
+    </ul>
+
+    <button
+      class="md:hidden"
+      aria-label="Abrir menú"
+      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+    >
+      <Menu class="w-6 h-6" />
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black/5">
+    <ul class="flex flex-col px-6 py-6 gap-4 text-base font-medium">
+      <li><a href="#inicio" class="block">Inicio</a></li>
+      <li><a href="#nosotros" class="block">Sobre nosotros</a></li>
+      <li><a href="#servicios" class="block">Servicios</a></li>
+      <li><a href="#faq" class="block">Preguntas frecuentes</a></li>
+
+      {/*
+      <li><a href="#opiniones" class="block">Opiniones</a></li>
+      */}
+
+      <li class="pt-2">
+        <a
+          href="#contacto"
+          class="block text-center px-4 py-3 rounded-xl bg-blue-600 text-white"
+        >
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>

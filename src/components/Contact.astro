@@ -1,0 +1,74 @@
+---
+import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
+---
+
+<section
+  id="contacto"
+  class="py-24 bg-linear-to-br from-blue-600 via-blue-500 to-blue-600 text-white"
+>
+  <div class="max-w-4xl mx-auto px-6 text-center">
+
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-6">
+      ¡Contactanos!
+    </h2>
+
+    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-14">
+      Podés solicitar el servicio que necesites a través de nuestro WhatsApp.
+      Atención inmediata, las 24 horas.
+    </p>
+
+    <a
+      href="https://wa.me/541154298197"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group inline-flex flex-col items-center justify-center gap-4 bg-white text-blue-600 rounded-3xl px-10 py-10 shadow-2xl shadow-blue-900/30 hover:scale-[1.03] transition-all duration-300"
+    >
+      <img
+        src="/whatsapp.svg"
+        alt="WhatsApp"
+        class="w-24 h-24 group-hover:scale-110 transition-transform duration-300"
+      />
+
+      <span class="text-2xl font-bold">
+        Contactanos por WhatsApp
+      </span>
+
+      <span class="inline-flex items-center gap-3 text-xl font-semibold text-blue-700">
+        <Phone class="w-6 h-6" />
+        11 5429-8197
+      </span>
+    </a>
+
+    <p class="mt-10 text-blue-100 text-lg">
+      También podés encontrarnos en:
+    </p>
+
+    <div class="mt-6 flex justify-center gap-6">
+      <a
+        href="mailto:kiafadestapaciones@gmail.com"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        aria-label="Email"
+      >
+        <Mail class="w-6 h-6" />
+      </a>
+
+      <a
+        href="https://www.instagram.com/tu_instagram"
+        target="_blank"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        aria-label="Instagram"
+      >
+        <Instagram class="w-6 h-6" />
+      </a>
+
+      <a
+        href="https://www.facebook.com/tu_facebook"
+        target="_blank"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        aria-label="Facebook"
+      >
+        <Facebook class="w-6 h-6" />
+      </a>
+    </div>
+  </div>
+</section>

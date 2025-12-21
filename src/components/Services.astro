@@ -1,0 +1,70 @@
+---
+import { House, CloudRain, Toilet, Utensils, TvMinimalPlay, Building2 } from "@lucide/astro";
+import ServiceCard from "./ServiceCard.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const services: CollectionEntry<"services">[] = (await getCollection("services"));
+const iconMap: Record<string, typeof House> = {
+  'house': House,
+  'cloud-rain': CloudRain,
+  'toilet': Toilet,
+  'utensils': Utensils,
+  'tv-minimal-play': TvMinimalPlay,
+  'building-2': Building2,
+};
+
+---
+<section
+  id="servicios"
+  class="relative py-24 bg-white overflow-hidden"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="services-title text-5xl md:text-6xl font-extrabold text-slate-900">
+        Servicios
+      </h2>
+      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        Brindamos soluciones profesionales en destapaciones y mantenimiento de cañerías,
+        trabajando con equipamiento especializado y atención inmediata.
+      </p>
+    </div>
+
+    <div class="services-grid grid grid-cols-1 md:grid-cols-2 gap-10">
+      { services.map(service => {
+        const { slug, data } = service;
+        const { icon, title, description, seoTitle, seoDescription } = data;
+
+        return (
+          <ServiceCard
+            icon={iconMap[icon]}
+            title={title}
+            description={description}
+          />
+        );
+      }) }
+    </div>
+  </div>
+
+  <script>
+    import { animate, inView } from "motion";
+
+    inView(".services-title", () => {
+      animate(
+        ".services-title",
+        { opacity: [0, 1], y: [20, 0] },
+        { duration: 0.5 }
+      );
+    });
+
+    const cards = document.querySelectorAll(".service-card");
+    cards.forEach((card, index) => {
+      inView(card, () => {
+        animate(
+          card,
+          { opacity: [0, 1], y: [30, 0] },
+          { duration: 0.4, delay: index * 0.1 }
+        );
+      });
+    });
+  </script>
+</section>

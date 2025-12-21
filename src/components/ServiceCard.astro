@@ -1,0 +1,19 @@
+---
+const { icon: Icon, title, description } = Astro.props;
+---
+
+<div class="service-card group rounded-2xl border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div class="flex items-start gap-6">
+      <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 transition group-hover:bg-blue-600 group-hover:text-white">
+        <Icon class="w-7 h-7" />
+      </div>    
+      <div>
+        <h3 class="text-2xl font-semibold text-slate-900 mb-3">
+          {title}
+        </h3>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+</div>

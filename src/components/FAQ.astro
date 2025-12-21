@@ -1,0 +1,171 @@
+---
+import { CreditCard, MessageSquare, Users, Wrench } from "@lucide/astro";
+---
+
+<section
+  id="faq"
+  class="py-24 bg-linear-to-br from-slate-100 via-white to-slate-100 text-slate-900 overflow-hidden"
+>
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="faq-title text-5xl md:text-6xl font-extrabold">
+        Preguntas Frecuentes
+      </h2>
+    </div>
+
+    <div class="accordion accordion-shadow *:accordion-item-active:shadow-md *:accordion-item-active:shadow-blue-500/20">
+      <div
+        class="faq-item accordion-item accordion-item-active:scale-[1.05] accordion-item-active:mb-3 active transition-all ease-in duration-300 bg-gray-100 rounded-xl border border-slate-700 hover:border-slate-600"
+        id="servicios-faq"
+      >
+        <button
+          class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start w-full group"
+          aria-controls="servicios-faq-collapse"
+          aria-expanded="true"
+        >
+          <span class="icon-container flex items-center justify-center size-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors shrink-0">
+            <Wrench class="size-5 text-blue-400" />
+          </span>
+          <span class="flex-1 text-lg font-semibold text-slate-900">
+            ¿Qué servicios ofrecemos?
+          </span>
+        </button>
+
+        <div
+          id="servicios-faq-collapse"
+          class="accordion-content w-full overflow-hidden transition-[height] duration-300"
+          aria-labelledby="servicios-faq"
+          role="region"
+        >
+          <div class="px-6 pb-5 pl-18">
+            <p class="text-slate-600 leading-relaxed">
+              Ofrecemos servicios de destapaciones cloacales, pluviales, de baños y cocinas,
+              así como video inspecciones. Trabajamos con maquinaria de alta calidad y
+              contamos con personal especializado, garantizando soluciones efectivas sin
+              roturas innecesarias.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="faq-item accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-gray-100 rounded-xl border border-slate-700 hover:border-slate-600"
+        id="pago-faq"
+      >
+        <button
+          class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start w-full group"
+          aria-controls="pago-faq-collapse"
+          aria-expanded="false"
+        >
+          <span class="icon-container flex items-center justify-center size-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors shrink-0">
+            <CreditCard class="size-5 text-blue-400" />
+          </span>   
+          <span class="flex-1 text-lg font-semibold text-slate-900">
+            ¿Qué medios de pago aceptamos?
+          </span>
+        </button>
+
+        <div
+          id="pago-faq-collapse"
+          class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+          aria-labelledby="pago-faq"
+          role="region"
+        >
+          <div class="px-6 pb-5 pl-18">
+            <p class="text-slate-600 leading-relaxed">
+              Aceptamos efectivo, transferencias bancarias y los principales medios de pago
+              electrónicos. Podés abonar una vez finalizado el servicio y verificada la
+              solución del problema.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="faq-item accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-gray-100 rounded-xl border border-slate-700 hover:border-slate-600"
+        id="presupuesto-faq"
+      >
+        <button
+          class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start w-full group"
+          aria-controls="presupuesto-faq-collapse"
+          aria-expanded="false"
+        >
+          <span class="icon-container flex items-center justify-center size-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors shrink-0">
+            <MessageSquare class="size-5 text-blue-400" />
+          </span>
+          <span class="flex-1 text-lg font-semibold text-slate-900">
+            ¿Cómo puedo solicitar un presupuesto?
+          </span>
+        </button>
+
+        <div
+          id="presupuesto-faq-collapse"
+          class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+          aria-labelledby="presupuesto-faq"
+          role="region"
+        >
+          <div class="px-6 pb-5 pl-18">
+            <p class="text-slate-600 leading-relaxed">
+              Podés contactarnos por WhatsApp, teléfono o desde el formulario de la web.
+              Respondemos a la brevedad para coordinar una visita o brindarte un presupuesto
+              estimado. Atendemos urgencias las 24 horas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="faq-item accordion-item accordion-item-active:scale-[1.05] accordion-item-active:mt-3 transition-all ease-in-out duration-300 bg-gray-100 rounded-xl border border-slate-700 hover:border-slate-600"
+        id="clientes-faq"
+      >
+        <button
+          class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start w-full group"
+          aria-controls="clientes-faq-collapse"
+          aria-expanded="false"
+        >
+          <span class="icon-container flex items-center justify-center size-10 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors shrink-0">
+            <Users class="size-5 text-blue-400" />
+          </span>
+          <span class="flex-1 text-lg font-semibold text-slate-900">
+            ¿A quiénes prestamos servicios?
+          </span>
+        </button>
+
+        <div
+          id="clientes-faq-collapse"
+          class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+          aria-labelledby="clientes-faq"
+          role="region"
+        >
+          <div class="px-6 pb-5 pl-18">
+            <p class="text-slate-600 leading-relaxed">
+              Atendemos a particulares, empresas, consorcios y administradores de edificios.
+              Adaptamos nuestro servicio a cada tipo de cliente y necesidad específica.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".faq-title", () => {
+    animate(".faq-title", { opacity: [0, 1], y: [20, 0] }, { duration: 0.5 });
+  });
+
+  document.querySelectorAll(".faq-item").forEach((item, index) => {
+    inView(item, () => {
+      animate(
+        item,
+        { opacity: [0, 1], y: [30, 0] },
+        { duration: 0.4, delay: index * 0.1 }
+      );
+    });
+  });
+</script>
+
+<script is:inline src="/node_modules/flyonui/dist/accordion.js"></script>

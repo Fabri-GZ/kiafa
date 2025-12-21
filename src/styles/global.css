@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@plugin "flyonui";
+@import "flyonui/variants.css";
+
+html {
+  scrollbar-color: #64748b #e5e7eb;
+  scroll-behavior: smooth;
+}
