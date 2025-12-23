@@ -4,69 +4,68 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
 
 <section id="nosotros" class="relative py-24 bg-white overflow-hidden">
   <div class="max-w-6xl mx-auto px-6 mb-24">
-  <div class="text-center mb-20">
-    <h2 class="about-title text-5xl md:text-6xl font-extrabold text-slate-900">
-      Sobre Nosotros
-    </h2>
+    <div class="text-center mb-20">
+      <h2 class="about-title text-5xl md:text-6xl font-extrabold text-slate-900">
+        Sobre Nosotros
+      </h2>
+    </div>
+
+    <div class="about-grid grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+      <div class="about-item flex items-start gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Calendar class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            +15 años de experiencia
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Trayectoria comprobada en destapaciones de cloacas, pluviales y ramales internos.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-item flex items-start gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <MapPin class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Capital Federal y GBA
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Cobertura en CABA y zonas específicas del Gran Buenos Aires.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-item flex items-start gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Wrench class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Equipamiento profesional
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Maquinaria eléctrica especializada para desobstruir cañerías y devolverles su diámetro original.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-item flex items-start gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Clock class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Atención inmediata 24 hs
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Servicio disponible todos los días, incluso urgencias.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="about-grid grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-    <div class="about-item flex items-start gap-5">
-      <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
-        <Calendar class="w-7 h-7" />
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-          +15 años de experiencia
-        </h3>
-        <p class="text-slate-600 text-lg">
-          Trayectoria comprobada en destapaciones de cloacas, pluviales y ramales internos.
-        </p>
-      </div>
-    </div>
-
-    <div class="about-item flex items-start gap-5">
-      <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
-        <MapPin class="w-7 h-7" />
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-          Capital Federal y GBA
-        </h3>
-        <p class="text-slate-600 text-lg">
-          Cobertura en CABA y zonas específicas del Gran Buenos Aires.
-        </p>
-      </div>
-    </div>
-
-    <div class="about-item flex items-start gap-5">
-      <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
-        <Wrench class="w-7 h-7" />
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-          Equipamiento profesional
-        </h3>
-        <p class="text-slate-600 text-lg">
-          Maquinaria eléctrica especializada para desobstruir cañerías y devolverles su diámetro original.
-        </p>
-      </div>
-    </div>
-
-    <div class="about-item flex items-start gap-5">
-      <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
-        <Clock class="w-7 h-7" />
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-          Atención inmediata 24 hs
-        </h3>
-        <p class="text-slate-600 text-lg">
-          Servicio disponible todos los días, incluso urgencias.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
 </section>

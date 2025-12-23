@@ -6,3 +6,9 @@ html {
   scrollbar-color: #64748b #e5e7eb;
   scroll-behavior: smooth;
 }
+
+.testimonials-swiper .swiper-pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 2.5rem;
+  }

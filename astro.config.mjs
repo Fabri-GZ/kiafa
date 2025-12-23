@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -10,5 +10,12 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: []
+  integrations: [],
+  site: "https://kiafa-one.vercel.app",
+  env: {
+    schema: {
+      APIFY_TOKEN: envField.string({ context: 'server', access: 'secret' }),
+      GOOGLE_MAPS_PLACE_URL: envField.string({ context: 'server', access: 'public' }),
+    },
+  },
 });

@@ -1,21 +1,11 @@
 ---
-const testimonials = [
-  {
-    name: "María G.",
-    text: "Excelente servicio. Vinieron rápido y solucionaron el problema sin romper nada.",
-    rating: 5,
-  },
-  {
-    name: "Carlos R.",
-    text: "Muy profesionales y prolijos. Los llamé de urgencia y respondieron enseguida.",
-    rating: 5,
-  },
-  {
-    name: "Laura P.",
-    text: "Trabajo impecable, precio claro y buena atención. Totalmente recomendables.",
-    rating: 5,
-  },
-];
+import TestimonialCards from "./TestimonialCards.astro";
+
+const res = await fetch(import.meta.env.PUBLIC_REVIEWS_BLOB_URL, {
+  cache: "force-cache",
+});
+
+const reviews = res.ok ? (await res.json()).slice(0, 15) : [];
 ---
 
 <section
@@ -23,7 +13,7 @@ const testimonials = [
   class="relative py-12 bg-linear-to-br from-slate-100 via-white to-slate-100 overflow-hidden"
 >
   <div class="max-w-5xl mx-auto px-6">
-    <div class="text-center mb-16">
+    <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900">
         Opiniones de nuestros clientes
       </h2>
@@ -32,20 +22,63 @@ const testimonials = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {testimonials.map((t) => (
-        <div class="rounded-2xl bg-white p-6 shadow-md border border-slate-100">
-          <div class="mb-3 flex gap-1 text-yellow-400">
-            {Array.from({ length: t.rating }).map(() => "★")}
-          </div>
-          <p class="text-slate-700 mb-4">
-            “{t.text}”
-          </p>
-          <span class="text-sm font-semibold text-slate-900">
-            {t.name}
-          </span>
-        </div>
-      ))}
-    </div>
+    <div class="swiper testimonials-swiper">
+  <div class="swiper-wrapper">
+    {reviews.map((t, index) => (
+      <div
+        class="swiper-slide h-full flex items-stretch"
+        data-hash={`review-${index + 1}`}
+      >
+        <TestimonialCards
+          name={t.name}
+          text={t.text}
+          rating={t.rating}
+          url={t.url}
+        />
+      </div>
+    ))}
+  </div>
+
+  <div class="swiper-pagination"></div>
+</div>
+
   </div>
 </section>
+<script>
+  import Swiper from 'swiper';
+  import { Pagination, HashNavigation, Autoplay } from 'swiper/modules';
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Pagination, HashNavigation, Autoplay],
+    loop: true,
+    spaceBetween: 24,
+
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    hashNavigation: {
+      watchState: true,
+    },
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
