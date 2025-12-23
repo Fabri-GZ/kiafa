@@ -1,11 +1,9 @@
 ---
 import TestimonialCards from "./TestimonialCards.astro";
 
-const res = await fetch(import.meta.env.PUBLIC_REVIEWS_BLOB_URL, {
-  cache: "force-cache",
-});
+import reviewsData from "../data/reviews.json";
 
-const reviews = res.ok ? (await res.json()).slice(0, 15) : [];
+const reviews = reviewsData.slice(0, 15);
 ---
 
 <section
