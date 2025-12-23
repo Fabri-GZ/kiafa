@@ -1,6 +1,8 @@
 import type { APIRoute } from "astro";
 import { kv } from "@vercel/kv";
 
+export const prerender = false;
+
 export const GET: APIRoute = async () => {
   try {
     const reviews = await kv.get<any[]>("reviews");

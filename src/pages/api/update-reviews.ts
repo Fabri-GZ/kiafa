@@ -2,6 +2,8 @@ import type { APIRoute } from "astro";
 import { fetchReviews } from "../../lib/reviews";
 import { kv } from "@vercel/kv";
 
+export const prerender = false;
+
 export const GET: APIRoute = async ({ request }) => {
   const authHeader = request.headers.get("authorization");
   console.log("AUTH HEADER:", request.headers.get("authorization"));
