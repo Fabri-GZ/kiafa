@@ -1,66 +1,167 @@
 ---
-import { Menu, X } from "@lucide/astro";
+import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 ---
 
 <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
-  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between">
 
-    <a href="#inicio" class="font-extrabold text-xl tracking-tight">
-      Kiafa<span class="text-blue-600">Destapaciones</span>
+    <a href="#inicio" class="flex items-center">
+      <img src="/logo-kiafa-black.webp" alt="Kiafa Destapaciones" class="h-12 w-auto object-contain" loading="eager" />
     </a>
 
-    <ul class="hidden md:flex items-center gap-8 font-medium text-sm">
-      <li><a href="#inicio" class="hover:text-blue-600 transition">Inicio</a></li>
-      <li><a href="#nosotros" class="hover:text-blue-600 transition">Sobre nosotros</a></li>
-      <li><a href="#servicios" class="hover:text-blue-600 transition">Servicios</a></li>
-      <li><a href="#faq" class="hover:text-blue-600 transition">Preguntas frecuentes</a></li>
-
-      {/*
-      <li>
-        <a href="#opiniones" class="hover:text-blue-600 transition">
-          Opiniones
-        </a>
-      </li>
-      */}
+    <ul class="hidden md:flex items-center gap-8 font-medium text-lg text-black">
+      <li><a href="#inicio" class="hover:text-blue-600 transition duration-150 ease-in">Inicio</a></li>
+      <li><a href="#nosotros" class="hover:text-blue-600 transition duration-150 ease-in">Sobre nosotros</a></li>
+      <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
+      <li><a href="#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
 
       <li>
-        <a
-          href="#contacto"
-          class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition"
+        <a 
+          href="https://wa.me/541154298197" 
+          target="_blank" 
+          class="items-center justify-center rounded-xl px-4 py-2 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link"
         >
-          Contacto
+        Contacto
         </a>
       </li>
     </ul>
 
     <button
-      class="md:hidden"
+      id="menu-button"
+      class="md:hidden z-60"
       aria-label="Abrir menú"
-      onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
     >
-      <Menu class="w-6 h-6" />
+      <Menu id="icon-menu" class="w-7 h-7 text-black" />
+      <X id="icon-close" class="w-7 h-7 text-black hidden" />
     </button>
   </nav>
+</header>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black/5">
-    <ul class="flex flex-col px-6 py-6 gap-4 text-base font-medium">
-      <li><a href="#inicio" class="block">Inicio</a></li>
-      <li><a href="#nosotros" class="block">Sobre nosotros</a></li>
-      <li><a href="#servicios" class="block">Servicios</a></li>
-      <li><a href="#faq" class="block">Preguntas frecuentes</a></li>
+<div id="mobile-overlay" class="hidden fixed inset-0 z-50 md:hidden">
+  <div
+    id="mobile-backdrop"
+    class="absolute inset-0 bg-black/40"
+  ></div>
 
-      {/*
-      <li><a href="#opiniones" class="block">Opiniones</a></li>
-      */}
+  <nav id="mobile-menu" class="relative w-[80%] max-w-sm h-full bg-white shadow-xl px-6 py-8 flex flex-col gap-8">
+    <img
+      src="/logo-kiafa-black.webp"
+      alt="Kiafa Destapaciones"
+      class="h-10 w-40"
+    />
 
-      <li class="pt-2">
-        <a
-          href="#contacto"
-          class="block text-center px-4 py-3 rounded-xl bg-blue-600 text-white"
-        >
-          Contacto
+    <ul class="flex flex-col gap-6 text-lg font-medium text-black">
+      <li>
+        <a href="#inicio" class="flex items-center gap-3 menu-link">
+          <House class="w-5 h-5 text-blue-600" />
+          Inicio
         </a>
       </li>
+
+      <li>
+        <a href="#nosotros" class="flex items-center gap-3 menu-link">
+          <Users class="w-5 h-5 text-blue-600" />
+          Sobre nosotros
+        </a>
+      </li>
+
+      <li>
+        <a href="#servicios" class="flex items-center gap-3 menu-link">
+          <Wrench class="w-5 h-5 text-blue-600" />
+          Servicios
+        </a>
+      </li>
+
+      <li>
+        <a href="#faq" class="flex items-center gap-3 menu-link">
+          <Info class="w-5 h-5 text-blue-600" />
+          Preguntas frecuentes
+        </a>
+      </li>
+
+      <li class="pt-4">
+         <a href="https://wa.me/541154298197" target="_blank" class="block items-center justify-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
+        Contacto
+      </a>
+      </li>
     </ul>
-  </div>
-</header>
+  </nav>
+</div>
+
+<script>
+  import { animate } from "motion";
+
+  const menuButton = document.getElementById("menu-button");
+  const overlay = document.getElementById("mobile-overlay");
+  const menu = document.getElementById("mobile-menu");
+  const backdrop = document.getElementById("mobile-backdrop");
+  const iconMenu = document.getElementById("icon-menu");
+  const iconClose = document.getElementById("icon-close");
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  let isOpen = false;
+
+  async function openMenu() {
+    isOpen = true;
+    document.body.classList.add("overflow-hidden");
+    
+    overlay?.classList.remove("hidden");
+      animate(
+        backdrop,
+        { opacity: [0, 1] },
+        { duration: 0.3, easing: "ease-in" }
+      );
+
+      animate(
+        menu,
+        { x: ["-100%", "0%"] },
+        { duration: 0.4, easing: "ease-in" }
+      );
+    
+    iconMenu?.classList.add("hidden");
+    iconClose?.classList.remove("hidden");
+  }
+
+  async function closeMenu() {
+    isOpen = false;
+    
+      await animate(
+        menu,
+        { x: ["0%", "-100%"] },
+        { duration: 0.3, easing: "ease-in" }
+      ).finished;
+    
+      await animate(
+        backdrop,
+        { opacity: [1, 0] },
+        { duration: 0.2 }
+      ).finished;
+    
+    overlay?.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+    
+    iconMenu?.classList.remove("hidden");
+    iconClose?.classList.add("hidden");
+  }
+
+  function toggleMenu() {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  menuButton?.addEventListener("click", toggleMenu);
+  backdrop?.addEventListener("click", closeMenu);
+  
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      closeMenu();
+    }
+  });
+</script>
