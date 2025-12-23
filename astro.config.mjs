@@ -1,17 +1,16 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
-import vercel from '@astrojs/vercel/server';
+import vercel from '@astrojs/vercel/serverless';
 import tailwindcss from '@tailwindcss/vite';
 
 
 // https://astro.build/config
 export default defineConfig({
+  output: "server",
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]
   },
-
-  output: "server",
-  adapter: vercel(),
   integrations: [],
   site: "https://kiafa-one.vercel.app",
   env: {
