@@ -1,9 +1,16 @@
 ---
 import TestimonialCards from "./TestimonialCards.astro";
 
-import reviewsData from "../data/reviews.json";
+let reviews = [];
 
-const reviews = reviewsData.slice(0, 15);
+try {
+  const response = await fetch(`${import.meta.env.SITE}/api/reviews`);
+  const data = await response.json();
+  reviews = data.ok ? (data.reviews || []).slice(0, 15) : [];
+} catch (e) {
+  console.error("Error fetching reviews:", e);
+  reviews = [];
+}
 ---
 
 <section

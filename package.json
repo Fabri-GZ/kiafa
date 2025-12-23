@@ -12,6 +12,7 @@
     "@lucide/astro": "^0.561.0",
     "@tailwindcss/vite": "^4.1.18",
     "@vercel/blob": "^2.0.0",
+    "@vercel/kv": "^3.0.0",
     "apify-client": "^2.21.0",
     "astro": "^5.16.5",
     "flyonui": "^2.4.1",

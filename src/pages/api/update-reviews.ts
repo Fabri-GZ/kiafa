@@ -1,7 +1,6 @@
 import type { APIRoute } from "astro";
 import { fetchReviews } from "../../lib/reviews";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { kv } from "@vercel/kv";
 
 export const GET: APIRoute = async ({ request }) => {
   const authHeader = request.headers.get("authorization");
@@ -12,8 +11,7 @@ export const GET: APIRoute = async ({ request }) => {
   try {
     const reviews = await fetchReviews();
     
-    const filePath = path.join(process.cwd(), "src/data/reviews.json");
-    await fs.writeFile(filePath, JSON.stringify(reviews, null, 2));
+    await kv.set("reviews", reviews);
 
     return new Response(
       JSON.stringify({
@@ -30,7 +28,7 @@ export const GET: APIRoute = async ({ request }) => {
     console.error("Error updating reviews:", error);
     return new Response(
       JSON.stringify({ ok: false, error: String(error) }),
-      { status: 500 }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 };
