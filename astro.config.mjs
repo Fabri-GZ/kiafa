@@ -16,6 +16,7 @@ export default defineConfig({
     schema: {
       APIFY_TOKEN: envField.string({ context: 'server', access: 'secret' }),
       GOOGLE_MAPS_PLACE_URL: envField.string({ context: 'server', access: 'public' }),
+      CRON_SECRET: envField.string({ context: 'server', access: 'secret'  }),
     },
   },
 });

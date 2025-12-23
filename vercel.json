@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/update-reviews",
+      "path": "/api/update-reviews?secret=$CRON_SECRET",
       "schedule": "0 0 * * 0"
     }
   ]

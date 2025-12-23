@@ -1,10 +1,25 @@
 import type { APIRoute } from "astro";
 import { kv } from "@vercel/kv";
-import reviewsData from "../../data/reviews.json";
 
 export const GET: APIRoute = async () => {
   try {
-    const reviews = await kv.get("reviews") || reviewsData;
+    const reviews = await kv.get<any[]>("reviews");
+    
+    if (!reviews || reviews.length === 0) {
+      return new Response(
+        JSON.stringify({
+          ok: true,
+          reviews: [],
+          message: "No hay reviews en KV todavía"
+        }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
     
     return new Response(
       JSON.stringify({
@@ -20,13 +35,15 @@ export const GET: APIRoute = async () => {
       }
     );
   } catch (error) {
+    console.error("Error getting reviews from KV:", error);
     return new Response(
       JSON.stringify({
-        ok: true,
-        reviews: reviewsData,
+        ok: false,
+        reviews: [],
+        error: String(error)
       }),
       {
-        status: 200,
+        status: 500,
         headers: {
           "Content-Type": "application/json",
         },
