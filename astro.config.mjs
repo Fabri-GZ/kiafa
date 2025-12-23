@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
-
+import vercel from '@astrojs/vercel/server';
 import tailwindcss from '@tailwindcss/vite';
 
 
@@ -10,6 +10,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
+  output: "server",
+  adapter: vercel(),
   integrations: [],
   site: "https://kiafa-one.vercel.app",
   env: {
