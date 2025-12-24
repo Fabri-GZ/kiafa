@@ -1,25 +1,9 @@
----
-import { Image } from 'astro:assets';
-import heroImage from '../assets/kiafa-hero.webp';
----
 
 <section
   id="inicio"
-  class="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-slate-50 to-slate-100"
+  class="relative min-h-screen flex items-center justify-center overflow-hidden
+         bg-[url('/kiafa-hero.webp')] bg-cover bg-center bg-no-repeat"
 >
-  <div class="absolute inset-0">
-    <Image
-      src={heroImage}
-      alt="Equipo de Kiafa Destapaciones realizando servicio profesional"
-      class="w-full h-full object-cover"
-      loading="eager"
-      quality={85}
-      format="webp"
-      widths={[640, 768, 1024, 1280, 1536]}
-      sizes="100vw"
-    />
-  </div>
-
   <div
     class="absolute inset-0 bg-linear-to-b from-white/75 via-white/65 to-white/80"
     aria-hidden="true"
