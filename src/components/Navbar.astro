@@ -3,7 +3,7 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 ---
 
 <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
-  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between">
+  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper">
 
     <a href="#inicio" class="flex items-center">
       <img src="/logo-kiafa-black.webp" alt="Kiafa Destapaciones" class="h-12 w-auto object-contain" loading="eager" />
@@ -42,7 +42,7 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
     class="absolute inset-0 bg-black/40"
   ></div>
 
-  <nav id="mobile-menu" class="relative w-[80%] max-w-sm h-full bg-white shadow-xl px-6 py-8 flex flex-col gap-8">
+  <nav id="mobile-menu" class="relative w-[65%] max-w-sm h-full bg-white shadow-xl px-6 py-8 flex flex-col gap-8">
     <img
       src="/logo-kiafa-black.webp"
       alt="Kiafa Destapaciones"
@@ -97,7 +97,10 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
   const iconMenu = document.getElementById("icon-menu");
   const iconClose = document.getElementById("icon-close");
   const menuLinks = document.querySelectorAll(".menu-link");
-
+  const navbarWrapper = document.querySelector(".navbar-wrapper");
+  
+  if (navbarWrapper) animate(navbarWrapper, { opacity: [0, 1], y: [-30, 0] }, { duration: 0.4, ease: "easeIn" });
+  
   let isOpen = false;
 
   async function openMenu() {
@@ -105,17 +108,8 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
     document.body.classList.add("overflow-hidden");
     
     overlay?.classList.remove("hidden");
-      animate(
-        backdrop,
-        { opacity: [0, 1] },
-        { duration: 0.3, easing: "ease-in" }
-      );
-
-      animate(
-        menu,
-        { x: ["-100%", "0%"] },
-        { duration: 0.4, easing: "ease-in" }
-      );
+    if (backdrop) animate(backdrop, { opacity: [0, 1] }, { duration: 0.3, easing: "ease-in" });
+    if (menu) animate(menu, { x: ["-100%", "0%"] }, { duration: 0.4, easing: "ease-in" });
     
     iconMenu?.classList.add("hidden");
     iconClose?.classList.remove("hidden");

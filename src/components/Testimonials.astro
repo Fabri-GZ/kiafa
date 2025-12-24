@@ -19,10 +19,10 @@ try {
 >
   <div class="max-w-5xl mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 testimonials-title">
         Opiniones de nuestros clientes
       </h2>
-      <p class="mt-4 text-lg text-slate-600">
+      <p class="mt-4 text-lg text-slate-600 testimonials-subtitle">
         Experiencias reales de personas que confiaron en nuestro servicio
       </p>
     </div>
@@ -52,6 +52,11 @@ try {
 <script>
   import Swiper from 'swiper';
   import { Pagination, HashNavigation, Autoplay } from 'swiper/modules';
+  import { animate, inView } from "motion";
+
+  const swiperContainer = document.querySelector('.testimonials-swiper');
+  const title = document.querySelector('.testimonials-title');
+  const subtitle = document.querySelector('.testimonials-subtitle');
 
   const swiper = new Swiper('.swiper', {
     modules: [Pagination, HashNavigation, Autoplay],
@@ -82,6 +87,13 @@ try {
       disableOnInteraction: false,
     },
   });
+
+  inView(".testimonials-title", () => {
+    if(title) animate(title, { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, easing: "ease-in" });
+    if(subtitle) animate(subtitle, { opacity: [0, 1], y: [16, 0] }, { duration: 0.5, easing: "ease-in" });
+    if(swiperContainer) animate(swiperContainer, { opacity: [0, 1], y: [-30, 0], scale: [0.95, 1] }, { duration: 0.6, easing: "ease-in", delay: 0.4 });
+  });
+
 </script>
 <link
   rel="stylesheet"

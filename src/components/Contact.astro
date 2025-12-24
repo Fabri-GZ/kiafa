@@ -43,12 +43,12 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
     </a>
 
     <p class="mt-10 text-blue-100 text-lg">
-      También podés encontrarnos en:
+      También podés contactarte mediante:
     </p>
 
     <div class="mt-6 flex justify-center gap-6">
       <a
-        href="mailto:kiafadestapaciones@gmail.com"
+        href="mailto:kiafadestapaciones@hotmail.com"
         class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
         aria-label="Email"
       >
@@ -56,7 +56,7 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
       </a>
 
       <a
-        href="https://www.instagram.com/tu_instagram"
+        href="https://www.instagram.com/kiafa_destapaciones/"
         target="_blank"
         class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
         aria-label="Instagram"
@@ -64,14 +64,24 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
         <Instagram class="w-6 h-6" />
       </a>
 
-      <a
+      <!-- <a
         href="https://www.facebook.com/tu_facebook"
         target="_blank"
         class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
         aria-label="Facebook"
       >
         <Facebook class="w-6 h-6" />
-      </a>
+      </a> -->
     </div>
   </div>
 </section>
+<script>
+  import { animate, inView } from "motion";
+
+  inView("#contacto h2", () => {
+    animate( "#contacto h2", { opacity: [0, 1], y: [30, 0] }, { duration: 0.5, easing: "ease-in" });
+    animate( "#contacto p", { opacity: [0, 1], y: [20, 0] }, { duration: 0.45, delay: 0.15 });
+    animate( "#contacto a[href^='https://wa.me']", { opacity: [0, 1], scale: [0.95, 1] }, { duration: 0.45, delay: 0.3, easing: "ease-in" });
+    animate( "#contacto .mt-6 a", { opacity: [0, 1], y: [15, 0] }, {duration: 0.4, delay: (i) => i * 0.1, easing: "ease-in", });
+  });
+</script>

@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 const {
-  title = "Kiafa Destapaciones",
+  title = "Kiafa Destapaciones | Destapaciones 24hs ",
   description = "Servicio profesional de destapaciones cloacales, pluviales, baños y cocinas. Atención 24 horas, sin roturas innecesarias.",
 } = Astro.props;
 ---
@@ -12,7 +12,6 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
@@ -21,7 +20,15 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:site_name" content="Kiafa Destapaciones" />
+    <meta name="theme-color" content="#0f172a">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+    
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href={Astro.site} />
   </head>
 
   <body>

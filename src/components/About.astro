@@ -5,14 +5,14 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
 <section id="nosotros" class="relative py-24 bg-white overflow-hidden">
   <div class="max-w-6xl mx-auto px-6 mb-24">
     <div class="text-center mb-20">
-      <h2 class="about-title text-5xl md:text-6xl font-extrabold text-slate-900">
+      <h2 class="about-title text-5xl md:text-6xl font-extrabold text-slate-900 about-title">
         Sobre Nosotros
       </h2>
     </div>
 
     <div class="about-grid grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-      <div class="about-item flex items-start gap-5">
-        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+      <div class="about-item flex items-start gap-5 about-item">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 ">
           <Calendar class="w-7 h-7" />
         </div>
         <div>
@@ -25,7 +25,7 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5">
+      <div class="about-item flex items-start gap-5 about-item">
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <MapPin class="w-7 h-7" />
         </div>
@@ -39,7 +39,7 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5">
+      <div class="about-item flex items-start gap-5 about-item">
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <Wrench class="w-7 h-7" />
         </div>
@@ -53,7 +53,7 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5">
+      <div class="about-item flex items-start gap-5 about-item">
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <Clock class="w-7 h-7" />
         </div>
@@ -69,3 +69,18 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
     </div>
   </div>
 </section>
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".about-title", () => {
+    animate(".about-title", { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, delay: 0.2 });
+  });
+
+  document.querySelectorAll(".about-item").forEach((item, index) => {
+    const fromX = index % 2 === 0 ? -40 : 40;
+
+    inView(item, () => {
+      if(item) animate(item, { opacity: [0, 1], x: [fromX, 0] },{ duration: 0.45, easing: "ease-in", delay: index * 0.1, });
+    });
+  });
+</script>
