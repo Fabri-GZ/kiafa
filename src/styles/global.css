@@ -11,4 +11,20 @@ html {
     position: relative;
     bottom: auto;
     margin-top: 2.5rem;
+}
+
+#header-nav {
+  animation: blur linear both;
+  animation-timeline: scroll();
+  animation-range: 0 500px;
+}
+
+@keyframes blur {
+  to {
+    box-shadow:
+      0px 5px 50px -5px rgba(15,23,42,0.15),
+      0px 0px 0px 1px rgba(15,23,42,0.05);
+      background: rgba(255,255,255, 0.85);
+      backdrop-filter: blur(10px);
   }
+}

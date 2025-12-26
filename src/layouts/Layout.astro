@@ -2,9 +2,10 @@
 import "../styles/global.css";
 
 const {
-  title = "Kiafa Destapaciones | Destapaciones 24hs ",
-  description = "Servicio profesional de destapaciones cloacales, pluviales, baños y cocinas. Atención 24 horas, sin roturas innecesarias.",
+  title = "Kiafa Destapaciones | Destapaciones 24hs",
+  description = "Destapaciones en CABA y GBA. Cloacas, cañerías, baños, cocinas, pluviales y video inspección. Atención 24 horas.",
 } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -14,7 +15,9 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="destapaciones, kiafadestapaciones, destapaciones caba, destapaciones liniers, destapación de cañerías, destapación de desagues, destapación pluviales, destapación de baños, destapación de cocinas, destapaciones 24 horas, destapaciones sin roturas" />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow">
     <meta name="author" content="Kiafa Destapaciones" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

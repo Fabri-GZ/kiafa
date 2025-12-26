@@ -2,7 +2,7 @@
 import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 ---
 
-<header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+<header class="fixed top-0 inset-x-0 z-50" id="header-nav">
   <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper">
 
     <a href="#inicio" class="flex items-center">
@@ -79,7 +79,7 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
       </li>
 
       <li class="pt-4">
-         <a href="https://wa.me/541154298197" target="_blank" class="block items-center justify-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
+         <a href="#contacto" class="block items-center justify-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
         Contacto
       </a>
       </li>
@@ -87,7 +87,7 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
   </nav>
 </div>
 
-<script>
+<script >
   import { animate } from "motion";
 
   const menuButton = document.getElementById("menu-button");
