@@ -9,16 +9,20 @@ import Navbar from '../components/Navbar.astro';
 import Contact from '../components/Contact.astro';
 import WhatsappButton from '../components/WhatsappButton.astro';
 import Footer from '../components/Footer.astro';
+
+export const prerender = true;
 ---
 
 <Layout>
 	<Navbar />
-	<Hero />
-	<About />
-	<Testimonials client:visible />
-	<Services />
-	<FAQ />
-	<Contact />
+	<main id="main-content">
+		<Hero />
+		<About />
+		<Testimonials />
+		<Services />
+		<FAQ />
+		<Contact />
+	</main>
 	<WhatsappButton />
-	<Footer >
+	<Footer />
 </Layout>
