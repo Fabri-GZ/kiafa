@@ -1,23 +1,31 @@
-import { getCollection } from 'astro:content';
+---
+export const prerender = true;
+const site = "https://kiafadestapaciones.com.ar";
+---
 
-export async function GET(context) {
-  const pages = [
-    { url: '/', changefreq: 'monthly', priority: 1.0 },
-  ];
-
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages.map(page => `
   <url>
-    <loc>${context.site}${page.url}</loc>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('')}
-</urlset>`;
+    <loc>{site}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-  return new Response(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml'
-    }
-  });
-}
+  <url>
+    <loc>{site}/#servicios</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>{site}/#faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>{site}/#contacto</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
