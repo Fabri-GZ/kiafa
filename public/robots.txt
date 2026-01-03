@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kiafadestapaciones.com.ar/sitemap.xml

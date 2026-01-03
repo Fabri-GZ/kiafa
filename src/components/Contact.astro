@@ -4,23 +4,23 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
 
 <section
   id="contacto"
-  class="py-24 bg-linear-to-br from-blue-600 via-blue-500 to-blue-600 text-white"
+  class="py-24 bg-linear-to-br from-slate-100 via-white to-slate-100"
 >
   <div class="max-w-4xl mx-auto px-6 text-center">
 
-    <h2 class="text-5xl md:text-6xl font-extrabold mb-6">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900">
       ¡Contactanos!
     </h2>
 
-    <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-14">
+    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-14">
       Podés solicitar el servicio que necesites a través de nuestro WhatsApp.
     </p>
 
     <a
-      href="https://wa.me/541154298197"
+      href="https://wa.me/541154298197?text=Hola%2C%20necesito%20un%20servicio%20de%20destapaci%C3%B3n"
       target="_blank"
       rel="noopener noreferrer"
-      class="group relative inline-flex flex-col items-center justify-center gap-4 bg-linear-to-br from-green-400 via-green-500 to-emerald-600 text-white rounded-3xl px-10 py-10 shadow-2xl shadow-green-900/40 hover:shadow-green-800/60 hover:scale-[1.03] transition-all duration-300 overflow-hidden"
+      class="group relative inline-flex flex-col items-center justify-center gap-4 bg-linear-to-br from-green-400 via-green-500 to-emerald-600 text-white rounded-3xl px-10 py-10 shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:scale-[1.03] transition-all duration-300 overflow-hidden"
     >
       <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       <svg 
@@ -42,14 +42,14 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
       </span>
     </a>
 
-    <p class="mt-10 text-blue-100 text-lg">
+    <p class="mt-16 text-slate-600 text-lg">
       También podés contactarte mediante:
     </p>
 
     <div class="mt-6 flex justify-center gap-6">
       <a
         href="mailto:kiafadestapaciones@hotmail.com"
-        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-200 hover:bg-blue-500 hover:text-white text-slate-700 transition-all duration-200"
         aria-label="Email"
       >
         <Mail class="w-6 h-6" />
@@ -58,7 +58,8 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
       <a
         href="https://www.instagram.com/kiafa_destapaciones/"
         target="_blank"
-        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        rel="noopener noreferrer"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-200 hover:bg-blue-500 hover:text-white text-slate-700 transition-all duration-200"
         aria-label="Instagram"
       >
         <Instagram class="w-6 h-6" />
@@ -67,7 +68,8 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
       <!-- <a
         href="https://www.facebook.com/tu_facebook"
         target="_blank"
-        class="w-12 h-12 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 transition"
+        rel="noopener noreferrer"
+        class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-200 hover:bg-blue-600 hover:text-white text-slate-700 transition-all duration-200"
         aria-label="Facebook"
       >
         <Facebook class="w-6 h-6" />
@@ -75,13 +77,14 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
     </div>
   </div>
 </section>
-<script >
+
+<script>
   import { animate, inView } from "motion";
 
   inView("#contacto h2", () => {
-    animate( "#contacto h2", { opacity: [0, 1], y: [30, 0] }, { duration: 0.5, easing: "ease-in" });
-    animate( "#contacto p", { opacity: [0, 1], y: [20, 0] }, { duration: 0.45, delay: 0.15 });
-    animate( "#contacto a[href^='https://wa.me']", { opacity: [0, 1], scale: [0.95, 1] }, { duration: 0.45, delay: 0.3, easing: "ease-in" });
-    animate( "#contacto .mt-6 a", { opacity: [0, 1], y: [15, 0] }, {duration: 0.4, delay: (i) => i * 0.1, easing: "ease-in", });
+    animate("#contacto h2", { opacity: [0, 1], y: [30, 0] }, { duration: 0.5, easing: "ease-in" });
+    animate("#contacto p", { opacity: [0, 1], y: [20, 0] }, { duration: 0.45, delay: 0.15 });
+    animate("#contacto a[href^='https://wa.me']", { opacity: [0, 1], scale: [0.95, 1] }, { duration: 0.45, delay: 0.3, easing: "ease-in" });
+    animate("#contacto .mt-6 a", { opacity: [0, 1], y: [15, 0] }, { duration: 0.4, delay: (i) => i * 0.1, easing: "ease-in" });
   });
 </script>

@@ -2,7 +2,7 @@
 import "../styles/global.css";
 
 const {
-  title = "Kiafa Destapaciones | Destapaciones 24hs",
+  title = "Kiafa Destapaciones | Destapaciones 24hs en CABA y GBA",
   description = "Destapaciones en CABA y GBA. Cloacas, cañerías, baños, cocinas, pluviales y video inspección. Atención 24 horas.",
 } = Astro.props;
 
@@ -32,6 +32,66 @@ const {
     
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href={Astro.site} />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kiafa Destapaciones",
+  "image": "https://kiafadestapaciones.com.ar/logo-kiafa.webp",
+  "@id": "https://kiafadestapaciones.com.ar",
+  "url": "https://kiafadestapaciones.com.ar",
+  "telephone": "+541154298197",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida General Paz 11916",
+    "addressLocality": "Liniers",
+    "addressRegion": "CABA",
+    "postalCode": "1408",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -34.65443441598698,
+    "longitude": -58.5267015325151
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/kiafa_destapaciones/"
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Buenos Aires"
+    },
+    {
+      "@type": "State",
+      "name": "Gran Buenos Aires"
+    }
+  ],
+  "serviceType": [
+    "Destapaciones de cañerías",
+    "Destapaciones cloacales",
+    "Destapaciones de baños",
+    "Destapaciones de cocinas",
+    "Destapaciones pluviales",
+    "Destapaciones 24 horas"
+  ]
+}
+</script>
   </head>
 
   <body>

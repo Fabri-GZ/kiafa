@@ -1,85 +1,121 @@
 ---
+import { Phone, Mail, MapPin, MessageCircle } from "@lucide/astro";
+
 const year = new Date().getFullYear();
 ---
-
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-6xl mx-auto px-6 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-            <h3 class="text-xl font-bold text-white mb-3">Kiafa Destapaciones </h3>
-            <p class="text-slate-400 max-w-sm"> Servicio profesional de destapaciones cloacales, pluviales, baños y cocinas. <br> Atención en CABA y GBA. </p>
+        <h3 class="text-2xl font-bold text-white mb-4">Kiafa Destapaciones</h3>
+        <p class="text-slate-300 leading-relaxed max-w-sm">
+          Servicio profesional de destapaciones cloacales, pluviales, baños y cocinas.
+          <br/>
+          <strong class="text-slate-300">Atención 24 horas</strong> en CABA y GBA.
+        </p>
         </div>
         <div>
             <h4 class="text-lg font-semibold text-white mb-4">Navegación</h4>
-            <ul class="space-y-2">
+        <ul class="space-y-2">
               <li>
-                <a href="#inicio" class="hover:text-white transition">Inicio </a>
+            <a 
+              href="#inicio" 
+              class="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+            >
+              Inicio
+            </a>
               </li>
               <li>
-                <a href="#nosotros" class="hover:text-white transition">Nosotros</a>
+            <a 
+              href="#nosotros" 
+              class="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+            >
+              Nosotros
+            </a>
               </li>
               <li>
-                <a href="#servicios" class="hover:text-white transition">Servicios</a>
+            <a 
+              href="#servicios" 
+              class="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+            >
+              Servicios
+            </a>
               </li>
               <li>
-                <a href="#testimonials" class="hover:text-white transition">Testimonios</a>
+            <a 
+              href="#testimonials" 
+              class="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+            >
+              Testimonios
+            </a>
               </li>
               <li>
-                <a href="#contacto" class="hover:text-white transition">Contacto</a>
+            <a 
+              href="#contacto" 
+              class="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
+            >
+              Contacto
+            </a>
               </li>
             </ul>
         </div>
+
         <div>
           <h4 class="text-lg font-semibold text-white mb-4">
             Datos de contacto
           </h4>
-
-          <ul class="space-y-2 text-slate-400">
+        <ul class="space-y-4">
             <li>
               <a
                 href="mailto:kiafadestapaciones@hotmail.com"
-                class="hover:text-white transition"
+              class="group flex items-start gap-3 text-slate-400 hover:text-white transition-colors duration-200"
               >
-                kiafadestapaciones@hotmail.com
+              <Mail class="w-5 h-5 mt-0.5 flex-shrink-0" />
+              <span class="break-all">kiafadestapaciones@hotmail.com</span>
               </a>
             </li>
-
             <li>
               <a
-                href="tel:1154298197"
-                class="hover:text-white transition"
+              href="tel:+541154298197"
+              class="group flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-200"
               >
-                (011) 5429-8197
+              <Phone class="w-5 h-5 flex-shrink-0" />
+              <span>(011) 5429-8197</span>
               </a>
             </li>
-
             <li>
               <a
-                href="https://wa.me/541154298197"
+              href="https://wa.me/541154298197?text=Hola%2C%20necesito%20un%20servicio%20de%20destapaci%C3%B3n"
                 target="_blank"
-                class="hover:text-white transition"
+              rel="noopener noreferrer"
+              class="group flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-200"
               >
-                +54 9 11 5429-8197
+              <MessageCircle class="w-5 h-5 flex-shrink-0" />
+              <span>WhatsApp: +54 9 11 5429-8197</span>
               </a>
             </li>
-
             <li>
                 <a 
                     href="https://www.google.com/maps/place/Kiafa+Destapaciones/@-34.6545932,-58.5292438,17z/data=!4m6!3m5!1s0x95bcc85ea539ed6f:0xd1dc40ec563bd48f!8m2!3d-34.6545932!4d-58.5266689!16s%2Fg%2F11jt0rg0gj?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
-                    class="hover:text-white transition"
+              rel="noopener noreferrer"
+              class="group flex items-start gap-3 text-slate-400 hover:text-white transition-colors duration-200"
                 >
-                    Avenida General Paz 11916 | CABA
+              <MapPin class="w-5 h-5 mt-0.5 flex-shrink-0" />
+              <span>Av. General Paz 11916 </span>
                 </a>
             </li>
           </ul>
         </div>
-
     </div>
 
-    <div class="mt-12 pt-6 border-t border-white/10 text-center text-slate-500 text-sm">
-      © {year} Kiafa Destapaciones
+    <div class="mt-12 pt-8 border-t border-slate-700">
+      <div class="text-center text-slate-400 text-sm">
+        <p>© {year} Kiafa Destapaciones. Todos los derechos reservados.</p>
+        <p class="mt-2 text-slate-400">
+          Destapaciones profesionales en CABA y Gran Buenos Aires
+        </p>
+      </div>
     </div>
-
   </div>
 </footer>
