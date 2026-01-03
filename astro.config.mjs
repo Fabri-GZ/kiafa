@@ -12,7 +12,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   integrations: [],
-  site: "https://kiafa-one.vercel.app",
+  site: "https://kiafadestapaciones.com.ar",
   env: {
     schema: {
       APIFY_TOKEN: envField.string({ context: 'server', access: 'secret' }),
