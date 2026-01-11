@@ -1,0 +1,85 @@
+---
+import { Calendar, MapPin, Wrench, DollarSign } from "@lucide/astro";
+
+const {
+  title,
+  zoneDescription,
+} = Astro.props;
+---
+<section
+  id="nosotros"
+  class="relative py-24 bg-white"
+>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-20">
+      <h2 class="location-title text-5xl md:text-6xl font-extrabold text-slate-900 view-animate-single animate-fade-in-up animate-range-[entry_15%_contain_50%] animate-duration-500">
+        Destapaciones en {title}
+      </h2>
+      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto view-animate-single animate-fade-in-up animate-duration-500 animate-range-[entry_20%_contain_55%]">
+        Servicio profesional de destapaciones en {title}, con atención rápida,
+        maquinaria especializada y técnicos con experiencia.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+      
+      <div class="flex items-start gap-5 view-animate-single animate-[slide-in-left-strong] animate-duration-500 animate-range-[entry_15%_contain_40%]">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Calendar class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            +15 años de experiencia
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Más de una década resolviendo destapaciones cloacales, pluviales y
+            desagües domiciliarios.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-5 view-animate-single animate-[slide-in-right-strong] animate-duration-500 animate-range-[entry_20%_contain_40%]">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <MapPin class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Atención en {title}
+          </h3>
+          <p class="text-slate-600 text-lg">
+            {zoneDescription}
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-5 view-animate-single animate-[slide-in-left-strong] animate-duration-500 animate-range-[entry_25%_contain_40%]">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Wrench class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Equipamiento profesional
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Maquinaria eléctrica especializada para desobstruir cañerías y devolverles su diámetro original.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-5 view-animate-single animate-[slide-in-right-strong] animate-duration-500 animate-range-[entry_30%_contain_40%]">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <DollarSign class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Presupuesto sin cargo
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Evaluamos el problema y te damos un presupuesto claro antes de comenzar el trabajo.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

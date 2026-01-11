@@ -1,18 +1,27 @@
 ---
 import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
 ---
-
-<section id="nosotros" class="relative py-24 bg-white overflow-hidden">
+<section id="nosotros" class="relative py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6 mb-24">
+
     <div class="text-center mb-20">
-      <h2 class="about-title text-5xl md:text-6xl font-extrabold text-slate-900 about-title">
+      <h2 class=" text-5xl md:text-6xl font-extrabold text-slate-900 view-animate-single animate-fade-in-up animate-range-[entry_15%_contain_50%] animate-duration-500"
+      >
         Sobre Nosotros
       </h2>
     </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
 
-    <div class="about-grid grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-      <div class="about-item flex items-start gap-5 about-item">
-        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 ">
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-left-strong]
+          animate-duration-500
+          animate-range-[entry_15%_contain_40%]
+        "
+      >
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <Calendar class="w-7 h-7" />
         </div>
         <div>
@@ -25,7 +34,15 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5 about-item">
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-right-strong]
+          animate-duration-500
+          animate-range-[entry_20%_contain_40%]
+        "
+      >
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <MapPin class="w-7 h-7" />
         </div>
@@ -39,7 +56,15 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5 about-item">
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-left-strong]
+          animate-duration-500
+          animate-range-[entry_25%_contain_45%]
+        "
+      >
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <Wrench class="w-7 h-7" />
         </div>
@@ -48,12 +73,20 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
             Equipamiento profesional
           </h3>
           <p class="text-slate-600 text-lg">
-            Maquinaria eléctrica especializada para desobstruir cañerías y devolverles su diámetro original.
+            Maquinaria eléctrica especializada para desobstruir cañerías.
           </p>
         </div>
       </div>
 
-      <div class="about-item flex items-start gap-5 about-item">
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-right-strong]
+          animate-duration-500
+          animate-range-[entry_30%_contain_50%]
+        "
+      >
         <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
           <Clock class="w-7 h-7" />
         </div>
@@ -62,25 +95,10 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
             Atención inmediata 24 hs
           </h3>
           <p class="text-slate-600 text-lg">
-            Servicio disponible todos los días, incluso urgencias.
+            Servicio disponible ante urgencias.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script >
-  import { animate, inView } from "motion";
-
-  inView(".about-title", () => {
-    animate(".about-title", { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, delay: 0.2 });
-  });
-
-  document.querySelectorAll(".about-item").forEach((item, index) => {
-    const fromX = index % 2 === 0 ? -40 : 40;
-
-    inView(item, () => {
-      if(item) animate(item, { opacity: [0, 1], x: [fromX, 0] },{ duration: 0.45, easing: "ease-in", delay: index * 0.1, });
-    });
-  });
-</script>

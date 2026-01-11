@@ -2,8 +2,10 @@
 import "../styles/global.css";
 
 const {
-  title = "Kiafa Destapaciones | Destapaciones 24hs en CABA y GBA",
-  description = "Destapaciones en CABA y GBA. Cloacas, cañerías, baños, cocinas, pluviales y video inspección. Atención 24 horas.",
+  title = "Kiafa Destapaciones | Destapaciones en CABA y GBA",
+  description = "Destapaciones en CABA y GBA. Cloacas, cañerías, baños, cocinas, pluviales y video inspección.",
+  keywords = "destapaciones, kiafadestapaciones, destapaciones caba, destapaciones liniers, destapación de cañerías, destapación de desagues, destapación pluviales, destapación de baños, destapación de cocinas, destapaciones 24 horas, destapaciones sin roturas",
+  canonical = Astro.url.href, 
 } = Astro.props;
 
 ---
@@ -15,7 +17,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="destapaciones, kiafadestapaciones, destapaciones caba, destapaciones liniers, destapación de cañerías, destapación de desagues, destapación pluviales, destapación de baños, destapación de cocinas, destapaciones 24 horas, destapaciones sin roturas" />
+    <meta name="keywords" content={keywords} />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow">
     <meta name="author" content="Kiafa Destapaciones" />
@@ -23,15 +25,16 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
-    <meta property="og:url" content={Astro.site} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Kiafa Destapaciones" />
+    <meta name="author" content="Kiafa Destapaciones" />
     <meta name="theme-color" content="#0f172a">
     
     <link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)">
     
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="canonical" href={Astro.site} />
+    <link rel="canonical" href={canonical} />
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +44,6 @@ const {
   "@id": "https://kiafadestapaciones.com.ar",
   "url": "https://kiafadestapaciones.com.ar",
   "telephone": "+541154298197",
-  "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Avenida General Paz 11916",

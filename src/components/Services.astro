@@ -1,69 +1,77 @@
 ---
 import { House, CloudRain, Toilet, Utensils, TvMinimalPlay, Building2 } from "@lucide/astro";
 import ServiceCard from "./ServiceCard.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
-const services: CollectionEntry<"services">[] = (await getCollection("services"));
-const iconMap: Record<string, typeof House> = {
-  'house': House,
-  'cloud-rain': CloudRain,
-  'toilet': Toilet,
-  'utensils': Utensils,
-  'tv-minimal-play': TvMinimalPlay,
-  'building-2': Building2,
+const services = await getCollection("services");
+
+const iconMap = {
+  "house": House,
+  "cloud-rain": CloudRain,
+  "toilet": Toilet,
+  "utensils": Utensils,
+  "tv-minimal-play": TvMinimalPlay,
+  "building-2": Building2,
 };
-
 ---
+
 <section
   id="servicios"
-  class="relative py-24 bg-white overflow-hidden"
+  class="relative py-24 bg-white"
 >
   <div class="max-w-6xl mx-auto px-6">
+
     <div class="text-center mb-20">
-      <h2 class="services-title text-5xl md:text-6xl font-extrabold text-slate-900">
+      <h2
+        class="
+          text-5xl md:text-6xl font-extrabold text-slate-900
+          view-animate-single
+          animate-fade-in-up
+          animate-duration-500
+          animate-range-[entry_15%_contain_50%]
+        "
+      >
         Servicios
       </h2>
-      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+
+      <p
+        class="
+          mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto
+          view-animate-single
+          animate-fade-in-up
+          animate-duration-500
+          animate-delay-100
+          animate-range-[entry_20%_contain_55%]
+        "
+      >
         Brindamos soluciones profesionales en destapaciones y mantenimiento de cañerías en Capital Federal, Zona Norte, Sur y Oeste.
       </p>
     </div>
 
-    <div class="services-grid grid grid-cols-1 md:grid-cols-2 gap-10">
-      { services.map(service => {
-        const { slug, data } = service;
-        const { icon, title, description, seoTitle, seoDescription } = data;
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      {services.map((service, index) => {
+        const { data } = service;
+        const { icon, title, description } = data;
 
         return (
-          <ServiceCard
-            icon={iconMap[icon]}
-            title={title}
-            description={description}
-          />
+          <div
+            class={`
+              view-animate-single
+              animate-slide-up-fade
+              animate-duration-400
+              animate-range-[entry_20%_contain_30%]
+              animate-delay-${index * 100}
+            `}
+          >
+            <ServiceCard
+              icon={iconMap[icon]}
+              title={title}
+              description={description}
+            />
+          </div>
         );
-      }) }
+      })}
     </div>
   </div>
-
-  <script>
-    import { animate, inView } from "motion";
-
-    inView(".services-title", () => {
-      animate(
-        ".services-title",
-        { opacity: [0, 1], y: [20, 0] },
-        { duration: 0.5 }
-      );
-    });
-
-    const cards = document.querySelectorAll(".service-card");
-    cards.forEach((card, index) => {
-      inView(card, () => {
-        animate(
-          card,
-          { opacity: [0, 1], y: [30, 0] },
-          { duration: 0.4, delay: index * 0.1 }
-        );
-      });
-    });
-  </script>
 </section>

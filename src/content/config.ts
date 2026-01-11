@@ -16,4 +16,20 @@ const services = defineCollection({
     ]),
   }),
 });
-export const collections = { services };
+const locations = defineCollection({
+  schema: z.object({
+    title: z.string(),                 
+    seoTitle: z.string(),
+    seoDescription: z.string(),
+    seoKeywords: z.string().optional(),
+    span: z.string(),
+    h1: z.string(),
+    intro: z.string(),
+    zoneDescription: z.string(),                
+  }),
+});
+
+export const collections = {
+  services,
+  locations,
+};

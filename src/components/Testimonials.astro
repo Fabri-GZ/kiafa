@@ -1,6 +1,8 @@
 ---
 import TestimonialCards from "./TestimonialCards.astro";
 
+export const prerender = true;
+
 let reviews = [];
 
 try {
@@ -15,48 +17,40 @@ try {
 
 <section
   id="testimonials"
-  class="relative py-12 bg-linear-to-br from-slate-100 via-white to-slate-100 overflow-hidden"
+  class="relative py-12 bg-linear-to-br from-slate-100 via-white to-slate-100 min-h-145"
 >
   <div class="max-w-5xl mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 testimonials-title">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 view-animate-single animate-fade-in-up animate-range-[entry_15%_contain_50%] animate-duration-500">
         Opiniones de nuestros clientes
       </h2>
-      <p class="mt-4 text-lg text-slate-600 testimonials-subtitle">
+      <p class="mt-4 text-lg text-slate-600 testimonials-subtitle view-animate-single animate-fade-in-up animate-range-[entry_20%_contain_50%] animate-duration-500">
         Experiencias reales de personas que confiaron en nuestro servicio
       </p>
     </div>
-
-    <div class="swiper testimonials-swiper">
-  <div class="swiper-wrapper">
-    {reviews.map((t, index) => (
-      <div
-        class="swiper-slide h-full flex items-stretch"
-        data-hash={`review-${index + 1}`}
-      >
-        <TestimonialCards
-          name={t.name}
-          text={t.text}
-          rating={t.rating}
-          url={t.url}
-        />
+    <div class="swiper view-animate-single animate-[testimonial-reveal] animate-duration-300 animate-range-[entry_10%_contain_60%] animate-fill-both ease-in">
+      <div class="swiper-wrapper">
+        {reviews.map((t, index) => (
+          <div
+            class="swiper-slide h-full flex items-stretch"
+            data-hash={`review-${index + 1}`}
+          >
+            <TestimonialCards
+              name={t.name}
+              text={t.text}
+              rating={t.rating}
+              url={t.url}
+            />
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-
-  <div class="swiper-pagination"></div>
-</div>
-
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
 <script>
   import Swiper from 'swiper';
   import { Pagination, HashNavigation, Autoplay } from 'swiper/modules';
-  import { animate, inView } from "motion";
-
-  const swiperContainer = document.querySelector('.testimonials-swiper');
-  const title = document.querySelector('.testimonials-title');
-  const subtitle = document.querySelector('.testimonials-subtitle');
 
   const swiper = new Swiper('.swiper', {
     modules: [Pagination, HashNavigation, Autoplay],
@@ -87,13 +81,6 @@ try {
       disableOnInteraction: false,
     },
   });
-
-  inView(".testimonials-title", () => {
-    if(title) animate(title, { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, easing: "ease-in" });
-    if(subtitle) animate(subtitle, { opacity: [0, 1], y: [16, 0] }, { duration: 0.5, easing: "ease-in" });
-    if(swiperContainer) animate(swiperContainer, { opacity: [0, 1], y: [-30, 0], scale: [0.95, 1] }, { duration: 0.6, easing: "ease-in", delay: 0.4 });
-  });
-
 </script>
 <link
   rel="preload"

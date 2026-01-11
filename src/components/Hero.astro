@@ -1,3 +1,6 @@
+---
+const { title, subtitle, span } = Astro.props;
+---
 
 <section
   id="inicio"
@@ -10,19 +13,18 @@
   ></div>
 
   <div class="relative z-10 max-w-4xl px-6 text-center">
-    <h1 class="hero-title text-4xl md:text-6xl font-extrabold text-slate-900 drop-shadow-sm">
-      <span class="text-blue-700">Kiafa Destapaciones</span><br />
-      Destapaciones de Cañerías
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 drop-shadow-sm animate-slide-in-top duration-200 ease-in">
+      <span class="text-blue-700">{span}</span><br />
+      {title}
     </h1>
 
-    <p class="hero-subtitle mt-6 text-lg md:text-xl font-medium text-slate-800 drop-shadow-sm">
-     Destapación de <strong>cloacas, cañerías y desagües</strong> en CABA y GBA.
+    <p class="mt-6 text-lg md:text-xl font-medium text-slate-800 drop-shadow-sm animate-slide-out-bottom duration-200 ease-in">
+     {subtitle}
     </p>
 
-    <div class="hero-cta mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up-fade duration-200 ease-in">
       <a
-        href="https://wa.me/541154298197"
-        target="_blank"
+        href="#contacto"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in"
       >
@@ -31,13 +33,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  import { animate, inView } from "motion";
-
-  inView(".hero-title", () => {
-    animate(".hero-title", { opacity: [0, 1], y: [50, 0] }, { duration: 0.5 });
-    animate(".hero-subtitle", { opacity: [0, 1], y: [50, 0] }, { duration: 0.5 });
-    animate(".hero-cta", { opacity: [0, 1], y: [50, 0] }, { duration: 0.5 });
-  });
-</script>

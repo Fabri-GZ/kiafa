@@ -8,11 +8,11 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
 >
   <div class="max-w-4xl mx-auto px-6 text-center">
 
-    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900">
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 view-animate-single animate-fade-in-up animate-duration-500 animate-range-[entry_15%_contain_50%]">
       ¡Contactanos!
     </h2>
 
-    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-14">
+    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-14 view-animate-single animate-fade-in-up animate-duration-500 animate-delay-100 animate-range-[entry_15%_contain_55%]">
       Podés solicitar el servicio que necesites a través de nuestro WhatsApp.
     </p>
 
@@ -20,7 +20,7 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
       href="https://wa.me/541154298197?text=Hola%2C%20necesito%20un%20servicio%20de%20destapaci%C3%B3n"
       target="_blank"
       rel="noopener noreferrer"
-      class="group relative inline-flex flex-col items-center justify-center gap-4 bg-linear-to-br from-green-400 via-green-500 to-emerald-600 text-white rounded-3xl px-10 py-10 shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:scale-[1.03] transition-all duration-300 overflow-hidden"
+      class="group relative inline-flex flex-col items-center justify-center gap-4 bg-linear-to-br from-green-400 via-green-500 to-emerald-600 text-white rounded-3xl px-10 py-10 shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:scale-[1.03] transition-all duration-300 view-animate-single animate-zoom-in animate-duration-500 animate-delay-100 animate-range-[entry_15%_contain_40%]"
     >
       <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       <svg 
@@ -77,14 +77,3 @@ import { Phone, Mail, Instagram, Facebook } from "@lucide/astro";
     </div>
   </div>
 </section>
-
-<script>
-  import { animate, inView } from "motion";
-
-  inView("#contacto h2", () => {
-    animate("#contacto h2", { opacity: [0, 1], y: [30, 0] }, { duration: 0.5, easing: "ease-in" });
-    animate("#contacto p", { opacity: [0, 1], y: [20, 0] }, { duration: 0.45, delay: 0.15 });
-    animate("#contacto a[href^='https://wa.me']", { opacity: [0, 1], scale: [0.95, 1] }, { duration: 0.45, delay: 0.3, easing: "ease-in" });
-    animate("#contacto .mt-6 a", { opacity: [0, 1], y: [15, 0] }, { duration: 0.4, delay: (i) => i * 0.1, easing: "ease-in" });
-  });
-</script>
