@@ -3,21 +3,21 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 ---
 
 <header class="fixed top-0 inset-x-0 z-50" id="header-nav">
-  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper">
+  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper view-animate-single animate-fade-in-down animate-duration-500">
 
-    <a href="#inicio" class="flex items-center">
+    <a href="/#inicio" class="flex items-center">
       <img src="/logo-kiafa-black.webp" alt="Kiafa Destapaciones" class="h-12 w-auto object-contain" loading="eager" />
     </a>
 
     <ul class="hidden md:flex items-center gap-8 font-medium text-lg text-black">
-      <li><a href="#inicio" class="hover:text-blue-600 transition duration-150 ease-in">Inicio</a></li>
-      <li><a href="#nosotros" class="hover:text-blue-600 transition duration-150 ease-in">Sobre nosotros</a></li>
-      <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
-      <li><a href="#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
+      <li><a href="/#inicio" class="hover:text-blue-600 transition duration-150 ease-in">Inicio</a></li>
+      <li><a href="/#nosotros" class="hover:text-blue-600 transition duration-150 ease-in">Sobre nosotros</a></li>
+      <li><a href="/#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
+      <li><a href="/#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
 
       <li>
         <a 
-          href="#contacto" 
+          href="/#contacto" 
           class="items-center justify-center rounded-xl px-4 py-2 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link"
         >
         Contacto
@@ -30,8 +30,8 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
       class="md:hidden z-60"
       aria-label="Abrir menú"
     >
-      <Menu id="icon-menu" class="w-7 h-7 text-black" />
-      <X id="icon-close" class="w-7 h-7 text-black hidden" />
+      <Menu id="icon-menu" class="w-7 h-7 text-black transition-transform duration-200" />
+      <X id="icon-close" class="w-7 h-7 text-black hidden transition-transform duration-200" />
     </button>
   </nav>
 </header>
@@ -39,10 +39,13 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 <div id="mobile-overlay" class="hidden fixed inset-0 z-50 md:hidden">
   <div
     id="mobile-backdrop"
-    class="absolute inset-0 bg-black/40"
+    class="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300"
   ></div>
 
-  <nav id="mobile-menu" class="relative w-[65%] max-w-sm h-full bg-white shadow-xl px-6 py-8 flex flex-col gap-8">
+  <nav 
+    id="mobile-menu" 
+    class="relative w-[65%] max-w-sm h-full bg-white shadow-xl px-6 py-8 flex flex-col gap-8 -translate-x-full transition-transform duration-300 ease-out"
+  >
     <img
       src="/logo-kiafa-black.webp"
       alt="Kiafa Destapaciones"
@@ -50,46 +53,44 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
     />
 
     <ul class="flex flex-col gap-6 text-lg font-medium text-black">
-      <li>
-        <a href="#inicio" class="flex items-center gap-3 menu-link">
+      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-75" data-menu-item>
+        <a href="/#inicio" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
           <House class="w-5 h-5 text-blue-600" />
           Inicio
         </a>
       </li>
 
-      <li>
-        <a href="#nosotros" class="flex items-center gap-3 menu-link">
+      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-100" data-menu-item>
+        <a href="/#nosotros" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
           <Users class="w-5 h-5 text-blue-600" />
           Sobre nosotros
         </a>
       </li>
 
-      <li>
-        <a href="#servicios" class="flex items-center gap-3 menu-link">
+      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
+        <a href="/#servicios" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
           <Wrench class="w-5 h-5 text-blue-600" />
           Servicios
         </a>
       </li>
 
-      <li>
-        <a href="#faq" class="flex items-center gap-3 menu-link">
+      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-200" data-menu-item>
+        <a href="/#faq" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
           <Info class="w-5 h-5 text-blue-600" />
           Preguntas frecuentes
         </a>
       </li>
 
-      <li class="pt-4">
-         <a href="#contacto" class="block items-center justify-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
-        Contacto
-      </a>
+      <li class="pt-4 opacity-0 -translate-x-5 transition-all duration-300 delay-300" data-menu-item>
+        <a href="/#contacto" class="block text-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
+          Contacto
+        </a>
       </li>
     </ul>
   </nav>
 </div>
 
-<script >
-  import { animate } from "motion";
-
+<script>
   const menuButton = document.getElementById("menu-button");
   const overlay = document.getElementById("mobile-overlay");
   const menu = document.getElementById("mobile-menu");
@@ -97,41 +98,52 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
   const iconMenu = document.getElementById("icon-menu");
   const iconClose = document.getElementById("icon-close");
   const menuLinks = document.querySelectorAll(".menu-link");
-  const navbarWrapper = document.querySelector(".navbar-wrapper");
-  
-  if (navbarWrapper) animate(navbarWrapper, { opacity: [0, 1], y: [-30, 0] }, { duration: 0.4, ease: "easeIn" });
+  const menuItems = document.querySelectorAll("[data-menu-item]");
   
   let isOpen = false;
 
-  async function openMenu() {
+  function openMenu() {
     isOpen = true;
     document.body.classList.add("overflow-hidden");
     
     overlay?.classList.remove("hidden");
-    if (backdrop) animate(backdrop, { opacity: [0, 1] }, { duration: 0.3, easing: "ease-in" });
-    if (menu) animate(menu, { x: ["-100%", "0%"] }, { duration: 0.4, easing: "ease-in" });
+    void overlay?.offsetWidth;
+    
+    backdrop?.classList.remove("opacity-0");
+    backdrop?.classList.add("opacity-100");
+    
+    menu?.classList.remove("-translate-x-full");
+    menu?.classList.add("translate-x-0");
+    
+    setTimeout(() => {
+      menuItems.forEach((item) => {
+        item.classList.remove("opacity-0", "translate-x-[-20px]");
+        item.classList.add("opacity-100", "translate-x-0");
+      });
+    }, 150);
     
     iconMenu?.classList.add("hidden");
     iconClose?.classList.remove("hidden");
   }
 
-  async function closeMenu() {
+  function closeMenu() {
     isOpen = false;
     
-      await animate(
-        menu,
-        { x: ["0%", "-100%"] },
-        { duration: 0.3, easing: "ease-in" }
-      ).finished;
+    menuItems.forEach((item) => {
+      item.classList.remove("opacity-100", "translate-x-0");
+      item.classList.add("opacity-0", "translate-x-[-20px]");
+    });
     
-      await animate(
-        backdrop,
-        { opacity: [1, 0] },
-        { duration: 0.2 }
-      ).finished;
+    menu?.classList.remove("translate-x-0");
+    menu?.classList.add("-translate-x-full");
     
-    overlay?.classList.add("hidden");
-    document.body.classList.remove("overflow-hidden");
+    backdrop?.classList.remove("opacity-100");
+    backdrop?.classList.add("opacity-0");
+    
+    setTimeout(() => {
+      overlay?.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }, 300);
     
     iconMenu?.classList.remove("hidden");
     iconClose?.classList.add("hidden");
