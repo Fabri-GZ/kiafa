@@ -1,16 +1,14 @@
 ---
 import TestimonialCards from "./TestimonialCards.astro";
+import { kv } from "@vercel/kv";
 
-export const prerender = true;
-
-let reviews = [];
+let reviews: any[] = [];
 
 try {
-  const response = await fetch(`${import.meta.env.SITE}/api/reviews`);
-  const data = await response.json();
-  reviews = data.ok ? (data.reviews || []).slice(0, 15) : [];
+  const stored = await kv.get<any[]>("reviews");
+  reviews = (stored ?? []).slice(0, 15);
 } catch (e) {
-  console.error("Error fetching reviews:", e);
+  console.error("[Testimonials] KV read error:", e);
   reviews = [];
 }
 ---
@@ -21,38 +19,46 @@ try {
 >
   <div class="max-w-5xl mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 view-animate-single animate-fade-in-up animate-range-[entry_15%_contain_50%] animate-duration-500">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-slate-900 view-animate-single animate-fade-in-up animate-range-[entry_15%_contain_50%] animate-duration-500"
+      >
         Opiniones de nuestros clientes
       </h2>
-      <p class="mt-4 text-lg text-slate-600 testimonials-subtitle view-animate-single animate-fade-in-up animate-range-[entry_20%_contain_50%] animate-duration-500">
+      <p
+        class="mt-4 text-lg text-slate-600 testimonials-subtitle view-animate-single animate-fade-in-up animate-range-[entry_20%_contain_50%] animate-duration-500"
+      >
         Experiencias reales de personas que confiaron en nuestro servicio
       </p>
     </div>
-    <div class="swiper view-animate-single animate-[testimonial-reveal] animate-duration-300 animate-range-[entry_10%_contain_60%] animate-fill-both ease-in">
+    <div
+      class="swiper view-animate-single animate-[testimonial-reveal] animate-duration-300 animate-range-[entry_10%_contain_60%] animate-fill-both ease-in"
+    >
       <div class="swiper-wrapper">
-        {reviews.map((t, index) => (
-          <div
-            class="swiper-slide h-full flex items-stretch"
-            data-hash={`review-${index + 1}`}
-          >
-            <TestimonialCards
-              name={t.name}
-              text={t.text}
-              rating={t.rating}
-              url={t.url}
-            />
-          </div>
-        ))}
+        {
+          reviews.map((t, index) => (
+            <div
+              class="swiper-slide h-full flex items-stretch"
+              data-hash={`review-${index + 1}`}
+            >
+              <TestimonialCards
+                name={t.name}
+                text={t.text}
+                rating={t.rating}
+                url={t.url}
+              />
+            </div>
+          ))
+        }
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
 <script>
-  import Swiper from 'swiper';
-  import { Pagination, HashNavigation, Autoplay } from 'swiper/modules';
+  import Swiper from "swiper";
+  import { Pagination, HashNavigation, Autoplay } from "swiper/modules";
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     modules: [Pagination, HashNavigation, Autoplay],
     loop: true,
     spaceBetween: 24,
@@ -68,7 +74,7 @@ try {
     },
 
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
 

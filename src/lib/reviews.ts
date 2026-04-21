@@ -39,7 +39,7 @@ export async function fetchReviews() {
 
     return reviews;
   } catch (error) {
-    console.error("Error obteniendo reviews:", error);
+    console.error("[fetchReviews] Apify error:", error);
     return [];
   }
 }

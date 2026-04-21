@@ -6,10 +6,7 @@ export const prerender = false;
 
 export const GET: APIRoute = async ({ request }) => {
   const authHeader = request.headers.get("authorization");
-  console.log("AUTH HEADER:", request.headers.get("authorization"));
-  console.log("ENV SECRET:", import.meta.env.CRON_SECRET);
   if (authHeader !== `Bearer ${import.meta.env.CRON_SECRET}`) {
-    console.log("Unauthorized");
     return new Response("Unauthorized", { status: 401 });
   }
 
@@ -25,6 +22,7 @@ export const GET: APIRoute = async ({ request }) => {
       { status: 200 }
     );
   } catch (error) {
+    console.error("[update-reviews] Error storing reviews:", error);
     return new Response("Error", { status: 500 });
   }
 };
