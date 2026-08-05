@@ -68,7 +68,7 @@ export function plumberNode() {
       "Destapaciones de baños",
       "Destapaciones de cocinas",
       "Destapaciones pluviales",
-      "Destapaciones 24 horas",
+      "Destapaciones de columnas",
     ],
   };
 }
