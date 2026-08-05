@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Retiro, destapador Retiro, destapaciones en Retiro, 
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Retiro"
 intro: "Brindamos servicio de destapaciones en Retiro, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Retiro y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Retiro y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

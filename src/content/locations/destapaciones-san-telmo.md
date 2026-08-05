@@ -6,6 +6,6 @@ seoKeywords: "destapaciones San Telmo, destapador San Telmo, destapaciones en Sa
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en San Telmo"
 intro: "Brindamos servicio de destapaciones en San Telmo, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo San Telmo y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo San Telmo y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

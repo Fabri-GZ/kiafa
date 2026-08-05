@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Monserrat, destapador Monserrat, destapaciones en Mo
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Monserrat"
 intro: "Brindamos servicio de destapaciones en Monserrat, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Monserrat y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Monserrat y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

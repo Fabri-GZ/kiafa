@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Monte Castro, destapador Monte Castro, destapaciones
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Monte Castro"
 intro: "Brindamos servicio de destapaciones en Monte Castro, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Monte Castro y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Monte Castro y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

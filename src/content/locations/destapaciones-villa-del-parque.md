@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Villa del Parque, destapador Villa del Parque, desta
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa del Parque"
 intro: "Brindamos servicio de destapaciones en Villa del Parque, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Villa del Parque y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Villa del Parque y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

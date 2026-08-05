@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Villa Urquiza, destapador Villa Urquiza, destapacion
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Urquiza"
 intro: "Brindamos servicio de destapaciones en Villa Urquiza, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Villa Urquiza y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Villa Urquiza y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

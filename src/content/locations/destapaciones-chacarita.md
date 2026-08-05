@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Chacarita, destapador Chacarita, destapaciones en Ch
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Chacarita"
 intro: "Brindamos servicio de destapaciones en Chacarita, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Chacarita y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Chacarita y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

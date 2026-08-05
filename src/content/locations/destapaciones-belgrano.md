@@ -6,5 +6,5 @@ seoKeywords: "destapaciones Belgrano, destapador Belgrano, destapaciones en Belg
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Belgrano"
 intro: "Brindamos servicio de destapaciones en Belgrano, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Belgrano y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Belgrano y zonas cercanas, en domicilios, comercios y consorcios."
 ---

@@ -6,7 +6,7 @@ seoKeywords: "destapaciones Versalles, destapador Versalles, destapaciones en Ve
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Versalles"
 intro: "Brindamos servicio de destapaciones en Versalles, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Versalles y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Versalles y zonas cercanas, en domicilios, comercios y consorcios."
 nearbyBarrios: ["destapaciones-liniers"]
 ---
 

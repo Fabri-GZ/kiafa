@@ -6,6 +6,6 @@ seoKeywords: "destapaciones CABA, destapador CABA, destapaciones en CABA, destap
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en CABA"
 intro: "Brindamos servicio de destapaciones en CABA, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo CABA y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo CABA y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

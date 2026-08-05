@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Microcentro, destapador Microcentro, destapaciones e
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Microcentro"
 intro: "Brindamos servicio de destapaciones en Microcentro, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Microcentro y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Microcentro y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

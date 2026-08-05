@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Devoto, destapador Devoto, destapaciones en Devoto, 
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Devoto"
 intro: "Brindamos servicio de destapaciones en Devoto, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Devoto y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Devoto y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

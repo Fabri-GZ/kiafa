@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Congreso, destapador Congreso, destapaciones en Cong
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Congreso"
 intro: "Brindamos servicio de destapaciones en Congreso, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Congreso y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Congreso y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

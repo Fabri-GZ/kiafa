@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Paternal, destapador Paternal, destapaciones en Pate
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Paternal"
 intro: "Brindamos servicio de destapaciones en Paternal, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Paternal y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Paternal y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

@@ -6,7 +6,7 @@ seoKeywords: "destapaciones Mataderos, destapador Mataderos, destapaciones en Ma
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Mataderos"
 intro: "Brindamos servicio de destapaciones en Mataderos, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Mataderos y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Mataderos y zonas cercanas, en domicilios, comercios y consorcios."
 nearbyBarrios: ["destapaciones-liniers"]
 ---
 

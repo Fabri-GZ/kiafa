@@ -6,7 +6,7 @@ seoKeywords: "destapaciones Villa Luro, destapador Villa Luro, destapaciones en 
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Luro"
 intro: "Brindamos servicio de destapaciones en Villa Luro, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Villa Luro y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Villa Luro y zonas cercanas, en domicilios, comercios y consorcios."
 nearbyBarrios: ["destapaciones-liniers"]
 ---
 

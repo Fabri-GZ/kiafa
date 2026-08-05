@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Flores, destapador Flores, destapaciones en Flores, 
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Flores"
 intro: "Brindamos servicio de destapaciones en Flores, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Flores y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Flores y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

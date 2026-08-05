@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Parque Chacabuco, destapador Parque Chacabuco, desta
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Parque Chacabuco"
 intro: "Brindamos servicio de destapaciones en Parque Chacabuco, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Parque Chacabuco y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Parque Chacabuco y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

@@ -6,7 +6,7 @@ seoKeywords: "destapaciones Liniers, destapador Liniers, destapaciones en Linier
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Liniers"
 intro: "Brindamos servicio de destapaciones en Liniers, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Liniers y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Liniers y zonas cercanas, en domicilios, comercios y consorcios."
 nearbyBarrios:
   - "destapaciones-mataderos"
   - "destapaciones-villa-luro"

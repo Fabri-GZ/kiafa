@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Parque Patricios, destapador Parque Patricios, desta
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Parque Patricios"
 intro: "Brindamos servicio de destapaciones en Parque Patricios, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Parque Patricios y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Parque Patricios y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

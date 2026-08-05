@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Palermo, destapador Palermo, destapaciones en Palerm
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Palermo"
 intro: "Brindamos servicio de destapaciones en Palermo, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Palermo y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Palermo y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

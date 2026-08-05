@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Núñez, destapador Núñez, destapaciones en Núñe
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Núñez"
 intro: "Brindamos servicio de destapaciones en Núñez, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Núñez y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Núñez y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

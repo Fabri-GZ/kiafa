@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Saavedra, destapador Saavedra, destapaciones en Saav
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Saavedra"
 intro: "Brindamos servicio de destapaciones en Saavedra, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Saavedra y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Saavedra y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Avellaneda, destapador Avellaneda, destapaciones en 
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Avellaneda"
 intro: "Brindamos servicio de destapaciones en Avellaneda, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Avellaneda y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Avellaneda y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

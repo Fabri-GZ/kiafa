@@ -6,7 +6,7 @@ seoKeywords: "destapaciones Floresta, destapador Floresta, destapaciones en Flor
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Floresta"
 intro: "Brindamos servicio de destapaciones en Floresta, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Floresta y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Floresta y zonas cercanas, en domicilios, comercios y consorcios."
 nearbyBarrios: ["destapaciones-liniers"]
 ---
 

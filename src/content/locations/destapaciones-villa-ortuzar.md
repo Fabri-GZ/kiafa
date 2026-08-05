@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Villa Ortúzar, destapador Villa Ortúzar, destapaci
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Ortúzar"
 intro: "Brindamos servicio de destapaciones en Villa Ortúzar, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Villa Ortúzar y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Villa Ortúzar y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

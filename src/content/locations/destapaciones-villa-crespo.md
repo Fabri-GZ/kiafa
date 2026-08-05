@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Villa Crespo, destapador Villa Crespo, destapaciones
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Crespo"
 intro: "Brindamos servicio de destapaciones en Villa Crespo, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Villa Crespo y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Villa Crespo y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

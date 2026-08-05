@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Recoleta, destapador Recoleta, destapaciones en Reco
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Recoleta"
 intro: "Brindamos servicio de destapaciones en Recoleta, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Recoleta y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Recoleta y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 

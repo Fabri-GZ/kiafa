@@ -6,6 +6,6 @@ seoKeywords: "destapaciones Caballito, destapador Caballito, destapaciones en Ca
 span: "Kiafa Destapaciones"
 h1: "Destapaciones en Caballito"
 intro: "Brindamos servicio de destapaciones en Caballito, resolviendo problemas en cloacas, cañerías y pluviales."
-zoneDescription: "Atendemos en todo Caballito y zonas cercanas, ante cualquier emergencia domiciliaria o comercial."
+zoneDescription: "Atendemos en todo Caballito y zonas cercanas, en domicilios, comercios y consorcios."
 ---
 
