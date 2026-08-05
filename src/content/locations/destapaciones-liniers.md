@@ -7,5 +7,11 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Liniers"
 intro: "Brindamos servicio de destapaciones en Liniers, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Liniers y zonas cercanas, llegando rápido ante cualquier emergencia domiciliaria o comercial."
+nearbyBarrios:
+  - "destapaciones-mataderos"
+  - "destapaciones-villa-luro"
+  - "destapaciones-floresta"
+  - "destapaciones-villa-real"
+  - "destapaciones-versalles"
 ---
 
