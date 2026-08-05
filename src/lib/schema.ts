@@ -4,6 +4,8 @@
 // and must never be used to compute a rating figure.
 
 export const SITE = "https://kiafadestapaciones.com.ar";
+// Home URL carries the trailing slash so it matches sitemap.xml.ts exactly.
+export const HOME_URL = `${SITE}/`;
 export const ORG_ID = `${SITE}/#business`;
 
 export function plumberNode() {
@@ -12,7 +14,7 @@ export function plumberNode() {
     "name": "Kiafa Destapaciones",
     "image": `${SITE}/logo-kiafa.webp`,
     "@id": ORG_ID,
-    "url": SITE,
+    "url": HOME_URL,
     "telephone": "+541154298197",
     "address": {
       "@type": "PostalAddress",
@@ -107,7 +109,7 @@ export function breadcrumbNode({
         "@type": "ListItem",
         "position": 1,
         "name": "Inicio",
-        "item": SITE,
+        "item": HOME_URL,
       },
       {
         "@type": "ListItem",

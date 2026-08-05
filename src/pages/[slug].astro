@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     const bySlug = new Map(locations.map((l) => [l.slug, l]));
 
     return locations.map((location) => {
-        const nearby = (location.data.nearbyBarrios ?? [])
+        const nearby = [...new Set(location.data.nearbyBarrios ?? [])] // drop duplicates
             .filter((slug) => slug !== location.slug) // never self-link
             .flatMap((slug) => {
                 const match = bySlug.get(slug);
