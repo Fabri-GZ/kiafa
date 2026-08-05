@@ -7,5 +7,6 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Real"
 intro: "Brindamos servicio de destapaciones en Villa Real, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Villa Real y zonas cercanas, llegando rápido ante cualquier emergencia domiciliaria o comercial."
+nearbyBarrios: ["destapaciones-liniers"]
 ---
 

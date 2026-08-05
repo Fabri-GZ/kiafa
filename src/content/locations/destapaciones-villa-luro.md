@@ -7,5 +7,6 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Luro"
 intro: "Brindamos servicio de destapaciones en Villa Luro, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Villa Luro y zonas cercanas, llegando rápido ante cualquier emergencia domiciliaria o comercial."
+nearbyBarrios: ["destapaciones-liniers"]
 ---
 

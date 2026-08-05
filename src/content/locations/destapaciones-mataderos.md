@@ -7,5 +7,6 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Mataderos"
 intro: "Brindamos servicio de destapaciones en Mataderos, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Mataderos y zonas cercanas, llegando rápido ante cualquier emergencia domiciliaria o comercial."
+nearbyBarrios: ["destapaciones-liniers"]
 ---
 

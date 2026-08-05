@@ -7,5 +7,6 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Floresta"
 intro: "Brindamos servicio de destapaciones en Floresta, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Floresta y zonas cercanas, llegando rápido ante cualquier emergencia domiciliaria o comercial."
+nearbyBarrios: ["destapaciones-liniers"]
 ---
 
