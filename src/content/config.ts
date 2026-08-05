@@ -25,7 +25,11 @@ const locations = defineCollection({
     span: z.string(),
     h1: z.string(),
     intro: z.string(),
-    zoneDescription: z.string(),                
+    zoneDescription: z.string(),
+    // Slugs of OTHER entries in this same collection, e.g. "destapaciones-mataderos".
+    // Unresolvable slugs are dropped at build with a console.warn (see [slug].astro).
+    // An empty array is legal and renders nothing: [slug].astro guards on length.
+    nearbyBarrios: z.array(z.string().min(1)).optional(),
   }),
 });
 

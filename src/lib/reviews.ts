@@ -26,6 +26,15 @@ export async function fetchReviews() {
       .dataset(run.defaultDatasetId)
       .listItems();
 
+    // WARNING - DO NOT use this list to compute schema.org aggregateRating.
+    // The .filter(stars >= 4) below discards 1-star reviews, producing a
+    // flattering average (15 reviews at 5.0) that does not match the real GBP
+    // figure (17 reviews at 4.5). Publishing it is a fabricated rating and a
+    // manual-action risk. Any aggregateRating must come from the UNFILTERED set
+    // or from the real GBP value. See src/lib/schema.ts - no node builder there
+    // emits aggregateRating, and none may be added.
+    // (This filter lives in fetchReviews(); referred to as getReviews() in
+    // design notes, but the exported symbol here is fetchReviews.)
     const reviews = items
       .filter((review: any) => review.stars >= 4)
       .map((review: any) => ({
