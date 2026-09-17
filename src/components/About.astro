@@ -1,5 +1,6 @@
 ---
-import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
+import { Calendar, MapPin, Wrench } from "@lucide/astro";
+import HoursCard from "./HoursCard.astro";
 ---
 <section id="nosotros" class="relative py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6 mb-24">
@@ -78,27 +79,7 @@ import { Calendar, MapPin, Wrench, Clock } from "@lucide/astro";
         </div>
       </div>
 
-      <div
-        class="
-          flex items-start gap-5
-          view-animate-single
-          animate-[slide-in-right-strong]
-          animate-duration-500
-          animate-range-[entry_30%_contain_50%]
-        "
-      >
-        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
-          <Clock class="w-7 h-7" />
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-            Lunes a sábado
-          </h3>
-          <p class="text-slate-600 text-lg">
-            Atendemos de lunes a viernes de 8 a 17 h y sábados de 8 a 13 h.
-          </p>
-        </div>
-      </div>
+      <HoursCard animationClass="view-animate-single animate-[slide-in-right-strong] animate-duration-500 animate-range-[entry_30%_contain_50%]" />
     </div>
   </div>
 </section>
