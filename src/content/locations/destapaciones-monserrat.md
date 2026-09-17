@@ -1,6 +1,6 @@
 ---
 title: "Monserrat"
-seoTitle: "Destapaciones en Monserrat | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Monserrat"
 seoDescription: "Servicio de destapaciones en Monserrat. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Monserrat, destapador Monserrat, destapaciones en Monserrat, destapación de cañerías Monserrat, destapación cloacal Monserrat, destapacion pluvial Monserrat, destapaciones consorcios Monserrat, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -1,6 +1,6 @@
 ---
 title: "Versalles"
-seoTitle: "Destapaciones en Versalles | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Versalles"
 seoDescription: "Servicio de destapaciones en Versalles. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Versalles, destapador Versalles, destapaciones en Versalles, destapación de cañerías Versalles, destapación cloacal Versalles, destapacion pluvial Versalles, destapaciones consorcios Versalles, kiafa destapaciones"
 span: "Kiafa Destapaciones"

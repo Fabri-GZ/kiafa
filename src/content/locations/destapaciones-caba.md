@@ -1,6 +1,6 @@
 ---
 title: "CABA"
-seoTitle: "Destapaciones en CABA | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en CABA"
 seoDescription: "Servicio de destapaciones en CABA. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones CABA, destapador CABA, destapaciones en CABA, destapación de cañerías CABA, destapación cloacal CABA, destapacion pluvial CABA, destapaciones consorcios CABA, kiafa destapaciones"
 span: "Kiafa Destapaciones"

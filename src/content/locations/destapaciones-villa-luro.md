@@ -1,6 +1,6 @@
 ---
 title: "Villa Luro"
-seoTitle: "Destapaciones en Villa Luro | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Villa Luro"
 seoDescription: "Servicio de destapaciones en Villa Luro. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Luro, destapador Villa Luro, destapaciones en Villa Luro, destapación de cañerías Villa Luro, destapación cloacal Villa Luro, destapacion pluvial Villa Luro, destapaciones consorcios Villa Luro, kiafa destapaciones"
 span: "Kiafa Destapaciones"

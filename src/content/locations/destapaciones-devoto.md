@@ -1,6 +1,6 @@
 ---
 title: "Devoto"
-seoTitle: "Destapaciones en Devoto | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Devoto"
 seoDescription: "Servicio de destapaciones en Devoto. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Devoto, destapador Devoto, destapaciones en Devoto, destapación de cañerías Devoto, destapación cloacal Devoto, destapacion pluvial Devoto, destapaciones consorcios Devoto, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -1,6 +1,6 @@
 ---
 title: "Balvanera"
-seoTitle: "Destapaciones en Balvanera | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Balvanera"
 seoDescription: "Servicio de destapaciones en Balvanera. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Balvanera, destapador Balvanera, destapaciones en Balvanera, destapación de cañerías Balvanera, destapación cloacal Balvanera, destapacion pluvial Balvanera, destapaciones consorcios Balvanera, kiafa destapaciones"
 span: "Kiafa Destapaciones"

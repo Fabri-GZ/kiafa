@@ -1,6 +1,6 @@
 ---
 title: "Chacarita"
-seoTitle: "Destapaciones en Chacarita | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Chacarita"
 seoDescription: "Servicio de destapaciones en Chacarita. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Chacarita, destapador Chacarita, destapaciones en Chacarita, destapación de cañerías Chacarita, destapación cloacal Chacarita, destapacion pluvial Chacarita, destapaciones consorcios Chacarita, kiafa destapaciones"
 span: "Kiafa Destapaciones"

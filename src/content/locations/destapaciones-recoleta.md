@@ -1,6 +1,6 @@
 ---
 title: "Recoleta"
-seoTitle: "Destapaciones en Recoleta | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Recoleta"
 seoDescription: "Servicio de destapaciones en Recoleta. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Recoleta, destapador Recoleta, destapaciones en Recoleta, destapación de cañerías Recoleta, destapación cloacal Recoleta, destapacion pluvial Recoleta, destapaciones consorcios Recoleta, kiafa destapaciones"
 span: "Kiafa Destapaciones"

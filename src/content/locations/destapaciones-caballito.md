@@ -1,6 +1,6 @@
 ---
 title: "Caballito"
-seoTitle: "Destapaciones en Caballito | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Caballito"
 seoDescription: "Servicio de destapaciones en Caballito. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Caballito, destapador Caballito, destapaciones en Caballito, destapación de cañerías Caballito, destapación cloacal Caballito, destapacion pluvial Caballito, destapaciones consorcios Caballito, kiafa destapaciones"
 span: "Kiafa Destapaciones"

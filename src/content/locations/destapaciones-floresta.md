@@ -1,6 +1,6 @@
 ---
 title: "Floresta"
-seoTitle: "Destapaciones en Floresta | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Floresta"
 seoDescription: "Servicio de destapaciones en Floresta. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Floresta, destapador Floresta, destapaciones en Floresta, destapación de cañerías Floresta, destapación cloacal Floresta, destapacion pluvial Floresta, destapaciones consorcios Floresta, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -1,6 +1,6 @@
 ---
 title: "Villa del Parque"
-seoTitle: "Destapaciones en Villa del Parque | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Villa del Parque"
 seoDescription: "Servicio de destapaciones en Villa del Parque. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa del Parque, destapador Villa del Parque, destapaciones en Villa del Parque, destapación de cañerías Villa del Parque, destapación cloacal Villa del Parque, destapacion pluvial Villa del Parque, destapaciones consorcios Villa del Parque, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -1,6 +1,6 @@
 ---
 title: "Villa Urquiza"
-seoTitle: "Destapaciones en Villa Urquiza | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Villa Urquiza"
 seoDescription: "Servicio de destapaciones en Villa Urquiza. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Urquiza, destapador Villa Urquiza, destapaciones en Villa Urquiza, destapación de cañerías Villa Urquiza, destapación cloacal Villa Urquiza, destapacion pluvial Villa Urquiza, destapaciones consorcios Villa Urquiza, kiafa destapaciones"
 span: "Kiafa Destapaciones"
