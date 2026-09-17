@@ -1,5 +1,5 @@
 ---
-import { Calendar, MapPin, Wrench } from "@lucide/astro";
+import { Building2, Calendar, DollarSign, MapPin, Wrench } from "@lucide/astro";
 import HoursCard from "./HoursCard.astro";
 ---
 <section id="nosotros" class="relative py-24 bg-white">
@@ -79,7 +79,51 @@ import HoursCard from "./HoursCard.astro";
         </div>
       </div>
 
-      <HoursCard animationClass="view-animate-single animate-[slide-in-right-strong] animate-duration-500 animate-range-[entry_30%_contain_50%]" />
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-right-strong]
+          animate-duration-500
+          animate-range-[entry_25%_contain_45%]
+        "
+      >
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <DollarSign class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            Presupuesto sin cargo
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Evaluamos el problema y te damos un presupuesto claro antes de comenzar el trabajo.
+          </p>
+        </div>
+      </div>
+
+      <HoursCard animationClass="view-animate-single animate-[slide-in-left-strong] animate-duration-500 animate-range-[entry_30%_contain_50%]" />
+
+      <div
+        class="
+          flex items-start gap-5
+          view-animate-single
+          animate-[slide-in-right-strong]
+          animate-duration-500
+          animate-range-[entry_30%_contain_50%]
+        "
+      >
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700">
+          <Building2 class="w-7 h-7" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-900 mb-2">
+            +500 edificios atendidos
+          </h3>
+          <p class="text-slate-600 text-lg">
+            Trabajamos con administraciones y consorcios de CABA y GBA.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
