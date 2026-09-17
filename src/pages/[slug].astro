@@ -43,6 +43,8 @@ export async function getStaticPaths() {
 const  {location, nearby} = Astro.props;
 const {data} = location;
 const { title, seoTitle, seoDescription, seoKeywords, h1, intro, span, zoneDescription} = data;
+const { Content } = await location.render();
+const hasBody = (location.body ?? "").trim().length > 0;
 
 const canonical = `https://kiafadestapaciones.com.ar/${location.slug}`;
 
@@ -60,6 +62,7 @@ const schemaNodes = [
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
+        {hasBody && <section id="location-body"><Content /></section>}
         <Services />
         <FAQ />
         {nearby.length > 0 && <NearbyAreas current={title} items={nearby} />}
