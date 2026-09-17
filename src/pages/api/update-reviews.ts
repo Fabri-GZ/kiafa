@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
-import { fetchReviews } from "../../lib/reviews";
+import { fetchReviews, mapApifyReviews } from "../../lib/reviews";
 import { kv } from "@vercel/kv";
+import rawFallback from "../../data/reviews.json";
 
 export const prerender = false;
 
@@ -11,13 +12,22 @@ export const GET: APIRoute = async ({ request }) => {
   }
 
   try {
-    const reviews = await fetchReviews();
-    await kv.set("reviews", reviews);
+    const live = await fetchReviews();
+    const source = live.length > 0 ? "apify" : "fallback";
+    const reviews = live.length > 0 ? live : mapApifyReviews(rawFallback as any[]);
+
+    // Never wipe KV with an empty array: a failed Apify run must never erase
+    // the testimonials already live on every page. Only write when there is
+    // something usable, whether from Apify or the static fallback.
+    if (reviews.length > 0) {
+      await kv.set("reviews", reviews);
+    }
 
     return new Response(
       JSON.stringify({
         ok: true,
         count: reviews.length,
+        source,
       }),
       { status: 200 }
     );

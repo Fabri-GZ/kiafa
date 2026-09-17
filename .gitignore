@@ -1,5 +1,9 @@
 # build output
 dist/
+.vercel/
+
+# tooling scratch dirs
+.atl/
 
 # generated types
 .astro/
