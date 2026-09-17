@@ -1,6 +1,7 @@
 ---
 title: "Villa Ortúzar"
 seoTitle: "Destapaciones en Villa Ortúzar"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Villa Ortúzar. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Ortúzar, destapador Villa Ortúzar, destapaciones en Villa Ortúzar, destapación de cañerías Villa Ortúzar, destapación cloacal Villa Ortúzar, destapacion pluvial Villa Ortúzar, destapaciones consorcios Villa Ortúzar, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -1,6 +1,7 @@
 ---
 title: "Villa Crespo"
 seoTitle: "Destapaciones en Villa Crespo"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Villa Crespo. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Crespo, destapador Villa Crespo, destapaciones en Villa Crespo, destapación de cañerías Villa Crespo, destapación cloacal Villa Crespo, destapacion pluvial Villa Crespo, destapaciones consorcios Villa Crespo, kiafa destapaciones"
 span: "Kiafa Destapaciones"

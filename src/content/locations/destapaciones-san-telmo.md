@@ -1,6 +1,7 @@
 ---
 title: "San Telmo"
 seoTitle: "Destapaciones en San Telmo"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en San Telmo. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones San Telmo, destapador San Telmo, destapaciones en San Telmo, destapación de cañerías San Telmo, destapación cloacal San Telmo, destapacion pluvial San Telmo, destapaciones consorcios San Telmo, kiafa destapaciones"
 span: "Kiafa Destapaciones"

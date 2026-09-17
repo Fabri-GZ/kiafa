@@ -1,6 +1,7 @@
 ---
 title: "Paternal"
 seoTitle: "Destapaciones en Paternal"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Paternal. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Paternal, destapador Paternal, destapaciones en Paternal, destapación de cañerías Paternal, destapación cloacal Paternal, destapacion pluvial Paternal, destapaciones consorcios Paternal, kiafa destapaciones"
 span: "Kiafa Destapaciones"

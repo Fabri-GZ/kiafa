@@ -1,6 +1,7 @@
 ---
 title: "Congreso"
 seoTitle: "Destapaciones en Congreso"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Congreso. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Congreso, destapador Congreso, destapaciones en Congreso, destapación de cañerías Congreso, destapación cloacal Congreso, destapacion pluvial Congreso, destapaciones consorcios Congreso, kiafa destapaciones"
 span: "Kiafa Destapaciones"

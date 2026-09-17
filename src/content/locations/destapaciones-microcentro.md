@@ -1,6 +1,7 @@
 ---
 title: "Microcentro"
 seoTitle: "Destapaciones en Microcentro"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Microcentro. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Microcentro, destapador Microcentro, destapaciones en Microcentro, destapación de cañerías Microcentro, destapación cloacal Microcentro, destapacion pluvial Microcentro, destapaciones consorcios Microcentro, kiafa destapaciones"
 span: "Kiafa Destapaciones"

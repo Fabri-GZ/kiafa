@@ -1,6 +1,7 @@
 ---
 title: "Parque Patricios"
 seoTitle: "Destapaciones en Parque Patricios"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Parque Patricios. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Parque Patricios, destapador Parque Patricios, destapaciones en Parque Patricios, destapación de cañerías Parque Patricios, destapación cloacal Parque Patricios, destapacion pluvial Parque Patricios, destapaciones consorcios Parque Patricios, kiafa destapaciones"
 span: "Kiafa Destapaciones"
