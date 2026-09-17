@@ -1,6 +1,7 @@
 ---
 title: "Villa Pueyrredón"
-seoTitle: "Destapaciones en Villa Pueyrredón | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Villa Pueyrredón"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Villa Pueyrredón. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Pueyrredón, destapador Villa Pueyrredón, destapaciones en Villa Pueyrredón, destapación de cañerías Villa Pueyrredón, destapación cloacal Villa Pueyrredón, destapacion pluvial Villa Pueyrredón, destapaciones consorcios Villa Pueyrredón, kiafa destapaciones"
 span: "Kiafa Destapaciones"

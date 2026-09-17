@@ -1,6 +1,7 @@
 ---
 title: "Flores"
-seoTitle: "Destapaciones en Flores | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Flores"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Flores. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Flores, destapador Flores, destapaciones en Flores, destapación de cañerías Flores, destapación cloacal Flores, destapacion pluvial Flores, destapaciones consorcios Flores, kiafa destapaciones"
 span: "Kiafa Destapaciones"

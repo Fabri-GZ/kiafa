@@ -13,13 +13,20 @@ interface Props {
   schemaNodes?: object[];
 }
 
+const BRAND = "Kiafa Destapaciones";
+
 const {
-  title = "Destapaciones en CABA y GBA | Cloacas, caños y pluviales",
+  title = "Destapaciones en CABA y GBA | Kiafa Destapaciones",
   description = "Destapaciones de cloacas, cañerías, baños y pluviales en CABA y GBA. Empresa con más de 17 años de experiencia. Presupuesto sin cargo antes de empezar.",
   keywords = "destapaciones, kiafadestapaciones, destapaciones caba, destapaciones liniers, destapación de cañerías, destapación de desagues, destapación pluviales, destapación de baños, destapación de cocinas, destapaciones consorcios, destapaciones sin roturas",
   canonical = Astro.url.href,
   schemaNodes = [],
 } = Astro.props;
+
+// Idempotent: only appends the brand suffix when the incoming title does not
+// already end with it, so a `seoTitle` that already carries the brand is
+// never double-branded.
+const pageTitle = title.endsWith(`| ${BRAND}`) ? title : `${title} | ${BRAND}`;
 
 const jsonLd = jsonLdGraph([plumberNode(), ...schemaNodes]);
 ---
@@ -29,13 +36,13 @@ const jsonLd = jsonLdGraph([plumberNode(), ...schemaNodes]);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow">
     <meta name="author" content="Kiafa Destapaciones" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />

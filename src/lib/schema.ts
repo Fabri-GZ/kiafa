@@ -8,6 +8,20 @@ export const SITE = "https://kiafadestapaciones.com.ar";
 export const HOME_URL = `${SITE}/`;
 export const ORG_ID = `${SITE}/#business`;
 
+// Single source of truth for business hours: both the JSON-LD
+// openingHoursSpecification below and the visible HOURS_TEXT_ES copy
+// rendered by HoursCard.astro read the same numbers, so they can never
+// drift apart. Day names ("lunes a viernes" / "Monday".."Friday") stay
+// duplicated strings, kept in proximity in this same file.
+export const HOURS = {
+  weekday: { opens: "08:00", closes: "17:00" },
+  saturday: { opens: "08:00", closes: "13:00" },
+};
+
+const hour = (time: string) => Number(time.slice(0, 2));
+
+export const HOURS_TEXT_ES = `Atendemos de lunes a viernes de ${hour(HOURS.weekday.opens)} a ${hour(HOURS.weekday.closes)} h y sábados de ${hour(HOURS.saturday.opens)} a ${hour(HOURS.saturday.closes)} h.`;
+
 export function plumberNode() {
   return {
     "@type": "Plumber",
@@ -39,14 +53,14 @@ export function plumberNode() {
           "Thursday",
           "Friday",
         ],
-        "opens": "08:00",
-        "closes": "17:00",
+        "opens": HOURS.weekday.opens,
+        "closes": HOURS.weekday.closes,
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "13:00",
+        "opens": HOURS.saturday.opens,
+        "closes": HOURS.saturday.closes,
       },
     ],
     "sameAs": [

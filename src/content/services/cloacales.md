@@ -6,4 +6,4 @@ seoDescription: "Servicio profesional de destapaciones cloacales en CABA. Atenci
 icon: "house"
 ---
 
-Realizamos destapaciones cloacales con equipos profesionales, evitando roturas innecesarias y garantizando una solución rápida y efectiva.
+Realizamos destapaciones cloacales con equipos profesionales, evitando roturas innecesarias y con más de 17 años de experiencia en el sector.
