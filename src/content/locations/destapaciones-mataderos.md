@@ -1,6 +1,7 @@
 ---
 title: "Mataderos"
-seoTitle: "Destapaciones en Mataderos | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Mataderos"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Mataderos. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Mataderos, destapador Mataderos, destapaciones en Mataderos, destapación de cañerías Mataderos, destapación cloacal Mataderos, destapacion pluvial Mataderos, destapaciones consorcios Mataderos, kiafa destapaciones"
 span: "Kiafa Destapaciones"

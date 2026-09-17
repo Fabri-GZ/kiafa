@@ -1,6 +1,7 @@
 ---
 title: "Parque Chacabuco"
-seoTitle: "Destapaciones en Parque Chacabuco | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Parque Chacabuco"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Parque Chacabuco. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Parque Chacabuco, destapador Parque Chacabuco, destapaciones en Parque Chacabuco, destapación de cañerías Parque Chacabuco, destapación cloacal Parque Chacabuco, destapacion pluvial Parque Chacabuco, destapaciones consorcios Parque Chacabuco, kiafa destapaciones"
 span: "Kiafa Destapaciones"

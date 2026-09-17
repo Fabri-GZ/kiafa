@@ -1,6 +1,7 @@
 ---
 title: "Retiro"
-seoTitle: "Destapaciones en Retiro | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Retiro"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Retiro. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Retiro, destapador Retiro, destapaciones en Retiro, destapación de cañerías Retiro, destapación cloacal Retiro, destapacion pluvial Retiro, destapaciones consorcios Retiro, kiafa destapaciones"
 span: "Kiafa Destapaciones"

@@ -30,6 +30,10 @@ const locations = defineCollection({
     // Unresolvable slugs are dropped at build with a console.warn (see [slug].astro).
     // An empty array is legal and renders nothing: [slug].astro guards on length.
     nearbyBarrios: z.array(z.string().min(1)).optional(),
+    // Optional last-real-change date ("YYYY-MM-DD"), used by sitemap.xml.ts
+    // to emit <lastmod>. Omitted entirely when this field is absent — never
+    // falls back to the build date. Bump only on a real content change.
+    updatedAt: z.string().date().optional(),
   }),
 });
 

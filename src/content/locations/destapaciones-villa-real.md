@@ -1,6 +1,7 @@
 ---
 title: "Villa Real"
-seoTitle: "Destapaciones en Villa Real | Cloacas, cañerías y pluviales"
+seoTitle: "Destapaciones en Villa Real"
+updatedAt: "2026-09-17"
 seoDescription: "Servicio de destapaciones en Villa Real. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Villa Real, destapador Villa Real, destapaciones en Villa Real, destapación de cañerías Villa Real, destapación cloacal Villa Real, destapacion pluvial Villa Real, destapaciones consorcios Villa Real, kiafa destapaciones"
 span: "Kiafa Destapaciones"
