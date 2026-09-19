@@ -29,9 +29,9 @@ bodyMethod:
     - "Los cables vienen en distintos calibres, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el calibre cuando corresponde, aunque el trabajo lleve más tiempo."
   items:
     - term: "Sonda"
-      description: "se usa para recuperar lo que quedó dentro del caño, como un trapo o cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo."
+      description: "Se usa para recuperar lo que quedó dentro del caño, como un trapo o cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo."
     - term: "Punta cónica"
-      description: "sirve para que la cañería recupere su diámetro interno original. Avanza triturando lo que encuentra: raíces, grasa adherida, incrustación o restos de obra."
+      description: "Sirve para que la cañería recupere su diámetro interno original. Avanza triturando lo que encuentra: raíces, grasa adherida, incrustación o restos de obra."
   note:
     - "Esa decisión se toma en el lugar, mirando la cañería. De ahí depende que el caño quede destapado y en buen estado."
 bodyPrevention:
@@ -40,13 +40,13 @@ bodyPrevention:
     - "Buena parte de las destapaciones que hacemos podrían evitarse. Estos son los elementos que encontramos con más frecuencia dentro de las cañerías:"
   items:
     - term: "Toallitas húmedas"
-      description: "aunque el envase diga que son descartables, no se desarman en el agua. Se enganchan en cualquier irregularidad del caño y ahí empieza el tapón."
+      description: "Aunque el envase diga que son descartables, no se desarman en el agua. Se enganchan en cualquier irregularidad del caño y ahí empieza el tapón."
     - term: "Toallitas femeninas y pañales"
-      description: "absorben agua y aumentan de tamaño dentro de la cañería. Son una de las causas más comunes de obstrucción total."
+      description: "Absorben agua y aumentan de tamaño dentro de la cañería. Son una de las causas más comunes de obstrucción total."
     - term: "Aceite de cocina"
-      description: "tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. Va cerrando el diámetro de a poco, hasta que un día no pasa más. Conviene juntarlo en un recipiente y descartarlo con la basura."
+      description: "Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. Va cerrando el diámetro de a poco, hasta que un día no pasa más. Conviene juntarlo en un recipiente y descartarlo con la basura."
     - term: "Restos de obra"
-      description: "mezcla, cal, escombro y material de descarte volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver."
+      description: "Mezcla, cal, escombro y material de descarte volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver."
   note:
     - "Un tapón en una cañería sana se destapa rápido. El problema aparece cuando el caño ya arrastra años de incrustación acumulada."
 bodyFaq:

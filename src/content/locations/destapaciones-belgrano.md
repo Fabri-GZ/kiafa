@@ -28,18 +28,18 @@ bodyMethod:
     - "Los cables vienen en distintos calibres. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina, y elegir mal el calibre arruina la cañería en lugar de destaparla."
   items:
     - term: "La sonda"
-      description: "sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
+      description: "Sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
     - term: "La punta cónica"
-      description: "avanza triturando raíces, grasa, sarro o restos de obra, y deja la cañería con su diámetro interno original."
+      description: "Avanza triturando raíces, grasa, sarro o restos de obra, y deja la cañería con su diámetro interno original."
 bodyPrevention:
   heading: "Lo que no conviene tirar en un edificio"
   lead:
     - "En una casa, un tapón queda puertas adentro. En un edificio de Belgrano la descarga de cada departamento va a la misma columna, así que lo que tira un vecino termina afectando a toda la línea."
   items:
     - term: "Las toallitas húmedas"
-      description: "son el caso más común. Aunque el envase diga que son descartables, no se desarman en el agua y se enganchan en cualquier irregularidad del caño. Lo mismo pasa con las toallitas femeninas y los pañales, que absorben agua y aumentan de tamaño adentro de la cañería."
+      description: "Son el caso más común. Aunque el envase diga que son descartables, no se desarman en el agua y se enganchan en cualquier irregularidad del caño. Lo mismo pasa con las toallitas femeninas y los pañales, que absorben agua y aumentan de tamaño adentro de la cañería."
     - term: "El aceite de cocina"
-      description: "es el más silencioso de los tres. Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. En una columna compartida ese depósito se suma al de todos los pisos, y es una de las causas principales de que una línea entera termine tapada. Conviene juntarlo en un recipiente y descartarlo con la basura."
+      description: "Es el más silencioso de los tres. Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. En una columna compartida ese depósito se suma al de todos los pisos, y es una de las causas principales de que una línea entera termine tapada. Conviene juntarlo en un recipiente y descartarlo con la basura."
 bodyFaq:
   heading: "Preguntas frecuentes sobre destapaciones en Belgrano"
   items:
