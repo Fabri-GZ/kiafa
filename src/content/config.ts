@@ -51,10 +51,16 @@ const locations = defineCollection({
     // navbar dropdown is fixed by BODY_SECTIONS in src/lib/bodySections.ts,
     // not by key order here. All optional: a location with none of them
     // renders exactly as before this field set was added.
+    // `items` is no longer sourced from content: the "qué destapamos" list
+    // is identical on every barrio page (#1002 decision 2), so
+    // BodyServices.astro reads it from SHARED_SERVICE_ITEMS in
+    // src/lib/bodySections.ts instead. Kept optional here, not removed,
+    // so an old frontmatter copy left on disk parses harmlessly (zod
+    // strips unknown/unused keys) rather than failing the build.
     bodyServices: z.object({
       heading: z.string().min(1),
       lead: proseBlock.optional(),
-      items: z.array(z.string().min(1)).min(1),
+      items: z.array(z.string().min(1)).min(1).optional(),
       note: proseBlock.optional(),
     }).optional(),
 

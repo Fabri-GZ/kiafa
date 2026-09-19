@@ -12,14 +12,6 @@ bodyServices:
   heading: "Qué destapamos en Belgrano"
   lead:
     - "Trabajamos en casas, departamentos, comercios y consorcios de todo el barrio:"
-  items:
-    - "Ramales internos"
-    - "Cloacas y cámaras de inspección"
-    - "Pluviales y desagües de lluvia"
-    - "Baños, inodoros y piletas"
-    - "Cocinas, incluidas cocinas comerciales"
-    - "Rejillas y piletas de patio"
-    - "Columnas en edificios"
   note:
     - "Contamos además con servicio de video inspección, que en edificios sirve sobre todo para ubicar en qué piso o en qué tramo de la columna está el problema antes de decidir dónde abrir."
 bodyMethod:
