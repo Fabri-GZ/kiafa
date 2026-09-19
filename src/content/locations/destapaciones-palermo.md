@@ -12,14 +12,6 @@ bodyServices:
   heading: "Qué destapamos en Palermo"
   lead:
     - "Trabajamos en domicilios, comercios y consorcios de todo el barrio:"
-  items:
-    - "Ramales internos"
-    - "Cloacas y cámaras de inspección"
-    - "Pluviales y desagües de lluvia"
-    - "Baños, inodoros y piletas"
-    - "Cocinas, incluidas cocinas comerciales"
-    - "Rejillas y piletas de patio"
-    - "Columnas en edificios"
   note:
     - "Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto exacto la cañería tiene una rotura, contamos además con servicio de video inspección."
 bodyMethod:

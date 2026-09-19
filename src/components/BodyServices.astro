@@ -17,16 +17,22 @@
 // the site's video inspection service (see destapaciones-palermo.md /
 // destapaciones-belgrano.md), so the card is a restyle of existing
 // verbatim content, not an added claim.
+//
+// `items` is read from SHARED_SERVICE_ITEMS, not from Astro.props, per
+// #1002 decision 2: the seven-item list is identical on every barrio page,
+// so it lives once in src/lib/bodySections.ts instead of 33 frontmatter
+// copies that can (and did) drift out of sync.
 import { Icon } from "astro-icon/components";
+import { SHARED_SERVICE_ITEMS } from "../lib/bodySections";
 
 interface Props {
   heading: string;
   lead?: string[];
-  items: string[];
   note?: string[];
 }
 
-const { heading, lead, items, note } = Astro.props as Props;
+const { heading, lead, note } = Astro.props as Props;
+const items = SHARED_SERVICE_ITEMS;
 ---
 
 <section id="que-destapamos" class="relative py-24 bg-white scroll-mt-24">
