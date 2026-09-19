@@ -5,6 +5,14 @@
 // tabular-nums ordinal numeral replacing the icon chip. This is the third
 // density on the page (card-heavy #metodo above, borderless list here,
 // accordion in #faq-barrio below).
+//
+// This is the one section #997 approved as-is ("no está tan mal"), so
+// slice 7 confirms-and-polishes rather than rebuilds: the only change is
+// bumping the heading one step (text-4xl/5xl) so it doesn't read as
+// visually orphaned now that #que-destapamos above jumped to
+// text-5xl/6xl (slice 6). Full harmonization against #metodo still waits
+// on that section's own redesign (slice 11) — this is an interim step,
+// not the final scale.
 interface Props {
   heading: string;
   lead?: string[];
@@ -19,7 +27,7 @@ const { heading, lead, items, note } = Astro.props as Props;
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
-        class="text-3xl md:text-4xl font-extrabold text-slate-900
+        class="text-4xl md:text-5xl font-extrabold text-slate-900
                view-animate-single animate-fade-in-up animate-duration-500
                animate-range-[entry_10%_contain_10%]"
       >
