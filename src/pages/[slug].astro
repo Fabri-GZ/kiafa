@@ -62,7 +62,13 @@ const schemaNodes = [
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
-        {hasBody && <section id="location-body"><Content /></section>}
+        {hasBody && (
+            <section id="location-body" class="relative py-24 bg-slate-50">
+                <div class="max-w-3xl mx-auto px-6">
+                    <Content />
+                </div>
+            </section>
+        )}
         <Services />
         <FAQ />
         {nearby.length > 0 && <NearbyAreas current={title} items={nearby} />}
