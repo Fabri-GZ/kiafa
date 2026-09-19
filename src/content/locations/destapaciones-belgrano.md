@@ -38,12 +38,16 @@ bodyFaq:
   items:
     - question: "¿Hacen destapación de columnas en edificios?"
       answer: "Sí. Es uno de los trabajos más frecuentes en las torres del barrio. Hay que avisar al consorcio con tiempo, porque se necesita entrar a los departamentos para trabajar la columna piso por piso."
+      icon: "mdi:office-building"
     - question: "¿Atienden consorcios y administraciones?"
       answer: "Sí, además de casas particulares y departamentos. Si la administración lo pide, dejamos indicado el estado en que quedó la cañería."
+      icon: "mdi:account-group"
     - question: "¿Qué hacen con las raíces en las casas de Belgrano R?"
       answer: "La máquina las tritura y la cañería recupera su diámetro interno. Si además el caño está partido, lo informamos para que se repare el tramo."
+      icon: "mdi:tree"
     - question: "¿Cobran el presupuesto en un edificio?"
       answer: "No. Si hace falta ir a ver las cañerías antes de dar un precio, la visita es sin cargo, tanto en un departamento como en un espacio común del consorcio."
+      icon: "akar-icons:file"
 ---
 
 ## Por qué se tapan las cañerías en Belgrano

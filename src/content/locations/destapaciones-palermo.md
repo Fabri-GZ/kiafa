@@ -46,12 +46,16 @@ bodyFaq:
   items:
     - question: "¿Trabajan en PH y casas antiguas con pasillo?"
       answer: "Sí. Es una de las tipologías más comunes del barrio. El acceso reducido y las cañerías de hierro fundido original son justamente los casos donde importa elegir bien el calibre del cable."
+      icon: "akar-icons:home"
     - question: "¿Atienden cocinas de restaurantes y locales gastronómicos?"
       answer: "Sí, tomamos trabajos de cocinas comerciales además de domicilios y consorcios."
+      icon: "akar-icons:utensils"
     - question: "¿Qué pasa si la cañería está rota y no se puede destapar?"
       answer: "Lo informamos en el momento e indicamos el tramo aproximado donde está la rotura, para que la reparación se haga sobre un punto identificado."
+      icon: "mdi:pipe-leak"
     - question: "¿El presupuesto tiene costo?"
       answer: "No. Si hace falta ir al domicilio a ver el trabajo, el presupuesto es sin cargo."
+      icon: "akar-icons:file"
 ---
 
 ## Por qué se tapan las cañerías en Palermo
