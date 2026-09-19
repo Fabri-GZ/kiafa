@@ -1,0 +1,58 @@
+---
+// Presentational only, per bodySections registry field "bodyServices".
+// Deliberately the lightest-density section on the page: one Lucide icon
+// (Check) repeated across every item, no card description, three columns
+// at lg. This is the density contrast against #servicios (see
+// Services.astro: two columns, one icon per service, full description).
+import { Check } from "@lucide/astro";
+
+interface Props {
+  heading: string;
+  lead?: string[];
+  items: string[];
+  note?: string[];
+}
+
+const { heading, lead, items, note } = Astro.props as Props;
+---
+
+<section id="que-destapamos" class="relative py-24 bg-white scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold text-slate-900
+               view-animate-single animate-fade-in-up animate-duration-500
+               animate-range-[entry_10%_contain_10%]"
+      >
+        {heading}
+      </h2>
+      {lead && lead.map((paragraph) => (
+        <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto text-center">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {items.map((item) => (
+        <li
+          class="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-5
+                 transition-colors duration-200 hover:border-blue-300 hover:bg-blue-50/40
+                 view-animate-single animate-fade-in-up animate-duration-400
+                 animate-range-[entry_10%_contain_10%]"
+        >
+          <span class="shrink-0 w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700">
+            <Check class="w-5 h-5" />
+          </span>
+          <span class="text-base font-semibold text-slate-900">{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    {note && note.map((paragraph) => (
+      <p class="mt-10 text-lg text-slate-600 max-w-3xl mx-auto text-center">
+        {paragraph}
+      </p>
+    ))}
+  </div>
+</section>

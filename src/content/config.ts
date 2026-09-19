@@ -16,9 +16,19 @@ const services = defineCollection({
     ]),
   }),
 });
+// Paragraphs of plain prose framing a structured body section. Plain text
+// only: these are not rendered as markdown. A paragraph carrying inline
+// emphasis stays in the markdown body instead.
+const proseBlock = z.array(z.string().min(1)).min(1);
+
+const termItem = z.object({
+  term: z.string().min(1),
+  description: z.string().min(1),
+});
+
 const locations = defineCollection({
   schema: z.object({
-    title: z.string(),                 
+    title: z.string(),
     seoTitle: z.string(),
     seoDescription: z.string(),
     seoKeywords: z.string().optional(),
@@ -34,6 +44,47 @@ const locations = defineCollection({
     // to emit <lastmod>. Omitted entirely when this field is absent — never
     // falls back to the build date. Bump only on a real content change.
     updatedAt: z.string().date().optional(),
+
+    // Structured halves of a barrio body, rendered by the Body*.astro
+    // components (src/components/BodyServices.astro, BodyMethod.astro,
+    // BodyPrevention.astro, BodyFaq.astro). Order on the page and in the
+    // navbar dropdown is fixed by BODY_SECTIONS in src/lib/bodySections.ts,
+    // not by key order here. All optional: a location with none of them
+    // renders exactly as before this field set was added.
+    bodyServices: z.object({
+      heading: z.string().min(1),
+      lead: proseBlock.optional(),
+      items: z.array(z.string().min(1)).min(1),
+      note: proseBlock.optional(),
+    }).optional(),
+
+    // .max(2) because BodyMethod.astro maps its two items onto a fixed
+    // two-icon array (Route, Cone); a third item would have no icon. The
+    // cap makes that a parse error at build instead of an undefined icon
+    // at render.
+    bodyMethod: z.object({
+      heading: z.string().min(1),
+      lead: proseBlock.optional(),
+      items: z.array(termItem).min(1).max(2),
+      note: proseBlock.optional(),
+    }).optional(),
+
+    bodyPrevention: z.object({
+      heading: z.string().min(1),
+      lead: proseBlock.optional(),
+      items: z.array(termItem).min(1),
+      note: proseBlock.optional(),
+    }).optional(),
+
+    bodyFaq: z.object({
+      heading: z.string().min(1),
+      lead: proseBlock.optional(),
+      items: z.array(z.object({
+        question: z.string().min(1),
+        answer: z.string().min(1),
+      })).min(1),
+      note: proseBlock.optional(),
+    }).optional(),
   }),
 });
 
