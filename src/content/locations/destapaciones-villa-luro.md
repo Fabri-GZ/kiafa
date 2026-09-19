@@ -71,7 +71,7 @@ Trabajamos en casas, PH, departamentos, comercios y consorcios del barrio:
 - Columnas en los edificios de las avenidas
 
 Contamos además con servicio de video inspección, que sirve para ubicar en qué tramo
-la cañería tiene una fisura antes de decidir dónde abrir.
+la cañería tiene una rotura antes de decidir dónde abrir.
 
 ## Cómo elegimos el cable y la punta
 

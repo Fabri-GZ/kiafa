@@ -21,7 +21,7 @@ bodyServices:
     - "Rejillas y piletas de patio"
     - "Columnas en edificios"
   note:
-    - "Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto exacto la cañería tiene una fisura, contamos además con servicio de video inspección."
+    - "Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto exacto la cañería tiene una rotura, contamos además con servicio de video inspección."
 bodyMethod:
   heading: "El cable correcto para cada cañería"
   lead:
