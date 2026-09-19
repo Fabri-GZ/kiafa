@@ -8,6 +8,58 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Palermo"
 intro: "Brindamos servicio de destapaciones en Palermo, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Palermo y zonas cercanas, en domicilios, comercios y consorcios."
+bodyServices:
+  heading: "Qué destapamos en Palermo"
+  lead:
+    - "Trabajamos en domicilios, comercios y consorcios de todo el barrio:"
+  items:
+    - "Ramales internos"
+    - "Cloacas y cámaras de inspección"
+    - "Pluviales y desagües de lluvia"
+    - "Baños, inodoros y piletas"
+    - "Cocinas, incluidas cocinas comerciales"
+    - "Rejillas y piletas de patio"
+    - "Columnas en edificios"
+  note:
+    - "Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto exacto la cañería tiene una fisura, contamos además con servicio de video inspección."
+bodyMethod:
+  heading: "El cable correcto para cada cañería"
+  lead:
+    - "Trabajamos siempre con máquina de destapación a resorte. La máquina es la misma para todos los trabajos. El resultado depende del cable que se elige y de la punta que se le coloca."
+    - "Los cables vienen en distintos calibres, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el calibre cuando corresponde, aunque el trabajo lleve más tiempo."
+  items:
+    - term: "Sonda"
+      description: "se usa para recuperar lo que quedó dentro del caño, como un trapo o cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo."
+    - term: "Punta cónica"
+      description: "sirve para que la cañería recupere su diámetro interno original. Avanza triturando lo que encuentra: raíces, grasa adherida, incrustación o restos de obra."
+  note:
+    - "Esa decisión se toma en el lugar, mirando la cañería. De ahí depende que el caño quede destapado y en buen estado."
+bodyPrevention:
+  heading: "Qué no conviene tirar por el inodoro ni por la pileta"
+  lead:
+    - "Buena parte de las destapaciones que hacemos podrían evitarse. Estos son los elementos que encontramos con más frecuencia dentro de las cañerías:"
+  items:
+    - term: "Toallitas húmedas"
+      description: "aunque el envase diga que son descartables, no se desarman en el agua. Se enganchan en cualquier irregularidad del caño y ahí empieza el tapón."
+    - term: "Toallitas femeninas y pañales"
+      description: "absorben agua y aumentan de tamaño dentro de la cañería. Son una de las causas más comunes de obstrucción total."
+    - term: "Aceite de cocina"
+      description: "tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. Va cerrando el diámetro de a poco, hasta que un día no pasa más. Conviene juntarlo en un recipiente y descartarlo con la basura."
+    - term: "Restos de obra"
+      description: "mezcla, cal, escombro y material de descarte volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver."
+  note:
+    - "Un tapón en una cañería sana se destapa rápido. El problema aparece cuando el caño ya arrastra años de incrustación acumulada."
+bodyFaq:
+  heading: "Preguntas frecuentes sobre destapaciones en Palermo"
+  items:
+    - question: "¿Trabajan en PH y casas antiguas con pasillo?"
+      answer: "Sí. Es una de las tipologías más comunes del barrio. El acceso reducido y las cañerías de hierro fundido original son justamente los casos donde importa elegir bien el calibre del cable."
+    - question: "¿Atienden cocinas de restaurantes y locales gastronómicos?"
+      answer: "Sí, tomamos trabajos de cocinas comerciales además de domicilios y consorcios."
+    - question: "¿Qué pasa si la cañería está rota y no se puede destapar?"
+      answer: "Lo informamos en el momento e indicamos el tramo aproximado donde está la rotura, para que la reparación se haga sobre un punto identificado."
+    - question: "¿El presupuesto tiene costo?"
+      answer: "No. Si hace falta ir al domicilio a ver el trabajo, el presupuesto es sin cargo."
 ---
 
 ## Por qué se tapan las cañerías en Palermo
@@ -35,44 +87,6 @@ igual.
 En las construcciones nuevas el origen es otro. Ahí lo más común son los restos de
 obra que quedaron en la cañería desde el día uno, como mezcla, escombro y material de
 descarte, que aparecen cuando el sistema empieza a usarse de verdad.
-
-## Qué destapamos en Palermo
-
-Trabajamos en domicilios, comercios y consorcios de todo el barrio:
-
-- Ramales internos
-- Cloacas y cámaras de inspección
-- Pluviales y desagües de lluvia
-- Baños, inodoros y piletas
-- Cocinas, incluidas cocinas comerciales
-- Rejillas y piletas de patio
-- Columnas en edificios
-
-Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto
-exacto la cañería tiene una fisura, contamos además con servicio de video inspección.
-
-## El cable correcto para cada cañería
-
-Trabajamos siempre con máquina de destapación a resorte. La máquina es la misma para
-todos los trabajos. El resultado depende del cable que se elige y de la punta que se
-le coloca.
-
-Los cables vienen en distintos calibres, y elegir mal no es un detalle menor. Un cable
-grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared
-del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo
-primero es reconocer con qué diámetro se está trabajando y bajar el calibre cuando
-corresponde, aunque el trabajo lleve más tiempo.
-
-Las puntas cumplen funciones distintas:
-
-- **Sonda**: se usa para recuperar lo que quedó dentro del caño, como un trapo o
-  cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo.
-- **Punta cónica**: sirve para que la cañería recupere su diámetro interno original.
-  Avanza triturando lo que encuentra: raíces, grasa adherida, incrustación o restos
-  de obra.
-
-Esa decisión se toma en el lugar, mirando la cañería. De ahí depende que el caño
-quede destapado y en buen estado.
 
 ## Cuando la cañería está rota
 
@@ -105,39 +119,3 @@ verlo: **el presupuesto en el domicilio es sin cargo**.
 Trabajamos en la zona todos los días, así que coordinamos el turno a la brevedad
 según la disponibilidad de la jornada. Atendemos casas particulares, departamentos,
 comercios y consorcios.
-
-## Qué no conviene tirar por el inodoro ni por la pileta
-
-Buena parte de las destapaciones que hacemos podrían evitarse. Estos son los
-elementos que encontramos con más frecuencia dentro de las cañerías:
-
-- **Toallitas húmedas**: aunque el envase diga que son descartables, no se desarman en
-  el agua. Se enganchan en cualquier irregularidad del caño y ahí empieza el tapón.
-- **Toallitas femeninas y pañales**: absorben agua y aumentan de tamaño dentro de la
-  cañería. Son una de las causas más comunes de obstrucción total.
-- **Aceite de cocina**: tirado por la pileta parece líquido, pero se enfría dentro del
-  caño y se solidifica pegado a la pared. Va cerrando el diámetro de a poco, hasta que
-  un día no pasa más. Conviene juntarlo en un recipiente y descartarlo con la basura.
-- **Restos de obra**: mezcla, cal, escombro y material de descarte volcados por una
-  pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los
-  tapones más difíciles de resolver.
-
-Un tapón en una cañería sana se destapa rápido. El problema aparece cuando el caño
-ya arrastra años de incrustación acumulada.
-
-## Preguntas frecuentes sobre destapaciones en Palermo
-
-**¿Trabajan en PH y casas antiguas con pasillo?**
-Sí. Es una de las tipologías más comunes del barrio. El acceso reducido y las cañerías
-de hierro fundido original son justamente los casos donde importa elegir bien el
-calibre del cable.
-
-**¿Atienden cocinas de restaurantes y locales gastronómicos?**
-Sí, tomamos trabajos de cocinas comerciales además de domicilios y consorcios.
-
-**¿Qué pasa si la cañería está rota y no se puede destapar?**
-Lo informamos en el momento e indicamos el tramo aproximado donde está la rotura, para
-que la reparación se haga sobre un punto identificado.
-
-**¿El presupuesto tiene costo?**
-No. Si hace falta ir al domicilio a ver el trabajo, el presupuesto es sin cargo.
