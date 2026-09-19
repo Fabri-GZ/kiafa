@@ -1,8 +1,12 @@
 ---
-const { icon: Icon, title, description } = Astro.props;
+// cardClass defaults to bg-slate-50 so existing call sites (Services.astro
+// passes nothing) render unchanged. BodyMethod.astro overrides it to
+// bg-white when the card sits on a bg-slate-50 section band, so the card's
+// own background doesn't vanish into the band behind it.
+const { icon: Icon, title, description, cardClass = "bg-slate-50" } = Astro.props;
 ---
 
-<div class="service-card group rounded-2xl border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+<div class={`service-card group rounded-2xl border border-slate-200 ${cardClass} p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}>
     <div class="flex items-start gap-6">
       <div class="shrink-0 w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-700 transition group-hover:bg-blue-600 group-hover:text-white">
         <Icon class="w-7 h-7" />

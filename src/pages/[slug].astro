@@ -10,8 +10,13 @@ import WhatsappButton from '../components/WhatsappButton.astro';
 import Footer from '../components/Footer.astro';
 import LocationInfo from '../components/LocationInfo.astro';
 import NearbyAreas from '../components/NearbyAreas.astro';
+import BodyServices from '../components/BodyServices.astro';
+import BodyMethod from '../components/BodyMethod.astro';
+import BodyPrevention from '../components/BodyPrevention.astro';
+import BodyFaq from '../components/BodyFaq.astro';
 import { getCollection } from "astro:content";
-import { serviceNode, breadcrumbNode } from "../lib/schema";
+import { serviceNode, breadcrumbNode, faqNode } from "../lib/schema";
+import { deriveBodySections } from "../lib/bodySections";
 
 export const prerender = true;
 
@@ -45,6 +50,10 @@ const {data} = location;
 const { title, seoTitle, seoDescription, seoKeywords, h1, intro, span, zoneDescription} = data;
 const { Content } = await location.render();
 const hasBody = (location.body ?? "").trim().length > 0;
+// Consumed by the navbar dropdown starting slice 5. Computed here so
+// slice 5 never has to edit this file's data-derivation block, only its
+// <Navbar /> call.
+const bodySections = deriveBodySections(data as any);
 
 const canonical = `https://kiafadestapaciones.com.ar/${location.slug}`;
 
@@ -53,6 +62,9 @@ const keywords = seoKeywords || `destapaciones ${title.toLowerCase()}, destapado
 const schemaNodes = [
     serviceNode({ canonical, areaName: title }),
     breadcrumbNode({ canonical, name: title }),
+    // Appended last and only when bodyFaq is present, so the graph emitted
+    // for pages without it stays byte-identical to before this change.
+    ...(data.bodyFaq ? [faqNode({ canonical, faqs: data.bodyFaq.items })] : []),
 ];
 ---
 
@@ -62,12 +74,27 @@ const schemaNodes = [
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
-        {hasBody && (
-            <section id="location-body" class="relative py-24 bg-slate-50">
-                <div class="max-w-3xl mx-auto px-6">
-                    <Content />
-                </div>
-            </section>
+        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq) && (
+            <>
+                {hasBody && (
+                    <section id="location-body" class="relative py-24 bg-slate-50">
+                        <div class="max-w-3xl mx-auto px-6">
+                            <Content />
+                        </div>
+                    </section>
+                )}
+                {/* hasBody does NOT gate the sections below: each is independently
+                    gated on its own field. Order below is the contract of
+                    BODY_SECTIONS in src/lib/bodySections.ts. The outer guard above
+                    exists only so that when every one of these is absent (all 29
+                    control pages today), this whole block collapses to a single
+                    false expression instead of five, keeping their HTML output
+                    byte-identical to before this field set existed. */}
+                {data.bodyServices   && <BodyServices   {...data.bodyServices} />}
+                {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
+                {data.bodyPrevention && <BodyPrevention {...data.bodyPrevention} />}
+                {data.bodyFaq        && <BodyFaq        {...data.bodyFaq} />}
+            </>
         )}
         <Services />
         <FAQ />

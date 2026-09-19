@@ -135,8 +135,10 @@ export function breadcrumbNode({
   };
 }
 
-// Used starting in slice 2, when localFaqs is populated. Stubbed here so
-// schema.ts's public surface is stable across both slices.
+// Wired into [slug].astro's schemaNodes only when a location's bodyFaq
+// field is present, so pages without it emit the same graph as before
+// (serviceNode + breadcrumbNode only). See src/content/config.ts for the
+// bodyFaq shape this consumes.
 export function faqNode({
   canonical,
   faqs,
