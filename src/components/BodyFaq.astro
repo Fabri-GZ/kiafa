@@ -5,8 +5,28 @@
 // rather than "fixed" here). Uses id="faq-barrio" and item ids
 // "${index}-faq-barrio" so nothing collides with #faq or its
 // servicios-faq/pago-faq/presupuesto-faq/clientes-faq ids on the same
-// page. No per-item icon chip — that omission is the density difference
-// against #faq, which carries one Lucide icon per question.
+// page.
+//
+// Per #999 point 6, each question now gets a 48px bg-blue-100 icon chip
+// (without it the section read "too sober") and the chevron moves to the
+// right of the question text. First item's blue soft-shadow already comes
+// from the wrapper's `accordion-item-active:shadow-blue-500/20`, unchanged.
+//
+// Icon assignment is positional, per #998's fixed 4-topic mapping (PH and
+// older houses, commercial kitchens, broken pipe, quote), because both
+// barrios that populate this field today (palermo, belgrano) carry exactly
+// 4 items. Palermo's 4 questions match these topics in this exact order;
+// belgrano's diverge in wording (its own local angle on the same 4 slots)
+// but reuse the same positional icons rather than inventing a fifth rule.
+import { Icon } from "astro-icon/components";
+
+const FAQ_ICONS = [
+  "akar-icons:home",
+  "akar-icons:utensils",
+  "mdi:pipe-leak",
+  "akar-icons:file",
+] as const;
+
 interface Props {
   heading: string;
   lead?: string[];
@@ -51,9 +71,16 @@ const { heading, lead, items, note } = Astro.props as Props;
               aria-controls={`${itemId}-collapse`}
               aria-expanded={isFirst ? "true" : "false"}
             >
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700">
+                <Icon name={FAQ_ICONS[index % FAQ_ICONS.length]} class="w-5 h-5" />
+              </span>
               <span class="flex-1 text-lg font-semibold text-slate-900">
                 {item.question}
               </span>
+              <Icon
+                name="akar-icons:chevron-down"
+                class="w-5 h-5 shrink-0 text-slate-400 transition-transform duration-300 accordion-item-active:rotate-180"
+              />
             </button>
 
             <div
