@@ -12,25 +12,20 @@
 // right of the question text. First item's blue soft-shadow already comes
 // from the wrapper's `accordion-item-active:shadow-blue-500/20`, unchanged.
 //
-// Icon assignment is positional, per #998's fixed 4-topic mapping (PH and
-// older houses, commercial kitchens, broken pipe, quote), because both
-// barrios that populate this field today (palermo, belgrano) carry exactly
-// 4 items. Palermo's 4 questions match these topics in this exact order;
-// belgrano's diverge in wording (its own local angle on the same 4 slots)
-// but reuse the same positional icons rather than inventing a fifth rule.
+// Icon is content-driven per item (#1003 fix), same pattern as
+// BodyCauses.astro: each barrio's questions differ in topic and count, so
+// an icon assigned by array position desyncs the moment a barrio's
+// questions don't match the topic order another barrio happened to use.
+// The icon travels with its question in frontmatter instead. Falls back to
+// a generic icon only for a legacy item that predates the `icon` field.
 import { Icon } from "astro-icon/components";
 
-const FAQ_ICONS = [
-  "akar-icons:home",
-  "akar-icons:utensils",
-  "mdi:pipe-leak",
-  "akar-icons:file",
-] as const;
+const FALLBACK_ICON = "akar-icons:question";
 
 interface Props {
   heading: string;
   lead?: string[];
-  items: { question: string; answer: string }[];
+  items: { question: string; answer: string; icon?: string }[];
   note?: string[];
 }
 
@@ -72,7 +67,7 @@ const { heading, lead, items, note } = Astro.props as Props;
               aria-expanded={isFirst ? "true" : "false"}
             >
               <span class="shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700">
-                <Icon name={FAQ_ICONS[index % FAQ_ICONS.length]} class="w-7 h-7" />
+                <Icon name={item.icon ?? FALLBACK_ICON} class="w-7 h-7" />
               </span>
               <span class="flex-1 text-lg font-semibold text-slate-900">
                 {item.question}

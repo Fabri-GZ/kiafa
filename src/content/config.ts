@@ -85,9 +85,14 @@ const locations = defineCollection({
     bodyFaq: z.object({
       heading: z.string().min(1),
       lead: proseBlock.optional(),
+      // `icon` is per-item, not positional (#1003 fix): each barrio's
+      // questions differ in topic and count, so an icon assigned by array
+      // index desyncs across barrios. Optional so a legacy entry without
+      // icons still parses; BodyFaq.astro falls back to a generic icon.
       items: z.array(z.object({
         question: z.string().min(1),
         answer: z.string().min(1),
+        icon: z.string().min(1).optional(),
       })).min(1),
       note: proseBlock.optional(),
     }).optional(),
