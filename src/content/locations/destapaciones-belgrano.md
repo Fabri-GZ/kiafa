@@ -8,6 +8,49 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Belgrano"
 intro: "Brindamos servicio de destapaciones en Belgrano, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Belgrano y zonas cercanas, en domicilios, comercios y consorcios."
+bodyServices:
+  heading: "Qué destapamos en Belgrano"
+  lead:
+    - "Trabajamos en casas, departamentos, comercios y consorcios de todo el barrio:"
+  items:
+    - "Columnas en edificios"
+    - "Cloacas y cámaras de inspección"
+    - "Ramales internos"
+    - "Pluviales, rejillas y desagües de patio"
+    - "Baños, inodoros y piletas"
+    - "Cocinas, incluidas cocinas comerciales"
+  note:
+    - "Contamos además con servicio de video inspección, que en edificios sirve sobre todo para ubicar en qué piso o en qué tramo de la columna está el problema antes de decidir dónde abrir."
+bodyMethod:
+  heading: "Cómo elegimos el cable y la punta"
+  lead:
+    - "Trabajamos siempre con máquina de destapación a resorte, y la máquina es la misma para todos los trabajos. El resultado depende del cable que se elige y de la punta que se le coloca."
+    - "Los cables vienen en distintos calibres. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina, y elegir mal el calibre arruina la cañería en lugar de destaparla."
+  items:
+    - term: "La sonda"
+      description: "Sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
+    - term: "La punta cónica"
+      description: "Avanza triturando raíces, grasa, sarro o restos de obra, y deja la cañería con su diámetro interno original."
+bodyPrevention:
+  heading: "Lo que no conviene tirar en un edificio"
+  lead:
+    - "En una casa, un tapón queda puertas adentro. En un edificio de Belgrano la descarga de cada departamento va a la misma columna, así que lo que tira un vecino termina afectando a toda la línea."
+  items:
+    - term: "Las toallitas húmedas"
+      description: "Son el caso más común. Aunque el envase diga que son descartables, no se desarman en el agua y se enganchan en cualquier irregularidad del caño. Lo mismo pasa con las toallitas femeninas y los pañales, que absorben agua y aumentan de tamaño adentro de la cañería."
+    - term: "El aceite de cocina"
+      description: "Es el más silencioso de los tres. Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. En una columna compartida ese depósito se suma al de todos los pisos, y es una de las causas principales de que una línea entera termine tapada. Conviene juntarlo en un recipiente y descartarlo con la basura."
+bodyFaq:
+  heading: "Preguntas frecuentes sobre destapaciones en Belgrano"
+  items:
+    - question: "¿Hacen destapación de columnas en edificios?"
+      answer: "Sí. Es uno de los trabajos más frecuentes en las torres del barrio. Hay que avisar al consorcio con tiempo, porque se necesita entrar a los departamentos para trabajar la columna piso por piso."
+    - question: "¿Atienden consorcios y administraciones?"
+      answer: "Sí, además de casas particulares y departamentos. Si la administración lo pide, dejamos indicado el estado en que quedó la cañería."
+    - question: "¿Qué hacen con las raíces en las casas de Belgrano R?"
+      answer: "La máquina las tritura y la cañería recupera su diámetro interno. Si además el caño está partido, lo informamos para que se repare el tramo."
+    - question: "¿Cobran el presupuesto en un edificio?"
+      answer: "No. Si hace falta ir a ver las cañerías antes de dar un precio, la visita es sin cargo, tanto en un departamento como en un espacio común del consorcio."
 ---
 
 ## Por qué se tapan las cañerías en Belgrano
@@ -76,38 +119,6 @@ La segunda son los pluviales. Las rejillas de patio, las bocas de desagüe y los
 de lluvia acumulan tierra, hojas y arena. Es una obstrucción que casi nunca se nota
 hasta que llueve fuerte, y en ese momento ya es tarde.
 
-## Qué destapamos en Belgrano
-
-Trabajamos en casas, departamentos, comercios y consorcios de todo el barrio:
-
-- Columnas en edificios
-- Cloacas y cámaras de inspección
-- Ramales internos
-- Pluviales, rejillas y desagües de patio
-- Baños, inodoros y piletas
-- Cocinas, incluidas cocinas comerciales
-
-Contamos además con servicio de video inspección, que en edificios sirve sobre todo
-para ubicar en qué piso o en qué tramo de la columna está el problema antes de
-decidir dónde abrir.
-
-## Cómo elegimos el cable y la punta
-
-Trabajamos siempre con máquina de destapación a resorte, y la máquina es la misma para
-todos los trabajos. El resultado depende del cable que se elige y de la punta que se
-le coloca.
-
-Los cables vienen en distintos calibres. Un cable grueso dentro de una cañería de
-diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por
-eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de
-edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina,
-y elegir mal el calibre arruina la cañería en lugar de destaparla.
-
-Con las puntas pasa algo parecido. La sonda sirve para enganchar y sacar lo que quedó
-adentro, como un trapo o cualquier objeto que se pueda rescatar. La punta cónica
-avanza triturando raíces, grasa, sarro o restos de obra, y deja la cañería con su
-diámetro interno original.
-
 ## Cuando la cañería está rota
 
 No toda obstrucción se destapa. Si el caño está roto o fisurado, la máquina puede
@@ -117,23 +128,6 @@ En esos casos dejamos identificado que la cañería está rota y en qué tramo a
 está la rotura, para que la reparación se haga sobre un punto concreto en lugar de
 abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una
 columna significa romper mampostería en varios pisos.
-
-## Lo que no conviene tirar en un edificio
-
-En una casa, un tapón queda puertas adentro. En un edificio de Belgrano la descarga de
-cada departamento va a la misma columna, así que lo que tira un vecino termina
-afectando a toda la línea.
-
-Las toallitas húmedas son el caso más común. Aunque el envase diga que son
-descartables, no se desarman en el agua y se enganchan en cualquier irregularidad del
-caño. Lo mismo pasa con las toallitas femeninas y los pañales, que absorben agua y
-aumentan de tamaño adentro de la cañería.
-
-El aceite de cocina es el más silencioso de los tres. Tirado por la pileta parece líquido,
-pero se enfría dentro del caño y se solidifica pegado a la pared. En una columna
-compartida ese depósito se suma al de todos los pisos, y es una de las causas
-principales de que una línea entera termine tapada. Conviene juntarlo en un recipiente
-y descartarlo con la basura.
 
 ## Cómo cotizamos y coordinamos el turno
 
@@ -149,22 +143,3 @@ accede.
 Estamos en la zona a diario, así que el turno se coordina a la brevedad según la
 disponibilidad de la jornada. Trabajamos tanto en unidades particulares como en
 espacios comunes de consorcios y en locales del barrio.
-
-## Preguntas frecuentes sobre destapaciones en Belgrano
-
-**¿Hacen destapación de columnas en edificios?**
-Sí. Es uno de los trabajos más frecuentes en las torres del barrio. Hay que avisar al
-consorcio con tiempo, porque se necesita entrar a los departamentos para trabajar la
-columna piso por piso.
-
-**¿Atienden consorcios y administraciones?**
-Sí, además de casas particulares y departamentos. Si la administración lo pide,
-dejamos indicado el estado en que quedó la cañería.
-
-**¿Qué hacen con las raíces en las casas de Belgrano R?**
-La máquina las tritura y la cañería recupera su diámetro interno. Si además el caño
-está partido, lo informamos para que se repare el tramo.
-
-**¿Cobran el presupuesto en un edificio?**
-No. Si hace falta ir a ver las cañerías antes de dar un precio, la visita es sin
-cargo, tanto en un departamento como en un espacio común del consorcio.
