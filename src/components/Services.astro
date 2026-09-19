@@ -13,6 +13,19 @@ const iconMap = {
   "tv-minimal-play": TvMinimalPlay,
   "building-2": Building2,
 };
+
+// Full literal strings, one per card row. Tailwind v4 only generates a class
+// it finds as a complete literal in a scanned file — an index-built class
+// like `animate-delay-${index * 100}` never compiles (see #990). Cards past
+// the array length reuse the last entry instead of breaking.
+const CARD_RANGE = [
+  "animate-range-[entry_15%_contain_35%]",
+  "animate-range-[entry_15%_contain_35%]",
+  "animate-range-[entry_20%_contain_35%]",
+  "animate-range-[entry_20%_contain_35%]",
+  "animate-range-[entry_24%_contain_35%]",
+  "animate-range-[entry_24%_contain_35%]",
+];
 ---
 
 <section
@@ -28,7 +41,7 @@ const iconMap = {
           view-animate-single
           animate-fade-in-up
           animate-duration-500
-          animate-range-[entry_15%_contain_50%]
+          animate-range-[entry_15%_contain_35%]
         "
       >
         Servicios
@@ -40,8 +53,7 @@ const iconMap = {
           view-animate-single
           animate-fade-in-up
           animate-duration-500
-          animate-delay-100
-          animate-range-[entry_20%_contain_55%]
+          animate-range-[entry_18%_contain_35%]
         "
       >
         Brindamos soluciones profesionales en destapaciones y mantenimiento de cañerías en Capital Federal, Zona Norte, Sur y Oeste.
@@ -60,8 +72,7 @@ const iconMap = {
               view-animate-single
               animate-slide-up-fade
               animate-duration-400
-              animate-range-[entry_20%_contain_30%]
-              animate-delay-${index * 100}
+              ${CARD_RANGE[index] ?? CARD_RANGE.at(-1)}
             `}
           >
             <ServiceCard
