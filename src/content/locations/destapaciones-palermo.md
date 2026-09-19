@@ -17,7 +17,7 @@ bodyServices:
 bodyMethod:
   heading: "El cable correcto para cada cañería"
   lead:
-    - "Trabajamos siempre con máquina de destapación a resorte. La máquina es la misma para todos los trabajos. El resultado depende del cable que se elige y de la punta que se le coloca."
+    - "La máquina de destapación es siempre la misma. **Lo que se elige para cada trabajo es el cable y la punta**, dependiendo del estado y el diámetro de la cañería."
     - "Los cables vienen en distintos calibres, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el calibre cuando corresponde, aunque el trabajo lleve más tiempo."
   items:
     - term: "Sonda"
