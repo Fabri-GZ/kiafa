@@ -2,6 +2,7 @@
 import { defineConfig, envField } from 'astro/config';
 import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
+import icon from 'astro-icon';
 
 
 // https://astro.build/config
@@ -11,7 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [],
+  integrations: [icon()],
   site: "https://kiafadestapaciones.com.ar",
   env: {
     schema: {
