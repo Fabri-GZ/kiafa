@@ -14,6 +14,7 @@ import BodyServices from '../components/BodyServices.astro';
 import BodyMethod from '../components/BodyMethod.astro';
 import BodyPrevention from '../components/BodyPrevention.astro';
 import BodyFaq from '../components/BodyFaq.astro';
+import BodyCauses from '../components/BodyCauses.astro';
 import { getCollection } from "astro:content";
 import { serviceNode, breadcrumbNode, faqNode } from "../lib/schema";
 import { deriveBodySections } from "../lib/bodySections";
@@ -74,7 +75,7 @@ const schemaNodes = [
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
-        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq) && (
+        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq || data.bodyCauses) && (
             <>
                 {hasBody && (
                     <section id="location-body" class="relative py-24 bg-slate-50">
@@ -91,6 +92,7 @@ const schemaNodes = [
                     false expression instead of five, keeping their HTML output
                     byte-identical to before this field set existed. */}
                 {data.bodyServices   && <BodyServices   {...data.bodyServices} />}
+                {data.bodyCauses     && <BodyCauses     {...data.bodyCauses} />}
                 {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
                 {data.bodyPrevention && <BodyPrevention {...data.bodyPrevention} />}
                 {data.bodyFaq        && <BodyFaq        {...data.bodyFaq} />}

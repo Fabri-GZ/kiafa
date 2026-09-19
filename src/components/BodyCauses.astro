@@ -1,0 +1,80 @@
+---
+// Presentational only, per bodySections registry field "bodyCauses"
+// ("Por qué se tapan"). New component per #999 point 1 — not wired into
+// BODY_SECTIONS/the navbar dropdown on purpose: #1000 decision 3 excludes
+// this section from navigation, it's reading material found by scrolling.
+//
+// Exactly 3 cards, one per construction type, schema-enforced
+// (z.array(...).length(3) in src/content/config.ts). Each card: a 56px
+// bg-blue-100 icon chip, an uppercase blue-600 eyebrow, a bold title, the
+// cause paragraph, then — separated by a border-top divider — a secondary
+// data line with its own slate-500 icon (e.g. "raíces por el arbolado").
+import { Icon } from "astro-icon/components";
+
+interface CauseItem {
+  icon: string;
+  eyebrow: string;
+  title: string;
+  cause: string;
+  dataIcon: string;
+  dataText: string;
+}
+
+interface Props {
+  heading: string;
+  lead?: string[];
+  items: CauseItem[];
+  note?: string[];
+}
+
+const { heading, lead, items, note } = Astro.props as Props;
+---
+
+<section id="por-que-se-tapan" class="relative py-24 bg-white scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-slate-900
+               view-animate-single animate-fade-in-up animate-duration-500
+               animate-range-[entry_10%_contain_10%]"
+      >
+        {heading}
+      </h2>
+      {lead && lead.map((paragraph) => (
+        <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto text-center">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div
+          class="rounded-2xl bg-slate-50 border border-slate-200 p-7
+                 view-animate-single animate-fade-in-up animate-duration-400
+                 animate-range-[entry_10%_contain_10%]"
+        >
+          <span class="inline-flex w-14 h-14 rounded-2xl bg-blue-100 items-center justify-center text-blue-700">
+            <Icon name={item.icon} class="w-7 h-7" />
+          </span>
+          <p class="mt-5 text-sm font-bold text-blue-600 uppercase tracking-[.06em]">
+            {item.eyebrow}
+          </p>
+          <h3 class="mt-2 text-[22px] font-bold text-slate-900">{item.title}</h3>
+          <p class="mt-3 text-base text-slate-600 leading-relaxed">{item.cause}</p>
+
+          <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
+            <Icon name={item.dataIcon} class="w-[22px] h-[22px] text-slate-500 shrink-0" />
+            <span class="text-sm text-slate-500">{item.dataText}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {note && note.map((paragraph) => (
+      <p class="mt-10 text-lg text-slate-600 max-w-3xl mx-auto text-center">
+        {paragraph}
+      </p>
+    ))}
+  </div>
+</section>
