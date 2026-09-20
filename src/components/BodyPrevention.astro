@@ -23,12 +23,12 @@ interface Props {
 const { heading, lead, items, note } = Astro.props as Props;
 ---
 
-<section id="prevencion" class="relative py-24 bg-white scroll-mt-24">
+<section id="prevencion" class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
         class="text-4xl md:text-5xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                animate-range-[entry_10%_contain_10%]"
       >
         {heading}
@@ -43,7 +43,7 @@ const { heading, lead, items, note } = Astro.props as Props;
     <ol class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
       {items.map((item, i) => (
         <li
-          class="flex items-start gap-5 view-animate-single animate-[slide-in-left-strong]
+          class="flex items-start gap-5 view-animate-single animate-fill-both animate-[slide-in-left-strong]
                  animate-duration-500 animate-range-[entry_10%_contain_10%]"
         >
           <span class="shrink-0 w-12 text-4xl font-extrabold text-blue-600 tabular-nums leading-none">

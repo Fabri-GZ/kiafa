@@ -4,8 +4,10 @@
 // wired into BODY_SECTIONS/the navbar dropdown, per #1000 decision 3
 // (reading material, not a navigation destination).
 //
-// Two-column intro (H2 + 2 paragraphs, photo placeholder) followed by two
-// comparative excavation-cross-section cards. The closing callout
+// Centred intro (H2 + 2 paragraphs) followed by two comparative
+// excavation-cross-section cards. The photo slot that used to sit beside the
+// intro is gone: there is no real photo yet, and a dashed placeholder reads as
+// a broken page. The closing callout
 // ("ahorra trabajo de albañilería...") is deliberately NOT rendered here —
 // Fabri asked it removed (#999) — its content backfill in slice 13 drops
 // the equivalent sentence from source prose, not just this component.
@@ -18,44 +20,37 @@
 interface Props {
   heading: string;
   paragraphs: string[];
-  photoCaption: string;
+  // `photoCaption` is intentionally absent here. It still exists in the content
+  // schema so its copy survives, but nothing renders it while there is no photo.
   diagramLabels: { withoutTramo: string; withTramo: string };
 }
 
-const { heading, paragraphs, photoCaption, diagramLabels } = Astro.props as Props;
+const { heading, paragraphs, diagramLabels } = Astro.props as Props;
 ---
 
-<section id="caneria-rota" class="relative py-24 bg-slate-50 scroll-mt-24">
+<section id="caneria-rota" class="relative py-14 md:py-20 bg-slate-50 scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2
-          class="text-[46px] leading-tight font-extrabold text-slate-900
-                 view-animate-single animate-fade-in-up animate-duration-500
-                 animate-range-[entry_10%_contain_10%]"
-        >
-          {heading}
-        </h2>
-        {paragraphs.map((paragraph) => (
-          <p class="mt-5 text-lg text-slate-600 leading-relaxed">{paragraph}</p>
-        ))}
-      </div>
-
-      <div
-        class="h-[300px] rounded-2xl border-2 border-dashed border-slate-300
-               bg-white flex items-center justify-center
-               view-animate-single animate-fade-in-up animate-duration-500
+    {/* Single centred column: the photo slot that used to sit on the right was
+        removed because there is no real photo yet, and a dashed placeholder
+        reads as a broken page to a visitor. `photoCaption` stays in the content
+        schema so the copy is not lost; restore a two-column grid here when a
+        real image exists. */}
+    <div class="max-w-3xl mx-auto text-center">
+      <h2
+        class="text-[46px] leading-tight font-extrabold text-slate-900
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                animate-range-[entry_10%_contain_10%]"
       >
-        <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">
-          {photoCaption}
-        </span>
-      </div>
+        {heading}
+      </h2>
+      {paragraphs.map((paragraph) => (
+        <p class="mt-5 text-lg text-slate-600 leading-relaxed">{paragraph}</p>
+      ))}
     </div>
 
     <h3
       class="mt-20 text-2xl md:text-3xl font-extrabold text-slate-900 text-center
-             view-animate-single animate-fade-in-up animate-duration-500
+             view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
              animate-range-[entry_10%_contain_10%]"
     >
       La diferencia que hace el diagnóstico
@@ -64,23 +59,28 @@ const { heading, paragraphs, photoCaption, diagramLabels } = Astro.props as Prop
     <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
       <div
         class="rounded-2xl border-2 border-red-300 bg-white p-6
-               view-animate-single animate-fade-in-up animate-duration-400
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 320 160" width="100%" role="img" aria-labelledby="diagram-without-tramo">
+        <svg viewBox="0 0 900 260" width="100%" role="img" aria-labelledby="diagram-without-tramo">
           <title id="diagram-without-tramo">{diagramLabels.withoutTramo}</title>
           <defs>
-            <pattern id="soil-a" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" stroke-width="4" />
+            <pattern id="soil-a" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="12" stroke="#cbd5e1" stroke-width="5" />
             </pattern>
           </defs>
-          <rect x="0" y="28" width="320" height="112" fill="url(#soil-a)" />
-          <rect x="0" y="0" width="320" height="28" fill="#f8fafc" />
-          <line x1="0" y1="28" x2="320" y2="28" stroke="#94a3b8" stroke-width="2" />
-          <rect x="18" y="28" width="284" height="72" rx="4" fill="#fef2f2" stroke="#fca5a5" stroke-width="2" stroke-dasharray="6 4" />
-          <rect x="20" y="88" width="280" height="24" rx="12" fill="#ffffff" stroke="#475569" stroke-width="3" />
-          <circle cx="176" cy="100" r="7" fill="#ef4444" />
-          <path d="M170 94 l5 6 l6 -7" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round" />
+          <rect x="0" y="40" width="900" height="220" fill="url(#soil-a)" />
+          <rect x="0" y="0" width="900" height="40" fill="#f8fafc" />
+          <line x1="0" y1="40" x2="900" y2="40" stroke="#94a3b8" stroke-width="3" />
+          <rect x="30" y="40" width="840" height="176" rx="6" fill="#fef2f2" fill-opacity="0.85" stroke="#fca5a5" stroke-width="3" stroke-dasharray="9 6" />
+          {/* Pipe interior. The break is the ONLY thing that differs from an
+              intact pipe: same walls, same position on both cards. */}
+          <rect x="-10" y="112" width="920" height="88" fill="#ffffff" />
+          <path d="M420 200 L430 180 L424 168 L440 156 L452 145 L460 160 L472 156 L468 176 L500 200 Z" fill="#e2e8f0" />
+          <line x1="-10" y1="112" x2="910" y2="112" stroke="#475569" stroke-width="7" />
+          <line x1="-10" y1="200" x2="420" y2="200" stroke="#475569" stroke-width="7" />
+          <line x1="500" y1="200" x2="910" y2="200" stroke="#475569" stroke-width="7" />
+          <path d="M420 200 L430 180 L424 168 L440 156 L452 145 L460 160 L472 156 L468 176 L500 200" fill="none" stroke="#475569" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
         </svg>
         <p class="mt-5 text-center text-base font-bold text-red-600">
           {diagramLabels.withoutTramo}
@@ -89,23 +89,28 @@ const { heading, paragraphs, photoCaption, diagramLabels } = Astro.props as Prop
 
       <div
         class="rounded-2xl border-2 border-emerald-300 bg-white p-6
-               view-animate-single animate-fade-in-up animate-duration-400
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 320 160" width="100%" role="img" aria-labelledby="diagram-with-tramo">
+        <svg viewBox="0 0 900 260" width="100%" role="img" aria-labelledby="diagram-with-tramo">
           <title id="diagram-with-tramo">{diagramLabels.withTramo}</title>
           <defs>
-            <pattern id="soil-b" width="10" height="10" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" stroke-width="4" />
+            <pattern id="soil-b" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="12" stroke="#cbd5e1" stroke-width="5" />
             </pattern>
           </defs>
-          <rect x="0" y="28" width="320" height="112" fill="url(#soil-b)" />
-          <rect x="0" y="0" width="320" height="28" fill="#f8fafc" />
-          <line x1="0" y1="28" x2="320" y2="28" stroke="#94a3b8" stroke-width="2" />
-          <rect x="20" y="88" width="280" height="24" rx="12" fill="#ffffff" stroke="#475569" stroke-width="3" />
-          <rect x="146" y="28" width="60" height="72" rx="4" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="6 4" />
-          <circle cx="176" cy="100" r="7" fill="#ef4444" />
-          <path d="M170 94 l5 6 l6 -7" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round" />
+          <rect x="0" y="40" width="900" height="220" fill="url(#soil-b)" />
+          <rect x="0" y="0" width="900" height="40" fill="#f8fafc" />
+          <line x1="0" y1="40" x2="900" y2="40" stroke="#94a3b8" stroke-width="3" />
+          <rect x="384" y="40" width="152" height="176" rx="6" fill="#ecfdf5" fill-opacity="0.9" stroke="#6ee7b7" stroke-width="3" stroke-dasharray="9 6" />
+          {/* Pipe interior. The break is the ONLY thing that differs from an
+              intact pipe: same walls, same position on both cards. */}
+          <rect x="-10" y="112" width="920" height="88" fill="#ffffff" />
+          <path d="M420 200 L430 180 L424 168 L440 156 L452 145 L460 160 L472 156 L468 176 L500 200 Z" fill="#e2e8f0" />
+          <line x1="-10" y1="112" x2="910" y2="112" stroke="#475569" stroke-width="7" />
+          <line x1="-10" y1="200" x2="420" y2="200" stroke="#475569" stroke-width="7" />
+          <line x1="500" y1="200" x2="910" y2="200" stroke="#475569" stroke-width="7" />
+          <path d="M420 200 L430 180 L424 168 L440 156 L452 145 L460 160 L472 156 L468 176 L500 200" fill="none" stroke="#475569" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
         </svg>
         <p class="mt-5 text-center text-base font-bold text-emerald-600">
           {diagramLabels.withTramo}

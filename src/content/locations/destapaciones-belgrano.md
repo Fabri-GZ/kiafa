@@ -35,7 +35,7 @@ bodyCauses:
       eyebrow: "AVENIDA JURAMENTO"
       title: "Grasa de la zona comercial"
       cause: "Los locales gastronómicos descargan grasa y aceite de manera constante. Se enfría dentro del caño, se adhiere a la pared y achica el diámetro interno."
-      dataIcon: "mdi:oil"
+      dataIcon: "mdi:french-fries"
       dataText: "Descarga constante, todos los días"
 bodyBrokenPipe:
   heading: "Cuando la cañería está rota"
@@ -44,12 +44,11 @@ bodyBrokenPipe:
     - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una columna significa romper mampostería en varios pisos."
   diagramLabels:
     withoutTramo: "Sin tramo identificado: se abre a lo largo"
-    withTramo: "Con tramo identificado: un pozo puntual"
+    withTramo: "Con tramo identificado: una zona puntual"
 bodyMethod:
-  heading: "Cómo elegimos el cable y la punta"
+  heading: "Cómo trabajamos"
   lead:
-    - "Trabajamos siempre con máquina de destapación a resorte, y la máquina es la misma para todos los trabajos. El resultado depende del cable que se elige y de la punta que se le coloca."
-    - "Los cables vienen en distintos grosores. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina, y elegir mal el grosor arruina la cañería en lugar de destaparla."
+    - "La máquina es siempre la misma. **El resultado depende del cable que se elige y de la punta que se le coloca**: una columna de edificio pide más recorrido y resistencia que el desagüe de una cocina, y elegir mal el grosor arruina la cañería en lugar de destaparla."
   items:
     - term: "La sonda"
       description: "Sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
@@ -67,7 +66,7 @@ bodyPrevention:
     - term: "Los trapos"
       description: "Un trapo de piso o un repasador viejo tirado por el inodoro no se desarma nunca. Queda trabado en el primer codo que encuentra y hace de red: retiene todo lo que baja después. En una columna compartida, un solo trapo alcanza para frenar la línea entera."
     - term: "Los restos de obra"
-      description: "Mezcla, cal y escombro volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver. En un edificio el problema no queda en el departamento que está de obra: baja por la columna y lo hereda todo el resto."
+      description: "Mezcla, cal y escombro volcados por una pileta o una rejilla durante una refacción. Se endurecen adentro del caño y son de los tapones más difíciles de resolver. En un edificio el problema no queda en el departamento que está de obra: baja por la columna y lo hereda todo el resto."
 bodyFaq:
   heading: "Preguntas frecuentes sobre destapaciones en Belgrano"
   items:

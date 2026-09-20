@@ -5,11 +5,12 @@
 // doesn't fit ServiceCard's props without changing it for Services.astro's
 // unrelated call site, so this is new, method-specific markup.
 //
-// `lead` keeps its existing two-paragraph shape per barrio: `lead[0]` is
-// the left-aligned intro paragraph, `lead[1]` is the slate-900 band text
-// ("bajar el grosor"). Only palermo's `lead[0]` was replaced with the
-// approved fixed copy (#1000 decision 2) — every other barrio's `lead`
-// stays its own migrated content, unchanged by this component.
+// `lead[0]` is the left-aligned intro paragraph; `lead[1]`, when present,
+// renders as the slate-900 band below the diagrams. Palermo and Belgrano
+// dropped their `lead[1]`: it restated what the two pipe cross-sections
+// already show, and the section read as a wall of text because of it. The
+// band is kept in the component, not deleted, because a barrio may still
+// want one — a `lead` of length 1 simply renders no band.
 //
 // `lead[0]` may carry one `**bold**` marker (the approved copy does). This
 // is the only place in the codebase that needs mid-sentence emphasis
@@ -55,12 +56,12 @@ const introParagraph = lead?.[0];
 const bandParagraph = lead?.[1];
 ---
 
-<section id="metodo" class="relative py-24 bg-white scroll-mt-24">
+<section id="metodo" class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="max-w-2xl mb-14">
       <h2
         class="text-3xl md:text-4xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                animate-range-[entry_10%_contain_10%]"
       >
         {heading}
@@ -81,7 +82,7 @@ const bandParagraph = lead?.[1];
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div
         class="rounded-2xl border-2 border-blue-200 bg-slate-50 p-6
-               view-animate-single animate-fade-in-up animate-duration-400
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
         <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-correcto">
@@ -103,7 +104,7 @@ const bandParagraph = lead?.[1];
 
       <div
         class="rounded-2xl border-2 border-red-200 bg-slate-50 p-6
-               view-animate-single animate-fade-in-up animate-duration-400
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
         <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-excesivo">
@@ -145,7 +146,7 @@ const bandParagraph = lead?.[1];
     {bandParagraph && (
       <div
         class="mt-16 rounded-2xl bg-slate-900 p-8 md:p-10
-               view-animate-single animate-fade-in-up animate-duration-500
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                animate-range-[entry_10%_contain_10%]"
       >
         <p class="text-lg text-slate-100 leading-relaxed">{bandParagraph}</p>
@@ -154,7 +155,7 @@ const bandParagraph = lead?.[1];
 
     <h3
       class="mt-20 text-2xl md:text-3xl font-extrabold text-slate-900 text-center
-             view-animate-single animate-fade-in-up animate-duration-500
+             view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
              animate-range-[entry_10%_contain_10%]"
     >
       Algunas de las puntas que usamos
@@ -166,7 +167,7 @@ const bandParagraph = lead?.[1];
         return (
           <div
             class="rounded-2xl border border-slate-200 bg-slate-50 p-8
-                   view-animate-single animate-slide-up-fade animate-duration-400
+                   view-animate-single animate-fill-both animate-slide-up-fade animate-duration-400
                    animate-range-[entry_10%_contain_10%]"
           >
             <h4 class="text-xl font-bold text-slate-900 mb-3">{item.term}</h4>

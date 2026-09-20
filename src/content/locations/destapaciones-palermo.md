@@ -29,7 +29,7 @@ bodyCauses:
       eyebrow: "ZONA GASTRONÓMICA"
       title: "Grasa en el ramal compartido"
       cause: "Las cocinas de Soho y Hollywood descargan grasa y aceite de forma constante. La grasa se enfría, se adhiere a la pared y achica el diámetro interno."
-      dataIcon: "mdi:oil"
+      dataIcon: "mdi:french-fries"
       dataText: "Si el local comparte ramal, los departamentos lo sufren igual"
     - icon: "mdi:office-building"
       eyebrow: "CONSTRUCCIÓN NUEVA"
@@ -44,12 +44,11 @@ bodyBrokenPipe:
     - "En esos casos el trabajo cambia de objetivo. Dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. Es información que ahorra trabajo de albañilería y evita romper donde no hace falta."
   diagramLabels:
     withoutTramo: "Sin tramo identificado: se abre a lo largo"
-    withTramo: "Con tramo identificado: un pozo puntual"
+    withTramo: "Con tramo identificado: una zona puntual"
 bodyMethod:
-  heading: "El cable correcto para cada cañería"
+  heading: "Cómo trabajamos"
   lead:
-    - "La máquina de destapación es siempre la misma. **Lo que se elige para cada trabajo es el cable y la punta**, dependiendo del estado y el diámetro de la cañería."
-    - "Los cables vienen en distintos grosores, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el grosor cuando corresponde."
+    - "La máquina de destapación es siempre la misma. **Lo que se elige para cada trabajo es el cable y la punta**, según el estado y el diámetro de la cañería: elegir mal el grosor arruina el caño en lugar de destaparlo."
   items:
     - term: "Sonda"
       description: "Se usa para recuperar lo que quedó dentro del caño, como un trapo o cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo."
@@ -69,7 +68,7 @@ bodyPrevention:
     - term: "Aceite de cocina"
       description: "Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. Va cerrando el diámetro de a poco, hasta que un día no pasa más. Conviene juntarlo en un recipiente y descartarlo con la basura."
     - term: "Restos de obra"
-      description: "Mezcla, cal, escombro y material de descarte volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver."
+      description: "Mezcla, cal, escombro y material de descarte volcados por una pileta o una rejilla durante una refacción. Se endurecen adentro del caño y son de los tapones más difíciles de resolver."
   note:
     - "Un tapón en una cañería sana se destapa rápido. El problema aparece cuando el caño ya arrastra años de incrustación acumulada."
 bodyFaq:

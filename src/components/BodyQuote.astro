@@ -19,11 +19,14 @@
 // shared src/lib/prose.ts helper (see that file's header for the deferred
 // BodyMethod.astro convergence note).
 //
-// CTA reuses the site-wide anchor-button idiom (Hero.astro:26-32 /
-// Navbar.astro:85), linking to the `#contacto` anchor rendered by
-// <Contact /> in [slug].astro — NOT a wa.me deep link, despite the label.
+// CTA keeps the site-wide button idiom (Hero.astro:26-32 / Navbar.astro:85)
+// but now actually opens WhatsApp. It used to point at the `#contacto` anchor
+// while reading "Coordinar por WhatsApp", so the label was a promise the link
+// did not keep. `barrio` is passed through so the prefilled message names the
+// barrio the visitor is reading about.
 import { Icon } from "astro-icon/components";
 import { renderBoldSegments } from "../lib/prose";
+import { whatsappHref } from "../lib/whatsapp";
 
 interface QuoteRow {
   icon: string;
@@ -35,18 +38,19 @@ interface Props {
   paragraphs: string[];
   calloutText: string;
   ctaText: string;
+  barrio?: string;
   durationValue?: string;
   durationUnit?: string;
   durationNote?: string;
   rows?: QuoteRow[];
 }
 
-const { heading, paragraphs, calloutText, ctaText, durationValue, durationUnit, durationNote, rows } =
+const { heading, paragraphs, calloutText, ctaText, barrio, durationValue, durationUnit, durationNote, rows } =
   Astro.props as Props;
 const hasDuration = Boolean(durationValue && durationUnit);
 ---
 
-<section class="relative py-24 bg-white scroll-mt-24">
+<section class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
     <div
       class:list={[
@@ -57,7 +61,7 @@ const hasDuration = Boolean(durationValue && durationUnit);
       <div class="flex flex-col gap-6">
         <h2
           class="text-4xl md:text-[44px] leading-tight font-extrabold text-slate-900
-                 view-animate-single animate-fade-in-up animate-duration-500
+                 view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                  animate-range-[entry_10%_contain_10%]"
         >
           {heading}
@@ -73,7 +77,9 @@ const hasDuration = Boolean(durationValue && durationUnit);
         </div>
 
         <a
-          href="#contacto"
+          href={whatsappHref(barrio)}
+          target="_blank"
+          rel="noopener noreferrer"
           class="self-start inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in"
         >
           {ctaText}
@@ -82,14 +88,14 @@ const hasDuration = Boolean(durationValue && durationUnit);
 
       {hasDuration && (
         <div
-          class="rounded-3xl border border-slate-200 bg-slate-50 p-10 flex flex-col gap-7
-                 view-animate-single animate-fade-in-up animate-duration-500
+          class="rounded-3xl border border-slate-200 bg-slate-50 p-7 md:p-10 flex flex-col gap-6 md:gap-7
+                 view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
                  animate-range-[entry_10%_contain_10%]"
         >
           <h3 class="text-[26px] font-extrabold text-slate-900">Cuánto tarda una destapación</h3>
 
           <div class="flex items-baseline gap-3">
-            <span class="text-[56px] font-extrabold text-blue-600">{durationValue}</span>
+            <span class="text-[40px] md:text-[56px] font-extrabold text-blue-600 whitespace-nowrap">{durationValue}</span>
             <span class="text-xl font-semibold text-slate-600">{durationUnit}</span>
           </div>
 

@@ -97,7 +97,7 @@ const schemaNodes = [
         {(hasBody || hasStructuredBody) && (
             <>
                 {hasBody && (
-                    <section id="location-body" class="relative py-24 bg-slate-50">
+                    <section id="location-body" class="relative py-14 md:py-20 bg-slate-50">
                         <div class="max-w-3xl mx-auto px-6">
                             <Content />
                         </div>
@@ -118,7 +118,7 @@ const schemaNodes = [
                 {data.bodyServices   && <BodyServices   {...data.bodyServices} />}
                 {data.bodyCauses     && <BodyCauses     {...data.bodyCauses} />}
                 {data.bodyBrokenPipe && <BodyBrokenPipe {...data.bodyBrokenPipe} />}
-                {data.bodyQuote      && <BodyQuote      {...data.bodyQuote} />}
+                {data.bodyQuote      && <BodyQuote      {...data.bodyQuote} barrio={title} />}
                 {data.bodyPrevention && <BodyPrevention {...data.bodyPrevention} />}
                 {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
                 {data.bodyFaq        && <BodyFaq        {...data.bodyFaq} />}
@@ -136,10 +136,10 @@ const schemaNodes = [
             </>
         )}
         {nearby.length > 0 && <NearbyAreas current={title} items={nearby} />}
-        <Contact />
+        <Contact barrio={title} />
     </main>
-    <WhatsappButton />
-    <Footer />
+    <WhatsappButton barrio={title} />
+    <Footer barrio={title} />
 </Layout>
 
 
