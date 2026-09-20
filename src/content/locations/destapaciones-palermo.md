@@ -18,7 +18,7 @@ bodyMethod:
   heading: "El cable correcto para cada cañería"
   lead:
     - "La máquina de destapación es siempre la misma. **Lo que se elige para cada trabajo es el cable y la punta**, dependiendo del estado y el diámetro de la cañería."
-    - "Los cables vienen en distintos calibres, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el calibre cuando corresponde, aunque el trabajo lleve más tiempo."
+    - "Los cables vienen en distintos grosores, y elegir mal no es un detalle menor. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Un caño que entró tapado puede terminar roto. Por eso lo primero es reconocer con qué diámetro se está trabajando y bajar el grosor cuando corresponde."
   items:
     - term: "Sonda"
       description: "Se usa para recuperar lo que quedó dentro del caño, como un trapo o cualquier elemento que se pueda rescatar, y sacarlo en lugar de empujarlo."
@@ -45,7 +45,7 @@ bodyFaq:
   heading: "Preguntas frecuentes sobre destapaciones en Palermo"
   items:
     - question: "¿Trabajan en PH y casas antiguas con pasillo?"
-      answer: "Sí. Es una de las tipologías más comunes del barrio. El acceso reducido y las cañerías de hierro fundido original son justamente los casos donde importa elegir bien el calibre del cable."
+      answer: "Sí. Es una de las tipologías más comunes del barrio. El acceso reducido y las cañerías de hierro fundido original son justamente los casos donde importa elegir bien el grosor del cable."
       icon: "akar-icons:home"
     - question: "¿Atienden cocinas de restaurantes y locales gastronómicos?"
       answer: "Sí, tomamos trabajos de cocinas comerciales además de domicilios y consorcios."
@@ -56,6 +56,23 @@ bodyFaq:
     - question: "¿El presupuesto tiene costo?"
       answer: "No. Si hace falta ir al domicilio a ver el trabajo, el presupuesto es sin cargo."
       icon: "akar-icons:file"
+bodyQuote:
+  heading: "Cómo cotizamos y coordinamos el turno"
+  paragraphs:
+    - "Si el problema se describe con detalle, es decir qué se tapó, hace cuánto, qué pasa cuando se usa y en qué zona está la propiedad, muchas veces podemos dar un presupuesto directamente."
+    - "Cuando no alcanza con esa descripción, vamos al lugar a verlo."
+  calloutText: "El presupuesto en el domicilio es sin cargo"
+  ctaText: "Coordinar por WhatsApp"
+  durationValue: "15 a 30"
+  durationUnit: "minutos"
+  durationNote: "La mayoría de los trabajos se resuelve en ese rango. Las destapaciones de columna llevan más."
+  rows:
+    - icon: "mdi:pipe"
+      label: "Depende del **estado de las cañerías**, no del tamaño de la propiedad."
+    - icon: "akar-icons:home"
+      label: "Y del **acceso disponible**: una cámara difícil de alcanzar cambia el panorama."
+    - icon: "akar-icons:circle-alert"
+      label: "Si se complica, **lo informamos en el momento**."
 ---
 
 ## Por qué se tapan las cañerías en Palermo
@@ -95,23 +112,3 @@ rota y en qué tramo aproximado está la rotura, para que la reparación se haga
 punto concreto en lugar de abrir a ciegas. Es información que ahorra trabajo de
 albañilería y evita romper donde no hace falta.
 
-## Cuánto tarda una destapación
-
-La mayoría de los trabajos se resuelve en un rango de quince a treinta minutos. La
-excepción son las destapaciones de columna, que llevan más.
-
-Ese tiempo depende del estado de las cañerías y del acceso disponible. Una cañería sana con una
-obstrucción puntual se despeja rápido. Un caño muy incrustado, una cámara difícil de
-alcanzar o un acceso que obliga a entrar por otro lado cambian el panorama, y en ese
-caso lo informamos en el momento.
-
-## Cómo cotizamos y coordinamos el turno
-
-Hay dos caminos. Si el problema se describe con detalle, es decir qué se tapó, hace
-cuánto, qué pasa cuando se usa y en qué zona está la propiedad, muchas veces podemos
-dar un presupuesto directamente. Cuando no alcanza con esa descripción, vamos al lugar a
-verlo: **el presupuesto en el domicilio es sin cargo**.
-
-Trabajamos en la zona todos los días, así que coordinamos el turno a la brevedad
-según la disponibilidad de la jornada. Atendemos casas particulares, departamentos,
-comercios y consorcios.

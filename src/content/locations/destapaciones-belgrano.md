@@ -18,7 +18,7 @@ bodyMethod:
   heading: "Cómo elegimos el cable y la punta"
   lead:
     - "Trabajamos siempre con máquina de destapación a resorte, y la máquina es la misma para todos los trabajos. El resultado depende del cable que se elige y de la punta que se le coloca."
-    - "Los cables vienen en distintos calibres. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina, y elegir mal el calibre arruina la cañería en lugar de destaparla."
+    - "Los cables vienen en distintos grosores. Un cable grueso dentro de una cañería de diámetro chico no gira libre: colea contra la pared del caño y puede fisurarlo. Por eso lo primero es reconocer con qué diámetro se está trabajando. Una columna de edificio pide un cable de mayor recorrido y resistencia que el desagüe de una cocina, y elegir mal el grosor arruina la cañería en lugar de destaparla."
   items:
     - term: "La sonda"
       description: "Sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
@@ -48,6 +48,24 @@ bodyFaq:
     - question: "¿Cobran el presupuesto en un edificio?"
       answer: "No. Si hace falta ir a ver las cañerías antes de dar un precio, la visita es sin cargo, tanto en un departamento como en un espacio común del consorcio."
       icon: "akar-icons:file"
+bodyQuote:
+  heading: "Cómo cotizamos y coordinamos el turno"
+  paragraphs:
+    - "Si el problema se describe con detalle, es decir qué se tapó, hace cuánto, qué pasa cuando se usa y en qué piso o sector está, muchas veces podemos dar un presupuesto directamente."
+    - "Cuando no alcanza con esa descripción, vamos al lugar a verlo."
+    - "Las columnas son la excepción y se presupuestan siempre en el edificio, porque hay que ver cómo están armadas las cañerías para saber cuántas son y por dónde se accede."
+  calloutText: "El presupuesto en el domicilio es sin cargo"
+  ctaText: "Coordinar por WhatsApp"
+  durationValue: "15 a 30"
+  durationUnit: "minutos"
+  durationNote: "La mayoría de los trabajos se resuelve en ese rango. Las destapaciones de columna llevan más."
+  rows:
+    - icon: "mdi:pipe"
+      label: "Depende del **estado de las cañerías**, no del tamaño de la propiedad."
+    - icon: "akar-icons:home"
+      label: "Y del **acceso disponible**: una cámara difícil de alcanzar cambia el panorama."
+    - icon: "akar-icons:circle-alert"
+      label: "Si se complica, **lo informamos en el momento**."
 ---
 
 ## Por qué se tapan las cañerías en Belgrano
@@ -126,17 +144,3 @@ está la rotura, para que la reparación se haga sobre un punto concreto en luga
 abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una
 columna significa romper mampostería en varios pisos.
 
-## Cómo cotizamos y coordinamos el turno
-
-Hay dos caminos. Si el problema se describe con detalle, es decir qué se tapó, hace
-cuánto, qué pasa cuando se usa y en qué piso o sector está, muchas veces podemos dar
-un presupuesto directamente. Cuando no alcanza con esa descripción, vamos al lugar a
-verlo: **el presupuesto en el domicilio es sin cargo**.
-
-Las columnas son la excepción y se presupuestan siempre en el edificio, porque hay
-que ver cómo están armadas las cañerías para saber cuántas son y por dónde se
-accede.
-
-Estamos en la zona a diario, así que el turno se coordina a la brevedad según la
-disponibilidad de la jornada. Trabajamos tanto en unidades particulares como en
-espacios comunes de consorcios y en locales del barrio.

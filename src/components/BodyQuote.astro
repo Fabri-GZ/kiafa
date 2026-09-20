@@ -1,0 +1,122 @@
+---
+// Presentational only, per bodySections registry field "bodyQuote"
+// ("Cómo cotizamos y coordinamos el turno"). New component per #999 point
+// 12 — not wired into BODY_SECTIONS/the navbar dropdown (decision 2: the
+// four-entry navbar cap stands, a CTA does not earn a section an anchor).
+// Renders LAST, after bodyFaq (decision 6): the visitor reads the
+// explanation, gets objections cleared by the FAQ, and only then meets the
+// call to action next to the real <Contact /> section.
+//
+// Structural base is BodyBrokenPipe.astro's two-column grid, with
+// `items-start` instead of `items-center` (canvas `align-items:flex-start`).
+// `hasDuration` gates the ENTIRE right-column panel, including its
+// hardcoded `h3` — the `h3` must live inside this same conditional, not
+// render standalone, or a barrio without duration data renders an orphan
+// heading. When `hasDuration` is false the grid collapses to a single
+// narrow column instead of leaving a dead half-width column on `lg`.
+//
+// `rows[].label` may carry mid-sentence `**bold**` markers, parsed via the
+// shared src/lib/prose.ts helper (see that file's header for the deferred
+// BodyMethod.astro convergence note).
+//
+// CTA reuses the site-wide anchor-button idiom (Hero.astro:26-32 /
+// Navbar.astro:85), linking to the `#contacto` anchor rendered by
+// <Contact /> in [slug].astro — NOT a wa.me deep link, despite the label.
+import { Icon } from "astro-icon/components";
+import { renderBoldSegments } from "../lib/prose";
+
+interface QuoteRow {
+  icon: string;
+  label: string;
+}
+
+interface Props {
+  heading: string;
+  paragraphs: string[];
+  calloutText: string;
+  ctaText: string;
+  durationValue?: string;
+  durationUnit?: string;
+  durationNote?: string;
+  rows?: QuoteRow[];
+}
+
+const { heading, paragraphs, calloutText, ctaText, durationValue, durationUnit, durationNote, rows } =
+  Astro.props as Props;
+const hasDuration = Boolean(durationValue && durationUnit);
+---
+
+<section class="relative py-24 bg-white scroll-mt-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div
+      class:list={[
+        "grid gap-12 items-start",
+        hasDuration ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1 max-w-3xl",
+      ]}
+    >
+      <div class="flex flex-col gap-6">
+        <h2
+          class="text-4xl md:text-[44px] leading-tight font-extrabold text-slate-900
+                 view-animate-single animate-fade-in-up animate-duration-500
+                 animate-range-[entry_10%_contain_10%]"
+        >
+          {heading}
+        </h2>
+
+        {paragraphs.map((paragraph) => (
+          <p class="text-lg text-slate-600 leading-relaxed">{paragraph}</p>
+        ))}
+
+        <div class="flex items-start gap-3 rounded-2xl border border-blue-200 bg-blue-50 p-5">
+          <Icon name="akar-icons:circle-check" class="w-7 h-7 text-blue-600 shrink-0" />
+          <p class="text-lg font-bold text-slate-900">{calloutText}</p>
+        </div>
+
+        <a
+          href="#contacto"
+          class="self-start inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in"
+        >
+          {ctaText}
+        </a>
+      </div>
+
+      {hasDuration && (
+        <div
+          class="rounded-3xl border border-slate-200 bg-slate-50 p-10 flex flex-col gap-7
+                 view-animate-single animate-fade-in-up animate-duration-500
+                 animate-range-[entry_10%_contain_10%]"
+        >
+          <h3 class="text-[26px] font-extrabold text-slate-900">Cuánto tarda una destapación</h3>
+
+          <div class="flex items-baseline gap-3">
+            <span class="text-[56px] font-extrabold text-blue-600">{durationValue}</span>
+            <span class="text-xl font-semibold text-slate-600">{durationUnit}</span>
+          </div>
+
+          {durationNote && <p class="text-lg text-slate-600 leading-relaxed">{durationNote}</p>}
+
+          <div class="border-t border-slate-200"></div>
+
+          {rows && (
+            <div class="flex flex-col gap-3.5">
+              {rows.map((row) => (
+                <div class="flex items-start gap-3.5">
+                  <Icon name={row.icon} class="w-6 h-6 text-slate-500 shrink-0 mt-0.5" />
+                  <p class="text-lg text-slate-600 leading-relaxed">
+                    {renderBoldSegments(row.label).map((segment) =>
+                      segment.bold ? (
+                        <strong class="font-bold text-slate-900">{segment.text}</strong>
+                      ) : (
+                        segment.text
+                      )
+                    )}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+</section>

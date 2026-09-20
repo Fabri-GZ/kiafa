@@ -7,7 +7,7 @@
 //
 // `lead` keeps its existing two-paragraph shape per barrio: `lead[0]` is
 // the left-aligned intro paragraph, `lead[1]` is the slate-900 band text
-// ("bajar el calibre"). Only palermo's `lead[0]` was replaced with the
+// ("bajar el grosor"). Only palermo's `lead[0]` was replaced with the
 // approved fixed copy (#1000 decision 2) — every other barrio's `lead`
 // stays its own migrated content, unchanged by this component.
 //
@@ -84,20 +84,20 @@ const bandParagraph = lead?.[1];
                view-animate-single animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-calibre-correcto">
-          <title id="diagram-calibre-correcto">Cañería vista de costado: el cable gira por el centro sin llegar a la pared</title>
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-correcto">
+          <title id="diagram-grosor-correcto">Ca&#241;er&#237;a vista de costado: el cable a resorte gira por el centro sin llegar a la pared</title>
           <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
           <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
           <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
-          <path
-            d="M0 75 L20 75 Q42.5 43 65 75 T110 75 T155 75 T200 75 T245 75 T290 75 T335 75 T380 75"
-            fill="none"
-            stroke="#2563eb"
-            stroke-width="5"
-            stroke-linecap="round"
-          />
+          <!-- The cable is a tightly wound spring. Its coils are drawn as a
+               dashed stroke over a solid one: dashes run across the stroke
+               width, so at this thickness they read as the real coils instead
+               of a pattern. The path itself only carries the whipping motion
+               and is deliberately irregular in pitch and amplitude. -->
+          <path d="M-28 97 C-10.4 97 -1.6 48 16 48 C32.8 48 41.2 93 58 93 C76.4 93 85.6 47 104 47 C119.2 47 126.8 100 142 100 C161.2 100 170.8 55 190 55 C206.8 55 215.2 103 232 103 C248.8 103 257.2 51 274 51 C289.2 51 296.8 92 312 92 C329.6 92 338.4 47 356 47 C372 47 380 98 396 98 C412 98 420 50 436 50" fill="none" stroke="#94a3b8" stroke-width="7" stroke-linecap="round" />
+          <path d="M-28 97 C-10.4 97 -1.6 48 16 48 C32.8 48 41.2 93 58 93 C76.4 93 85.6 47 104 47 C119.2 47 126.8 100 142 100 C161.2 100 170.8 55 190 55 C206.8 55 215.2 103 232 103 C248.8 103 257.2 51 274 51 C289.2 51 296.8 92 312 92 C329.6 92 338.4 47 356 47 C372 47 380 98 396 98 C412 98 420 50 436 50" fill="none" stroke="#334155" stroke-width="7" stroke-dasharray="2.5 2" />
         </svg>
-        <p class="mt-5 text-center text-base font-bold text-blue-600">Calibre correcto</p>
+        <p class="mt-5 text-center text-base font-bold text-blue-600">Grosor correcto</p>
         <p class="text-center text-sm text-slate-500">Gira libre, sin tocar la pared</p>
       </div>
 
@@ -106,30 +106,38 @@ const bandParagraph = lead?.[1];
                view-animate-single animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-calibre-excesivo">
-          <title id="diagram-calibre-excesivo">Cañería vista de costado: el cable grueso gira con la misma amplitud y golpea la pared</title>
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-excesivo">
+          <defs>
+            <radialGradient id="impact-halo">
+              <stop offset="0%" stop-color="#991b1b" stop-opacity="0.6" />
+              <stop offset="55%" stop-color="#dc2626" stop-opacity="0.2" />
+              <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <title id="diagram-grosor-excesivo">Ca&#241;er&#237;a vista de costado: el mismo cable, m&#225;s grueso, golpea la pared en varios puntos y la da&#241;a</title>
           <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
           <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
           <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
-          <path
-            d="M0 75 L20 75 Q42.5 -9 65 75 T110 75 T155 75 T200 75 T245 75 T290 75 T335 75 T380 75"
-            fill="none"
-            stroke="#ef4444"
-            stroke-width="12"
-            stroke-linecap="round"
-          />
-          <path
-            d="M124.5 25 L129.5 33 M132.5 20 L132.5 33 M140.5 25 L135.5 33
-               M304.5 25 L309.5 33 M312.5 20 L312.5 33 M320.5 25 L315.5 33
-               M79.5 125 L84.5 117 M87.5 130 L87.5 117 M95.5 125 L90.5 117
-               M259.5 125 L264.5 117 M267.5 130 L267.5 117 M275.5 125 L270.5 117"
-            stroke="#b91c1c"
-            stroke-width="3"
-            fill="none"
-            stroke-linecap="round"
-          />
+          <!-- Red is reserved for damage: the cable keeps the same steel grey
+               as the correct one, so the difference that reads is its
+               thickness. Each mark sits only where the cable reaches the wall,
+               with a halo radiating outward like a damage radius. -->
+          <g>
+            <rect x="35" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="52" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="175" y="117" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="192" cy="122.5" r="25" fill="url(#impact-halo)" />
+            <rect x="215" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="232" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="305" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="322" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="349" y="117" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="366" cy="122.5" r="25" fill="url(#impact-halo)" />
+          </g>
+          <path d="M-6 75 C14.88 75 31.12 38 52 38 C68.56 38 81.44 104 98 104 C112.4 104 123.6 48 138 48 C157.44 48 172.56 113 192 113 C206.4 113 217.6 37 232 37 C247.84 37 260.16 101 276 101 C292.56 101 305.44 38 322 38 C337.84 38 350.16 112 366 112 C378.24 112 387.76 75 400 75" fill="none" stroke="#94a3b8" stroke-width="14" stroke-linecap="round" />
+          <path d="M-6 75 C14.88 75 31.12 38 52 38 C68.56 38 81.44 104 98 104 C112.4 104 123.6 48 138 48 C157.44 48 172.56 113 192 113 C206.4 113 217.6 37 232 37 C247.84 37 260.16 101 276 101 C292.56 101 305.44 38 322 38 C337.84 38 350.16 112 366 112 C378.24 112 387.76 75 400 75" fill="none" stroke="#334155" stroke-width="14" stroke-dasharray="3.5 2.5" />
         </svg>
-        <p class="mt-5 text-center text-base font-bold text-red-600">Calibre excesivo</p>
+        <p class="mt-5 text-center text-base font-bold text-red-600">Grosor excesivo</p>
         <p class="text-center text-sm text-slate-500">Colea, golpea la pared y la fisura</p>
       </div>
     </div>

@@ -16,6 +16,7 @@ import BodyPrevention from '../components/BodyPrevention.astro';
 import BodyFaq from '../components/BodyFaq.astro';
 import BodyCauses from '../components/BodyCauses.astro';
 import BodyBrokenPipe from '../components/BodyBrokenPipe.astro';
+import BodyQuote from '../components/BodyQuote.astro';
 import { getCollection } from "astro:content";
 import { serviceNode, breadcrumbNode, faqNode } from "../lib/schema";
 import { deriveBodySections } from "../lib/bodySections";
@@ -76,7 +77,7 @@ const schemaNodes = [
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
-        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq || data.bodyCauses || data.bodyBrokenPipe) && (
+        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq || data.bodyCauses || data.bodyBrokenPipe || data.bodyQuote) && (
             <>
                 {hasBody && (
                     <section id="location-body" class="relative py-24 bg-slate-50">
@@ -88,9 +89,9 @@ const schemaNodes = [
                 {/* hasBody does NOT gate the sections below: each is independently
                     gated on its own field. Order below is the contract of
                     BODY_SECTIONS in src/lib/bodySections.ts. The outer guard above
-                    exists only so that when every one of these is absent (all 29
-                    control pages today), this whole block collapses to a single
-                    false expression instead of five, keeping their HTML output
+                    exists only so that when every one of these is absent (all 31
+                    plain landings today), this whole block collapses to a single
+                    false expression instead of seven, keeping their HTML output
                     byte-identical to before this field set existed. */}
                 {data.bodyServices   && <BodyServices   {...data.bodyServices} />}
                 {data.bodyCauses     && <BodyCauses     {...data.bodyCauses} />}
@@ -98,6 +99,7 @@ const schemaNodes = [
                 {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
                 {data.bodyPrevention && <BodyPrevention {...data.bodyPrevention} />}
                 {data.bodyFaq        && <BodyFaq        {...data.bodyFaq} />}
+                {data.bodyQuote      && <BodyQuote      {...data.bodyQuote} />}
             </>
         )}
         <Services />
