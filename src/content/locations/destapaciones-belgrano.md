@@ -14,6 +14,37 @@ bodyServices:
     - "Trabajamos en casas, departamentos, comercios y consorcios de todo el barrio:"
   note:
     - "Contamos además con servicio de video inspección, que en edificios sirve sobre todo para ubicar en qué piso o en qué tramo de la columna está el problema antes de decidir dónde abrir."
+bodyCauses:
+  heading: "Por qué se tapan las cañerías en Belgrano"
+  lead:
+    - "En Belgrano conviven dos barrios muy distintos: las torres que reemplazaron a las antiguas residencias y los sectores de casas bajas con jardín. Cañerías distintas, motivos distintos."
+  items:
+    - icon: "mdi:office-building"
+      eyebrow: "TORRES"
+      title: "La columna vertical"
+      cause: "El caño que recibe la descarga de todos los pisos de una línea acumula grasa, sarro e incrustación durante años, hasta que el agua deja de bajar."
+      dataIcon: "mdi:pipe"
+      dataText: "El codo de planta baja es el punto crítico"
+    - icon: "akar-icons:home"
+      eyebrow: "BELGRANO R"
+      title: "Raíces del jardín"
+      cause: "Las raíces buscan humedad y entran por una junta floja o una fisura de una cañería vieja, y siguen creciendo adentro."
+      dataIcon: "mdi:tree"
+      dataText: "Y rejillas de patio que juntan tierra, hojas y arena"
+    - icon: "akar-icons:utensils"
+      eyebrow: "AVENIDA JURAMENTO"
+      title: "Grasa de la zona comercial"
+      cause: "Los locales gastronómicos descargan grasa y aceite de manera constante. Se enfría dentro del caño, se adhiere a la pared y achica el diámetro interno."
+      dataIcon: "mdi:oil"
+      dataText: "Descarga constante, todos los días"
+bodyBrokenPipe:
+  heading: "Cuando la cañería está rota"
+  paragraphs:
+    - "No toda obstrucción se destapa. Si el caño está roto o fisurado, la máquina puede despejar el paso un tiempo, pero la falla vuelve."
+    - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una columna significa romper mampostería en varios pisos."
+  diagramLabels:
+    withoutTramo: "Sin tramo identificado: se abre a lo largo"
+    withTramo: "Con tramo identificado: un pozo puntual"
 bodyMethod:
   heading: "Cómo elegimos el cable y la punta"
   lead:
@@ -33,6 +64,10 @@ bodyPrevention:
       description: "Son el caso más común. Aunque el envase diga que son descartables, no se desarman en el agua y se enganchan en cualquier irregularidad del caño. Lo mismo pasa con las toallitas femeninas y los pañales, que absorben agua y aumentan de tamaño adentro de la cañería."
     - term: "El aceite de cocina"
       description: "Es el más silencioso de los tres. Tirado por la pileta parece líquido, pero se enfría dentro del caño y se solidifica pegado a la pared. En una columna compartida ese depósito se suma al de todos los pisos, y es una de las causas principales de que una línea entera termine tapada. Conviene juntarlo en un recipiente y descartarlo con la basura."
+    - term: "Los trapos"
+      description: "Un trapo de piso o un repasador viejo tirado por el inodoro no se desarma nunca. Queda trabado en el primer codo que encuentra y hace de red: retiene todo lo que baja después. En una columna compartida, un solo trapo alcanza para frenar la línea entera."
+    - term: "Los restos de obra"
+      description: "Mezcla, cal y escombro volcados por una pileta o una rejilla durante una refacción. Fraguan adentro del caño y son de los tapones más difíciles de resolver. En un edificio el problema no queda en el departamento que está de obra: baja por la columna y lo hereda todo el resto."
 bodyFaq:
   heading: "Preguntas frecuentes sobre destapaciones en Belgrano"
   items:
@@ -67,80 +102,4 @@ bodyQuote:
     - icon: "akar-icons:circle-alert"
       label: "Si se complica, **lo informamos en el momento**."
 ---
-
-## Por qué se tapan las cañerías en Belgrano
-
-En Belgrano conviven dos barrios muy distintos. Desde hace algunos años, buena parte de la zona
-se llenó de torres de gran altura que reemplazaron a las antiguas residencias, y al
-mismo tiempo sectores como Belgrano R conservaron las casas bajas con jardín gracias a
-un código de altura estricto. Son dos formas de vivir distintas, con cañerías
-distintas, y se tapan por motivos distintos.
-
-En las torres el punto crítico es la columna, que es el caño vertical que recorre el 
-edificio y recibe la descarga de todos los pisos de una misma línea. 
-Ahí se acumula grasa, sarro e incrustación durante años, y el diámetro interno
-se va achicando de a poco hasta que un día el agua deja de bajar. La acumulación se
-concentra sobre todo en el codo de planta baja, que es donde el caño hace la curva
-para salir hacia la cloaca. Cuando la columna se tapa, el problema afecta a toda la
-línea vertical y no a un departamento solo.
-
-En las casas de Belgrano R el origen suele estar en el jardín. Las raíces de los
-árboles y de las plantas buscan humedad, y cuando encuentran una junta floja o una
-fisura en una cañería vieja entran y siguen creciendo adentro. A eso se suman las
-rejillas y los desagües de patio, que juntan tierra, hojas y arena hasta que el agua
-de lluvia no drena.
-
-Sobre la avenida Juramento y la zona comercial aparece un tercer motivo. Los locales
-gastronómicos descargan grasa y aceite de manera constante, y la grasa se enfría
-dentro del caño, se adhiere a la pared y achica el diámetro interno.
-
-## Destapación de columnas en edificios
-
-Es el trabajo más pedido en las torres de Belgrano y funciona distinto a una
-destapación domiciliaria.
-
-Para destapar una columna hay que entrar a los departamentos. No a todos: se trabaja
-salteando uno, bajando siempre desde un piso hacia el anterior. Del primero a planta
-baja, del tercero al primero, del quinto al tercero, y así hasta completar el
-recorrido. Por eso el aviso al consorcio es indispensable. Sin acceso a las unidades
-el trabajo no se puede hacer.
-
-El cable baja triturando lo que encuentra, para que la cañería recupere su diámetro
-interno original. Es un recorrido largo, con material acumulado de años, así que lleva
-más tiempo que un trabajo domiciliario común.
-
-Un edificio puede tener una sola columna o varias. Si las unidades son A, B, C y D,
-puede haber cuatro columnas independientes, o A y B pueden compartir una y C y D otra.
-Eso cambia por completo el alcance del trabajo, y es la razón por la que las columnas
-se presupuestan siempre en el edificio. Hay que ver cómo es un departamento por
-dentro, por dónde se accede y cómo están armadas las columnas antes de dar un precio.
-
-En caso de ser necesario, dejamos indicado el estado en que quedó la columna. En
-general recomendamos hacerla cada dos años, de manera preventiva, antes de que la
-acumulación llegue al punto de tapar la línea.
-
-## Casas y jardines en Belgrano R
-
-En las casas bajas el trabajo se parece al de cualquier casa, con dos
-particularidades de la zona.
-
-La primera son las raíces. Los jardines de Belgrano R tienen árboles grandes y
-arbustos de años, y las cañerías de las casas antiguas suelen ser de hierro fundido
-original. La raíz entra por la junta y se desarrolla dentro del caño hasta obstruirlo
-por completo. La máquina la tritura y devuelve el paso, aunque si la cañería está
-partida el problema vuelve y hay que repararla.
-
-La segunda son los pluviales. Las rejillas de patio, las bocas de desagüe y los caños
-de lluvia acumulan tierra, hojas y arena. Es una obstrucción que casi nunca se nota
-hasta que llueve fuerte, y en ese momento ya es tarde.
-
-## Cuando la cañería está rota
-
-No toda obstrucción se destapa. Si el caño está roto o fisurado, la máquina puede
-despejar el paso un tiempo, pero la falla vuelve.
-
-En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado
-está la rotura, para que la reparación se haga sobre un punto concreto en lugar de
-abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una
-columna significa romper mampostería en varios pisos.
 

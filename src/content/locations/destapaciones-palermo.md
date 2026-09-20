@@ -14,6 +14,37 @@ bodyServices:
     - "Trabajamos en domicilios, comercios y consorcios de todo el barrio:"
   note:
     - "Cuando hace falta precisar un diagnóstico, o cuando se quiere saber en qué punto exacto la cañería tiene una rotura, contamos además con servicio de video inspección."
+bodyCauses:
+  heading: "Por qué se tapan las cañerías en Palermo"
+  lead:
+    - "Palermo reúne, en pocas cuadras, construcciones separadas por casi un siglo. Cada grupo falla de una manera distinta, y por eso dos destapaciones en el mismo barrio rara vez se parecen."
+  items:
+    - icon: "akar-icons:home"
+      eyebrow: "CASAS Y PH ANTIGUOS"
+      title: "Hierro fundido incrustado"
+      cause: "El caño se va incrustando por dentro con los años y pierde diámetro de a poco, hasta que un uso normal alcanza para taparlo."
+      dataIcon: "mdi:tree"
+      dataText: "Raíces del arbolado que entran por una junta floja"
+    - icon: "akar-icons:utensils"
+      eyebrow: "ZONA GASTRONÓMICA"
+      title: "Grasa en el ramal compartido"
+      cause: "Las cocinas de Soho y Hollywood descargan grasa y aceite de forma constante. La grasa se enfría, se adhiere a la pared y achica el diámetro interno."
+      dataIcon: "mdi:oil"
+      dataText: "Si el local comparte ramal, los departamentos lo sufren igual"
+    - icon: "mdi:office-building"
+      eyebrow: "CONSTRUCCIÓN NUEVA"
+      title: "Restos de obra desde el día uno"
+      cause: "Mezcla, escombro y material de descarte que quedaron dentro de la cañería y aparecen cuando el sistema empieza a usarse de verdad."
+      dataIcon: "mdi:hammer-wrench"
+      dataText: "Nunca se usó, pero ya venía tapada"
+bodyBrokenPipe:
+  heading: "Cuando la cañería está rota"
+  paragraphs:
+    - "No toda obstrucción se destapa. Si el caño está roto o fisurado, la máquina no resuelve el problema de fondo: puede despejar el paso un tiempo, pero la falla vuelve."
+    - "En esos casos el trabajo cambia de objetivo. Dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. Es información que ahorra trabajo de albañilería y evita romper donde no hace falta."
+  diagramLabels:
+    withoutTramo: "Sin tramo identificado: se abre a lo largo"
+    withTramo: "Con tramo identificado: un pozo puntual"
 bodyMethod:
   heading: "El cable correcto para cada cañería"
   lead:
@@ -74,41 +105,4 @@ bodyQuote:
     - icon: "akar-icons:circle-alert"
       label: "Si se complica, **lo informamos en el momento**."
 ---
-
-## Por qué se tapan las cañerías en Palermo
-
-Palermo reúne, en pocas cuadras, construcciones separadas por casi un siglo. Conviven
-casas y PH antiguos con pasillo y cañerías de hierro fundido original, edificios de
-mediados del siglo pasado y torres levantadas en los últimos veinte años. Cada grupo
-falla de una manera distinta, y por eso dos destapaciones en el mismo barrio rara vez
-se parecen.
-
-En las construcciones más antiguas el problema suele estar en el estado del caño. El
-hierro fundido se va incrustando por dentro con los años y pierde diámetro de manera
-progresiva, hasta que un uso normal alcanza para tapar. A eso se suma el arbolado: en
-Palermo hay muchos árboles, y varios de tamaño considerable, cuyas raíces buscan
-humedad. Cuando encuentran
-una junta floja o una fisura en una cañería vieja, entran y siguen creciendo adentro.
-
-En la zona gastronómica de Palermo Soho y Palermo Hollywood pesa otro factor: la
-grasa. Las cocinas comerciales descargan grasa, aceite y restos de comida de forma
-constante. La grasa se enfría dentro del caño, se adhiere a la pared y va
-achicando el diámetro interno. Cuando esa descarga comparte ramal con las unidades de vivienda del
-mismo edificio, la obstrucción no queda en el local: los departamentos la sufren
-igual.
-
-En las construcciones nuevas el origen es otro. Ahí lo más común son los restos de
-obra que quedaron en la cañería desde el día uno, como mezcla, escombro y material de
-descarte, que aparecen cuando el sistema empieza a usarse de verdad.
-
-## Cuando la cañería está rota
-
-No toda obstrucción se destapa. Si el caño está roto o
-fisurado, la máquina no resuelve el problema de fondo: puede despejar el paso un
-tiempo, pero la falla vuelve.
-
-En esos casos el trabajo cambia de objetivo. Dejamos identificado que la cañería está
-rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un
-punto concreto en lugar de abrir a ciegas. Es información que ahorra trabajo de
-albañilería y evita romper donde no hace falta.
 

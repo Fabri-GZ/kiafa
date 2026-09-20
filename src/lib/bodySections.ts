@@ -1,17 +1,36 @@
-// Ordered registry of the structured body sections rendered by
-// src/pages/[slug].astro (BodyServices, BodyMethod, BodyPrevention,
-// BodyFaq). This is one of two places section order lives — the other is
-// the four literal {data.bodyX && <BodyX ... />} conditionals in
-// [slug].astro, which must stay in this same order. Kept as two
-// hand-written sources rather than one lookup-table map on purpose: a
-// literal conditional per section is the same gating pattern already used
-// for hasBody and nearby.length > 0, and it keeps [slug].astro provably
-// inert for the 29 pages that carry none of these fields.
+// Curated 4-entry subset of the structured body sections, feeding the
+// navbar dropdown (wired in slice 5). This is NOT a complete registry of
+// every body section: `bodyCauses`, `bodyBrokenPipe` and `bodyQuote` are
+// deliberately excluded — the dropdown is specified at exactly 4 children
+// (product decision). Do not "fix" this by adding the missing three.
+//
+// The full canonical page order, rendered by the seven literal
+// {data.bodyX && <BodyX ... />} conditionals in src/pages/[slug].astro, is:
+//   bodyServices → bodyCauses → bodyBrokenPipe → bodyQuote →
+//   bodyPrevention → bodyMethod → bodyFaq
+// This array's entries must keep their RELATIVE order matching that
+// canonical order (bodyServices, bodyPrevention, bodyMethod, bodyFaq), and
+// each `id` must equal the `id` actually rendered by the matching
+// component (BodyServices.astro, BodyPrevention.astro, BodyMethod.astro,
+// BodyFaq.astro) — ids are now part of the sync contract, not just order.
+//
+// Drift is silent: no build error and no type error, invisible until
+// someone clicks the dropdown. [slug].astro's body-block comment names
+// this file back as the paired order-of-truth; edit both in the same
+// commit.
+//
+// Kept as two hand-written sources rather than one lookup-table map on
+// purpose: a literal conditional per section is the same gating pattern
+// already used for hasBody and nearby.length > 0, and it keeps
+// [slug].astro provably inert for the 29 pages that carry none of these
+// fields. A `.map()` over this curated 4-entry subset also could not
+// render the other three sections at all, so a lookup table would not even
+// solve the problem here.
 export const BODY_SECTIONS = [
-  { field: "bodyServices",   id: "que-destapamos", label: "Qué destapamos" },
-  { field: "bodyMethod",     id: "metodo",         label: "Cable y punta" },
-  { field: "bodyPrevention", id: "prevencion",     label: "Qué cuidar" },
-  { field: "bodyFaq",        id: "faq-barrio",     label: "Preguntas del barrio" },
+  { field: "bodyServices",   id: "servicios",  label: "Qué destapamos" },
+  { field: "bodyPrevention", id: "prevencion", label: "Qué cuidar" },
+  { field: "bodyMethod",     id: "metodo",     label: "Cable y punta" },
+  { field: "bodyFaq",        id: "faq",        label: "Preguntas del barrio" },
 ] as const;
 
 type BodyData = Record<string, object | undefined>;
