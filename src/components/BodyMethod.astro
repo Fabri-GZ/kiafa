@@ -84,11 +84,18 @@ const bandParagraph = lead?.[1];
                view-animate-single animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 220 200" width="100%" role="img" aria-labelledby="diagram-calibre-correcto">
-          <title id="diagram-calibre-correcto">Calibre correcto</title>
-          <circle cx="110" cy="100" r="85" fill="#ffffff" stroke="#cbd5e1" stroke-width="10" />
-          <circle cx="110" cy="100" r="55" fill="none" stroke="#93c5fd" stroke-width="2" stroke-dasharray="4 4" />
-          <circle cx="110" cy="100" r="28" fill="#2563eb" />
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-calibre-correcto">
+          <title id="diagram-calibre-correcto">Cañería vista de costado: el cable gira por el centro sin llegar a la pared</title>
+          <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
+          <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
+          <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
+          <path
+            d="M0 75 L20 75 Q42.5 43 65 75 T110 75 T155 75 T200 75 T245 75 T290 75 T335 75 T380 75"
+            fill="none"
+            stroke="#2563eb"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
         </svg>
         <p class="mt-5 text-center text-base font-bold text-blue-600">Calibre correcto</p>
         <p class="text-center text-sm text-slate-500">Gira libre, sin tocar la pared</p>
@@ -99,14 +106,25 @@ const bandParagraph = lead?.[1];
                view-animate-single animate-fade-in-up animate-duration-400
                animate-range-[entry_10%_contain_10%]"
       >
-        <svg viewBox="0 0 220 200" width="100%" role="img" aria-labelledby="diagram-calibre-excesivo">
-          <title id="diagram-calibre-excesivo">Calibre excesivo</title>
-          <circle cx="110" cy="100" r="85" fill="#ffffff" stroke="#cbd5e1" stroke-width="10" />
-          <circle cx="135" cy="100" r="55" fill="#ef4444" />
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-calibre-excesivo">
+          <title id="diagram-calibre-excesivo">Cañería vista de costado: el cable grueso gira con la misma amplitud y golpea la pared</title>
+          <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
+          <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
+          <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
           <path
-            d="M186 88 L194 80 M190 100 L202 96 L198 108 L206 104"
+            d="M0 75 L20 75 Q42.5 -9 65 75 T110 75 T155 75 T200 75 T245 75 T290 75 T335 75 T380 75"
+            fill="none"
+            stroke="#ef4444"
+            stroke-width="12"
+            stroke-linecap="round"
+          />
+          <path
+            d="M124.5 25 L129.5 33 M132.5 20 L132.5 33 M140.5 25 L135.5 33
+               M304.5 25 L309.5 33 M312.5 20 L312.5 33 M320.5 25 L315.5 33
+               M79.5 125 L84.5 117 M87.5 130 L87.5 117 M95.5 125 L90.5 117
+               M259.5 125 L264.5 117 M267.5 130 L267.5 117 M275.5 125 L270.5 117"
             stroke="#b91c1c"
-            stroke-width="2.5"
+            stroke-width="3"
             fill="none"
             stroke-linecap="round"
           />
@@ -131,7 +149,7 @@ const bandParagraph = lead?.[1];
              view-animate-single animate-fade-in-up animate-duration-500
              animate-range-[entry_10%_contain_10%]"
     >
-      Las dos puntas que usamos
+      Algunas de las puntas que usamos
     </h3>
 
     <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
