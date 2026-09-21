@@ -29,7 +29,7 @@ const { heading, lead, items, note } = Astro.props as Props;
       <h2
         class="text-4xl md:text-5xl font-extrabold text-slate-900
                view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
@@ -44,7 +44,7 @@ const { heading, lead, items, note } = Astro.props as Props;
       {items.map((item, i) => (
         <li
           class="flex items-start gap-5 view-animate-single animate-fill-both animate-[slide-in-left-strong]
-                 animate-duration-500 animate-range-[entry_10%_contain_10%]"
+                 animate-duration-500 animate-range-[entry_0%_contain_10%]"
         >
           <span class="shrink-0 w-12 text-4xl font-extrabold text-blue-600 tabular-nums leading-none">
             {String(i + 1).padStart(2, "0")}
