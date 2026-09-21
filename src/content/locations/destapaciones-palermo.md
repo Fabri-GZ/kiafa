@@ -1,7 +1,7 @@
 ---
 title: "Palermo"
 seoTitle: "Destapaciones en Palermo"
-updatedAt: "2026-09-19"
+updatedAt: "2026-09-22"
 seoDescription: "Servicio de destapaciones en Palermo. Cloacas, cañerías, pluviales y video inspecciones. Presupuesto sin cargo."
 seoKeywords: "destapaciones Palermo, destapador Palermo, destapaciones en Palermo, destapación de cañerías Palermo, destapación cloacal Palermo, destapacion pluvial Palermo, destapaciones consorcios Palermo, kiafa destapaciones"
 span: "Kiafa Destapaciones"
