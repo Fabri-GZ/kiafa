@@ -35,13 +35,13 @@ const { heading, lead, note } = Astro.props as Props;
 const items = SHARED_SERVICE_ITEMS;
 ---
 
-<section id="que-destapamos" class="relative py-24 bg-white scroll-mt-24">
+<section id="servicios" class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
         class="text-5xl md:text-6xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
@@ -58,8 +58,8 @@ const items = SHARED_SERVICE_ITEMS;
           class:list={[
             "group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-7",
             "transition-colors duration-200 hover:border-blue-300 hover:bg-blue-50/40",
-            "view-animate-single animate-fade-in-up animate-duration-400",
-            "animate-range-[entry_10%_contain_10%]",
+            "view-animate-single animate-fill-both animate-fade-in-up animate-duration-400",
+            "animate-range-[entry_0%_contain_10%]",
             // An orphan card alone on the last `lg` row (3-col grid) gets
             // centered instead of sitting on the left — the "seventh card"
             // case #999 calls out, generalized to any item count that
@@ -80,8 +80,8 @@ const items = SHARED_SERVICE_ITEMS;
     {note && (
       <div
         class="mt-10 flex items-center gap-5 rounded-2xl bg-slate-900 p-7
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         <span class="shrink-0 w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-white">
           <Icon name="akar-icons:video" class="w-7 h-7" />

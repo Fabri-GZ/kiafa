@@ -1,11 +1,48 @@
 ---
-// Presentational only, per bodySections registry field "bodyMethod".
-// Reuses ServiceCard.astro verbatim (full weight: chip, h3, description)
-// for exactly two items. The section band is bg-slate-50, so the two
-// cards override ServiceCard's default bg-slate-50 to bg-white via
-// cardClass, otherwise the card background would vanish into the band.
-import { Route, Cone } from "@lucide/astro";
-import ServiceCard from "./ServiceCard.astro";
+// Presentational only, per bodySections registry field "bodyMethod"
+// ("El cable correcto"). Full redesign per #999 point 5 — no longer reuses
+// ServiceCard.astro: the bold-lead-clause requirement on the tip cards
+// doesn't fit ServiceCard's props without changing it for Services.astro's
+// unrelated call site, so this is new, method-specific markup.
+//
+// `lead[0]` is the left-aligned intro paragraph; `lead[1]`, when present,
+// renders as the slate-900 band below the diagrams. Palermo and Belgrano
+// dropped their `lead[1]`: it restated what the two pipe cross-sections
+// already show, and the section read as a wall of text because of it. The
+// band is kept in the component, not deleted, because a barrio may still
+// want one — a `lead` of length 1 simply renders no band.
+//
+// `lead[0]` may carry one `**bold**` marker (the approved copy does). This
+// is the only place in the codebase that needs mid-sentence emphasis
+// inside a plain, non-markdown proseBlock field (see src/content/config.ts
+// — these fields deliberately don't render as markdown). `renderBoldSegments`
+// parses just that one marker locally, at render time, instead of widening
+// the schema or moving the sentence into the markdown body.
+//
+// The two tip cards ("La sonda" / "La punta cónica") open with a bold
+// action clause. Per #999's approved brief the source `description` text
+// doesn't literally start with an imperative phrase, so `splitLeadClause`
+// bolds the migrated text's own first clause (up to its first comma or
+// period) instead of inventing new copy — verbatim wording stays intact.
+
+function renderBoldSegments(text: string) {
+  return text
+    .split(/(\*\*[^*]+\*\*)/g)
+    .filter((segment) => segment.length > 0)
+    .map((segment) => {
+      const match = segment.match(/^\*\*([^*]+)\*\*$/);
+      return match ? { bold: true, text: match[1] } : { bold: false, text: segment };
+    });
+}
+
+function splitLeadClause(text: string) {
+  const match = text.match(/^(.*?)([,.])(.*)$/s);
+  if (!match) return { lead: text, rest: "" };
+  const [, before, punct, after] = match;
+  return punct === "."
+    ? { lead: `${before}.`, rest: after }
+    : { lead: before, rest: `${punct}${after}` };
+}
 
 interface Props {
   heading: string;
@@ -15,43 +52,131 @@ interface Props {
 }
 
 const { heading, lead, items, note } = Astro.props as Props;
-
-// Two items only (schema caps bodyMethod.items at 2), so a positional
-// two-entry icon array needs no icon key in frontmatter.
-const ICONS = [Route, Cone];
+const introParagraph = lead?.[0];
+const bandParagraph = lead?.[1];
 ---
 
-<section id="metodo" class="relative py-24 bg-slate-50 scroll-mt-24">
+<section id="metodo" class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-14">
+    <div class="max-w-2xl mb-14">
       <h2
         class="text-3xl md:text-4xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
-      {lead && lead.map((paragraph) => (
-        <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto text-center">
-          {paragraph}
+      {introParagraph && (
+        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+          {renderBoldSegments(introParagraph).map((segment) =>
+            segment.bold ? (
+              <strong class="font-bold text-slate-900">{segment.text}</strong>
+            ) : (
+              segment.text
+            )
+          )}
         </p>
-      ))}
+      )}
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-      {items.map((item, index) => (
-        <div
-          class="view-animate-single animate-slide-up-fade animate-duration-400
-                 animate-range-[entry_10%_contain_10%]"
-        >
-          <ServiceCard
-            icon={ICONS[index] ?? ICONS[ICONS.length - 1]}
-            title={item.term}
-            description={item.description}
-            cardClass="bg-white"
-          />
-        </div>
-      ))}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div
+        class="rounded-2xl border-2 border-blue-200 bg-slate-50 p-6
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
+               animate-range-[entry_0%_contain_10%]"
+      >
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-correcto">
+          <title id="diagram-grosor-correcto">Ca&#241;er&#237;a vista de costado: el cable a resorte gira por el centro sin llegar a la pared</title>
+          <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
+          <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
+          <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
+          <!-- The cable is a tightly wound spring. Its coils are drawn as a
+               dashed stroke over a solid one: dashes run across the stroke
+               width, so at this thickness they read as the real coils instead
+               of a pattern. The path itself only carries the whipping motion
+               and is deliberately irregular in pitch and amplitude. -->
+          <path d="M-28 97 C-10.4 97 -1.6 48 16 48 C32.8 48 41.2 93 58 93 C76.4 93 85.6 47 104 47 C119.2 47 126.8 100 142 100 C161.2 100 170.8 55 190 55 C206.8 55 215.2 103 232 103 C248.8 103 257.2 51 274 51 C289.2 51 296.8 92 312 92 C329.6 92 338.4 47 356 47 C372 47 380 98 396 98 C412 98 420 50 436 50" fill="none" stroke="#94a3b8" stroke-width="7" stroke-linecap="round" />
+          <path d="M-28 97 C-10.4 97 -1.6 48 16 48 C32.8 48 41.2 93 58 93 C76.4 93 85.6 47 104 47 C119.2 47 126.8 100 142 100 C161.2 100 170.8 55 190 55 C206.8 55 215.2 103 232 103 C248.8 103 257.2 51 274 51 C289.2 51 296.8 92 312 92 C329.6 92 338.4 47 356 47 C372 47 380 98 396 98 C412 98 420 50 436 50" fill="none" stroke="#334155" stroke-width="7" stroke-dasharray="2.5 2" />
+        </svg>
+        <p class="mt-5 text-center text-base font-bold text-blue-600">Grosor correcto</p>
+        <p class="text-center text-sm text-slate-500">Gira libre, sin tocar la pared</p>
+      </div>
+
+      <div
+        class="rounded-2xl border-2 border-red-200 bg-slate-50 p-6
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
+               animate-range-[entry_0%_contain_10%]"
+      >
+        <svg viewBox="0 0 400 150" width="100%" role="img" aria-labelledby="diagram-grosor-excesivo">
+          <defs>
+            <radialGradient id="impact-halo">
+              <stop offset="0%" stop-color="#991b1b" stop-opacity="0.6" />
+              <stop offset="55%" stop-color="#dc2626" stop-opacity="0.2" />
+              <stop offset="100%" stop-color="#dc2626" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <title id="diagram-grosor-excesivo">Ca&#241;er&#237;a vista de costado: el mismo cable, m&#225;s grueso, golpea la pared en varios puntos y la da&#241;a</title>
+          <rect x="0" y="33" width="400" height="84" fill="#ffffff" />
+          <rect x="0" y="22" width="400" height="11" fill="#cbd5e1" />
+          <rect x="0" y="117" width="400" height="11" fill="#cbd5e1" />
+          <!-- Red is reserved for damage: the cable keeps the same steel grey
+               as the correct one, so the difference that reads is its
+               thickness. Each mark sits only where the cable reaches the wall,
+               with a halo radiating outward like a damage radius. -->
+          <g>
+            <rect x="35" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="52" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="175" y="117" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="192" cy="122.5" r="25" fill="url(#impact-halo)" />
+            <rect x="215" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="232" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="305" y="22" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="322" cy="27.5" r="25" fill="url(#impact-halo)" />
+            <rect x="349" y="117" width="34" height="11" rx="3" fill="#dc2626" />
+            <circle cx="366" cy="122.5" r="25" fill="url(#impact-halo)" />
+          </g>
+          <path d="M-6 75 C14.88 75 31.12 38 52 38 C68.56 38 81.44 104 98 104 C112.4 104 123.6 48 138 48 C157.44 48 172.56 113 192 113 C206.4 113 217.6 37 232 37 C247.84 37 260.16 101 276 101 C292.56 101 305.44 38 322 38 C337.84 38 350.16 112 366 112 C378.24 112 387.76 75 400 75" fill="none" stroke="#94a3b8" stroke-width="14" stroke-linecap="round" />
+          <path d="M-6 75 C14.88 75 31.12 38 52 38 C68.56 38 81.44 104 98 104 C112.4 104 123.6 48 138 48 C157.44 48 172.56 113 192 113 C206.4 113 217.6 37 232 37 C247.84 37 260.16 101 276 101 C292.56 101 305.44 38 322 38 C337.84 38 350.16 112 366 112 C378.24 112 387.76 75 400 75" fill="none" stroke="#334155" stroke-width="14" stroke-dasharray="3.5 2.5" />
+        </svg>
+        <p class="mt-5 text-center text-base font-bold text-red-600">Grosor excesivo</p>
+        <p class="text-center text-sm text-slate-500">Colea, golpea la pared y la fisura</p>
+      </div>
+    </div>
+
+    {bandParagraph && (
+      <div
+        class="mt-16 rounded-2xl bg-slate-900 p-8 md:p-10
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
+      >
+        <p class="text-lg text-slate-100 leading-relaxed">{bandParagraph}</p>
+      </div>
+    )}
+
+    <h3
+      class="mt-20 text-2xl md:text-3xl font-extrabold text-slate-900 text-center
+             view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+             animate-range-[entry_0%_contain_10%]"
+    >
+      Algunas de las puntas que usamos
+    </h3>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+      {items.map((item) => {
+        const { lead: boldLead, rest } = splitLeadClause(item.description);
+        return (
+          <div
+            class="rounded-2xl border border-slate-200 bg-slate-50 p-8
+                   view-animate-single animate-fill-both animate-slide-up-fade animate-duration-400
+                   animate-range-[entry_0%_contain_10%]"
+          >
+            <h4 class="text-xl font-bold text-slate-900 mb-3">{item.term}</h4>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              <strong class="font-bold text-slate-900">{boldLead}</strong>{rest}
+            </p>
+          </div>
+        );
+      })}
     </div>
 
     {note && note.map((paragraph) => (

@@ -32,13 +32,13 @@ interface Props {
 const { heading, lead, items, note } = Astro.props as Props;
 ---
 
-<section id="faq-barrio" class="relative py-24 bg-slate-50 scroll-mt-24">
+<section id="faq" class="relative py-14 md:py-20 bg-slate-50 scroll-mt-24">
   <div class="max-w-4xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
         class="text-3xl md:text-4xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
@@ -56,7 +56,7 @@ const { heading, lead, items, note } = Astro.props as Props;
         return (
           <div
             class:list={[
-              "accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-white rounded-xl border border-slate-700 hover:border-slate-600 view-animate-single animate-zoom-in animate-duration-400 animate-range-[entry_10%_contain_10%]",
+              "accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-white rounded-xl border border-slate-700 hover:border-slate-600 view-animate-single animate-fill-both animate-zoom-in animate-duration-400 animate-range-[entry_0%_contain_10%]",
               { active: isFirst },
             ]}
             id={itemId}
