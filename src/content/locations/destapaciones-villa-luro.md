@@ -60,14 +60,14 @@ bodyPrevention:
   lead:
     - "Buena parte de las destapaciones que hacemos podrían evitarse. Estos son los elementos que encontramos con más frecuencia dentro de las cañerías:"
   items:
-    - term: "Hojas"
-      description: "Los patios y las veredas arboladas del barrio las juntan todo el año, y terminan en las rejillas y en las bocas de desagüe. Ahí se mezclan con tierra y arena hasta formar un tapón compacto que recién se nota cuando llueve."
     - term: "Toallitas húmedas"
       description: "No se desarman en el agua, aunque el envase diga que son descartables."
     - term: "Toallitas femeninas y pañales"
       description: "Absorben agua y aumentan de tamaño dentro de la cañería."
     - term: "Aceite de cocina"
       description: "Se enfría dentro del caño y se solidifica pegado a la pared. Conviene juntarlo en un recipiente y descartarlo con la basura."
+    - term: "Hojas"
+      description: "Los patios y las veredas arboladas del barrio las juntan todo el año, y terminan en las rejillas y en las bocas de desagüe. Ahí se mezclan con tierra y arena hasta formar un tapón compacto que recién se nota cuando llueve."
 bodyFaq:
   heading: "Preguntas frecuentes sobre destapaciones en Villa Luro"
   items:
