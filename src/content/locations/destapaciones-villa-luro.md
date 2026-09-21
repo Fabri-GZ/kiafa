@@ -8,7 +8,6 @@ span: "Kiafa Destapaciones"
 h1: "Destapaciones en Villa Luro"
 intro: "Brindamos servicio de destapaciones en Villa Luro, resolviendo problemas en cloacas, cañerías y pluviales."
 zoneDescription: "Atendemos en todo Villa Luro y zonas cercanas, en domicilios, comercios y consorcios."
-nearbyBarrios: ["destapaciones-liniers"]
 bodyServices:
   heading: "Qué destapamos en Villa Luro"
   lead:
@@ -25,15 +24,15 @@ bodyCauses:
       eyebrow: "CASAS Y PH ANTIGUOS"
       title: "Hierro fundido incrustado"
       cause: "En las construcciones más antiguas el caño suele ser de hierro fundido, que se va incrustando por dentro con los años y pierde diámetro de manera progresiva, hasta que el uso normal de un baño o una cocina alcanza para taparlo."
-      dataIcon: "mdi:home-city"
+      dataIcon: "mdi:home-city-outline"
       dataText: "Cañerías originales, muchas sin haber sido tocadas antes"
-    - icon: "mdi:tree"
+    - icon: "mdi:tree-outline"
       eyebrow: "PATIOS Y JARDINES"
       title: "Raíces en el patio"
       cause: "Las raíces buscan humedad, y cuando dan con una junta floja o una fisura entran en la cañería y crecen adentro hasta obstruirla."
-      dataIcon: "mdi:water"
+      dataIcon: "mdi:water-outline"
       dataText: "La máquina las tritura y el caño recupera diámetro"
-    - icon: "mdi:umbrella"
+    - icon: "mdi:water-alert-outline"
       eyebrow: "ARROYO MALDONADO"
       title: "El arroyo entubado"
       cause: "Villa Luro es atravesado por el arroyo Maldonado, entubado bajo Juan B. Justo, y tiene historia de inundaciones. Una rejilla o un caño de lluvia tapado no se nota en un día normal, pero se vuelve crítico apenas cae una tormenta fuerte."
@@ -43,28 +42,26 @@ bodyBrokenPipe:
   heading: "Cuando la cañería está rota"
   paragraphs:
     - "Hay obstrucciones que no se resuelven con máquina. Cuando el caño está roto o fisurado se puede despejar el paso por un tiempo, pero al poco tiempo la falla reaparece en el mismo lugar."
-    - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura. En una casa con patio eso permite abrir en un punto concreto en lugar de levantar contrapiso a ciegas, que es la diferencia entre una reparación de un día y una obra."
+    - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura. En una casa con patio eso permite abrir en un punto concreto en lugar de levantar contrapiso a ciegas. Es información que ahorra trabajo de albañilería y evita romper donde no hace falta."
   diagramLabels:
     withoutTramo: "Sin tramo identificado: se abre a lo largo"
     withTramo: "Con tramo identificado: una zona puntual"
 bodyMethod:
   heading: "Cómo trabajamos"
   lead:
-    - "La máquina de destapación a resorte es siempre la misma. **Lo que cambia es el cable y la punta que se arman para cada cañería**, porque en una casa de Villa Luro el hierro fundido viejo ya está debilitado por la incrustación, y un cable que no corresponde puede fisurarlo en lugar de destaparlo."
+    - "La máquina de destapación a resorte es siempre la misma. **Lo que cambia es el cable y la punta que se usan para cada cañería**, porque en una casa de Villa Luro el hierro fundido viejo ya está debilitado por la incrustación, y un cable que no corresponde puede fisurarlo en lugar de destaparlo."
   items:
     - term: "Sonda"
       description: "Sirve para enganchar y sacar lo que quedó adentro, como un trapo o cualquier objeto que se pueda rescatar."
     - term: "Punta cónica"
       description: "Avanza triturando raíces, grasa, sarro o restos de obra, y devuelve a la cañería su diámetro interno original."
 bodyPrevention:
-  heading: "Lo que llega a la cañería sin que nadie lo tire"
+  heading: "Qué no conviene tirar por el inodoro ni por la pileta"
   lead:
-    - "Parte de lo que tapa una casa en Villa Luro no lo tiró nadie por el inodoro. Entra solo."
+    - "Buena parte de las destapaciones que hacemos podrían evitarse. Estos son los elementos que encontramos con más frecuencia dentro de las cañerías:"
   items:
     - term: "Hojas"
       description: "Los patios y las veredas arboladas del barrio las juntan todo el año, y terminan en las rejillas y en las bocas de desagüe. Ahí se mezclan con tierra y arena hasta formar un tapón compacto que recién se nota cuando llueve."
-    - term: "Raíces"
-      description: "Entran por las juntas de las cañerías viejas sin que haya ninguna señal en la superficie. Crecen despacio, durante años, y para cuando el agua deja de bajar ya ocuparon buena parte del caño."
     - term: "Toallitas húmedas"
       description: "No se desarman en el agua, aunque el envase diga que son descartables."
     - term: "Toallitas femeninas y pañales"
@@ -76,13 +73,13 @@ bodyFaq:
   items:
     - question: "¿Destapan rejillas y desagües de lluvia?"
       answer: "Sí. Es uno de los pedidos más habituales del barrio, sobre todo antes y después de las tormentas fuertes."
-      icon: "mdi:umbrella"
+      icon: "mdi:weather-pouring"
     - question: "¿Trabajan en PH de pasillo?"
       answer: "Sí. Es una de las tipologías más comunes de la zona y el acceso reducido es parte habitual del trabajo."
       icon: "akar-icons:home"
     - question: "¿Qué pasa con las raíces del patio?"
       answer: "La máquina las tritura y la cañería recupera su diámetro interno. Si el caño quedó partido, lo informamos para que se repare ese tramo."
-      icon: "mdi:tree"
+      icon: "mdi:tree-outline"
     - question: "¿Hace falta que vayan a ver el trabajo para dar un precio?"
       answer: "No siempre. Con una buena descripción muchas veces alcanza. Si hace falta ir, la visita no tiene costo."
       icon: "akar-icons:file"

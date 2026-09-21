@@ -19,7 +19,7 @@ bodyCauses:
   lead:
     - "En Belgrano conviven dos barrios muy distintos: las torres que reemplazaron a las antiguas residencias y los sectores de casas bajas con jardín. Cañerías distintas, motivos distintos."
   items:
-    - icon: "mdi:office-building"
+    - icon: "mdi:office-building-outline"
       eyebrow: "TORRES"
       title: "La columna vertical"
       cause: "El caño que recibe la descarga de todos los pisos de una línea acumula grasa, sarro e incrustación durante años, hasta que el agua deja de bajar."
@@ -29,7 +29,7 @@ bodyCauses:
       eyebrow: "BELGRANO R"
       title: "Raíces del jardín"
       cause: "Las raíces buscan humedad y entran por una junta floja o una fisura de una cañería vieja, y siguen creciendo adentro."
-      dataIcon: "mdi:tree"
+      dataIcon: "mdi:tree-outline"
       dataText: "Y rejillas de patio que juntan tierra, hojas y arena"
     - icon: "akar-icons:utensils"
       eyebrow: "AVENIDA JURAMENTO"
@@ -41,7 +41,7 @@ bodyBrokenPipe:
   heading: "Cuando la cañería está rota"
   paragraphs:
     - "No toda obstrucción se destapa. Si el caño está roto o fisurado, la máquina puede despejar el paso un tiempo, pero la falla vuelve."
-    - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. En edificios eso importa todavía más, porque abrir a ciegas en una columna significa romper mampostería en varios pisos."
+    - "En esos casos dejamos identificado que la cañería está rota y en qué tramo aproximado está la rotura, para que la reparación se haga sobre un punto concreto en lugar de abrir a ciegas. Es información que evita romper donde no hace falta, y en un edificio pesa todavía más: abrir a ciegas en una columna significa tocar mampostería en varios pisos."
   diagramLabels:
     withoutTramo: "Sin tramo identificado: se abre a lo largo"
     withTramo: "Con tramo identificado: una zona puntual"
@@ -72,13 +72,13 @@ bodyFaq:
   items:
     - question: "¿Hacen destapación de columnas en edificios?"
       answer: "Sí. Es uno de los trabajos más frecuentes en las torres del barrio. Hay que avisar al consorcio con tiempo, porque se necesita entrar a los departamentos para trabajar la columna piso por piso."
-      icon: "mdi:office-building"
+      icon: "mdi:office-building-outline"
     - question: "¿Atienden consorcios y administraciones?"
       answer: "Sí, además de casas particulares y departamentos. Si la administración lo pide, dejamos indicado el estado en que quedó la cañería."
-      icon: "mdi:account-group"
+      icon: "mdi:account-group-outline"
     - question: "¿Qué hacen con las raíces en las casas de Belgrano R?"
       answer: "La máquina las tritura y la cañería recupera su diámetro interno. Si además el caño está partido, lo informamos para que se repare el tramo."
-      icon: "mdi:tree"
+      icon: "mdi:tree-outline"
     - question: "¿Cobran el presupuesto en un edificio?"
       answer: "No. Si hace falta ir a ver las cañerías antes de dar un precio, la visita es sin cargo, tanto en un departamento como en un espacio común del consorcio."
       icon: "akar-icons:file"
