@@ -7,10 +7,12 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 // and an empty array renders NOTHING extra, so those pages keep the navbar they
 // already had, byte for byte.
 //
-// On a barrio page the dropdown REPLACES the standalone "Servicios" and
-// "Preguntas frecuentes" links rather than sitting beside them: BODY_SECTIONS
-// publishes the ids `servicios` and `faq`, which are exactly what those two
-// links already target, so keeping both would put two entries on one anchor.
+// On a barrio page the dropdown REPLACES the standalone "Servicios" link and
+// nothing else: BODY_SECTIONS publishes the id `servicios`, which is exactly
+// what that link targets, so keeping both would put two entries on one anchor.
+// "Preguntas frecuentes" stays top level on every page — it is the one section
+// a visitor looks for by name — which is also why `bodyFaq` is not in the
+// dropdown's subset.
 interface Props {
   barrio?: string;
   sections?: { id: string; label: string }[];
@@ -56,11 +58,9 @@ const hasDropdown = sections.length > 0 && Boolean(barrio);
           </details>
         </li>
       ) : (
-        <>
-          <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
-          <li><a href="#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
-        </>
+        <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
       )}
+      <li><a href="#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
 
       <li>
         <a
@@ -131,22 +131,20 @@ const hasDropdown = sections.length > 0 && Boolean(barrio);
           </ul>
         </li>
       ) : (
-        <>
-          <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
-            <a href="#servicios" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
-              <Wrench class="w-5 h-5 text-blue-600" />
-              Servicios
-            </a>
-          </li>
-
-          <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-200" data-menu-item>
-            <a href="#faq" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
-              <Info class="w-5 h-5 text-blue-600" />
-              Preguntas frecuentes
-            </a>
-          </li>
-        </>
+        <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
+          <a href="#servicios" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
+            <Wrench class="w-5 h-5 text-blue-600" />
+            Servicios
+          </a>
+        </li>
       )}
+
+      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-200" data-menu-item>
+        <a href="#faq" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
+          <Info class="w-5 h-5 text-blue-600" />
+          Preguntas frecuentes
+        </a>
+      </li>
 
       <li class="pt-4 opacity-0 -translate-x-5 transition-all duration-300 delay-300" data-menu-item>
         <a href="#contacto" class="block text-center rounded-xl px-4 py-3 text-lg font-semibold text-white bg-blue-600 shadow-lg shadow-blue-500/30 hover:bg-blue-500 hover:shadow-blue-400/60 transition-all duration-200 ease-in menu-link">
