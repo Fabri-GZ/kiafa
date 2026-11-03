@@ -134,10 +134,10 @@ const locations = defineCollection({
     }).optional(),
 
     // "Cómo cotizamos" + "Cuánto tarda", merged per #999 into one
-    // two-column section. `durationValue`/`durationUnit`/`rows` are
-    // optional because only palermo's source text carries the duration
-    // stat verbatim as of this schema landing (see #991/#1000): the
-    // component must render correctly with them absent.
+    // two-column section. `durationValue`/`durationUnit`/`durationNote`/
+    // `rows` are all optional because the component must render correctly
+    // with them absent — the right-column duration panel only appears
+    // when `durationValue` and `durationUnit` are both present.
     bodyQuote: z.object({
       heading: z.string().min(1),
       paragraphs: z.array(z.string().min(1)).min(1),
@@ -145,6 +145,7 @@ const locations = defineCollection({
       ctaText: z.string().min(1),
       durationValue: z.string().min(1).optional(),
       durationUnit: z.string().min(1).optional(),
+      durationNote: z.string().min(1).optional(),
       rows: z.array(z.object({
         icon: z.string().min(1),
         label: z.string().min(1),

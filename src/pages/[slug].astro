@@ -2,8 +2,6 @@
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Testimonials from '../components/Testimonials.astro';
-import Services from "../components/Services.astro";
-import FAQ from '../components/FAQ.astro';
 import Navbar from '../components/Navbar.astro';
 import Contact from '../components/Contact.astro';
 import WhatsappButton from '../components/WhatsappButton.astro';
@@ -16,6 +14,9 @@ import BodyPrevention from '../components/BodyPrevention.astro';
 import BodyFaq from '../components/BodyFaq.astro';
 import BodyCauses from '../components/BodyCauses.astro';
 import BodyBrokenPipe from '../components/BodyBrokenPipe.astro';
+import BodyQuote from '../components/BodyQuote.astro';
+import Services from '../components/Services.astro';
+import FAQ from '../components/FAQ.astro';
 import { getCollection } from "astro:content";
 import { serviceNode, breadcrumbNode, faqNode } from "../lib/schema";
 import { deriveBodySections } from "../lib/bodySections";
@@ -57,6 +58,23 @@ const hasBody = (location.body ?? "").trim().length > 0;
 // <Navbar /> call.
 const bodySections = deriveBodySections(data as any);
 
+// True only where the redesigned, structured body sections exist — today
+// palermo and belgrano. It drives the INVERSE gate on the shared <Services />
+// and <FAQ /> below: a page renders the barrio-specific pair or the generic
+// pair, never both and never neither. That keeps the navbar's #servicios and
+// #faq anchors resolving on all 33 pages, because Services.astro/FAQ.astro and
+// BodyServices.astro/BodyFaq.astro publish those same two ids.
+//
+// It deliberately does NOT include `hasBody`. Villa-luro and devoto still carry
+// their body as plain markdown with no structured fields; folding `hasBody` in
+// here suppressed the generic pair on them while they had nothing to replace it
+// with, leaving both anchors dead. When slice 4b migrates those two to
+// frontmatter this flips for them on its own — no slug list to maintain.
+const hasStructuredBody = Boolean(
+    data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq
+    || data.bodyCauses || data.bodyBrokenPipe || data.bodyQuote
+);
+
 const canonical = `https://kiafadestapaciones.com.ar/${location.slug}`;
 
 const keywords = seoKeywords || `destapaciones ${title.toLowerCase()}, destapador ${title.toLowerCase()}, destapaciones caba, destapaciones consorcios, kiafa destapaciones`;
@@ -71,42 +89,57 @@ const schemaNodes = [
 ---
 
 <Layout title={seoTitle} description={seoDescription} keywords={keywords} canonical={canonical} schemaNodes={schemaNodes}>
-	<Navbar />
+	<Navbar barrio={title} sections={bodySections} />
     <main id="main-content">
         <Hero title={h1} subtitle={intro} span={span} />
         <Testimonials />
         <LocationInfo title={title} zoneDescription={zoneDescription} />
-        {(hasBody || data.bodyServices || data.bodyMethod || data.bodyPrevention || data.bodyFaq || data.bodyCauses || data.bodyBrokenPipe) && (
+        {(hasBody || hasStructuredBody) && (
             <>
                 {hasBody && (
-                    <section id="location-body" class="relative py-24 bg-slate-50">
+                    <section id="location-body" class="relative py-14 md:py-20 bg-slate-50">
                         <div class="max-w-3xl mx-auto px-6">
                             <Content />
                         </div>
                     </section>
                 )}
                 {/* hasBody does NOT gate the sections below: each is independently
-                    gated on its own field. Order below is the contract of
-                    BODY_SECTIONS in src/lib/bodySections.ts. The outer guard above
-                    exists only so that when every one of these is absent (all 29
-                    control pages today), this whole block collapses to a single
-                    false expression instead of five, keeping their HTML output
+                    gated on its own field. The order of these seven conditionals
+                    IS the contract: bodyServices → bodyCauses → bodyBrokenPipe →
+                    bodyQuote → bodyPrevention → bodyMethod → bodyFaq.
+                    src/lib/bodySections.ts publishes a curated 4-entry subset of
+                    this order (bodyServices, bodyPrevention, bodyMethod, bodyFaq)
+                    for the navbar dropdown and must be edited in the same commit
+                    whenever this order changes. The outer guard above exists only
+                    so that when every one of these is absent (the 29 plain
+                    landings today), this whole block collapses to a single false
+                    expression instead of seven, keeping their HTML output
                     byte-identical to before this field set existed. */}
                 {data.bodyServices   && <BodyServices   {...data.bodyServices} />}
                 {data.bodyCauses     && <BodyCauses     {...data.bodyCauses} />}
                 {data.bodyBrokenPipe && <BodyBrokenPipe {...data.bodyBrokenPipe} />}
-                {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
+                {data.bodyQuote      && <BodyQuote      {...data.bodyQuote} barrio={title} />}
                 {data.bodyPrevention && <BodyPrevention {...data.bodyPrevention} />}
+                {data.bodyMethod     && <BodyMethod     {...data.bodyMethod} />}
                 {data.bodyFaq        && <BodyFaq        {...data.bodyFaq} />}
             </>
         )}
-        <Services />
-        <FAQ />
+        {/* The generic pair, shown wherever the barrio-specific sections are
+            absent — the 29 plain landings plus villa-luro and devoto until
+            slice 4b. Product decision: those pages keep them because the pair
+            is the bulk of what they say, while a migrated barrio replaces them
+            with its own versions rather than carrying both. */}
+        {!hasStructuredBody && (
+            <>
+                <Services />
+                <FAQ />
+            </>
+        )}
         {nearby.length > 0 && <NearbyAreas current={title} items={nearby} />}
-        <Contact />
+        <Contact barrio={title} />
     </main>
-    <WhatsappButton />
-    <Footer />
+    <WhatsappButton barrio={title} />
+    <Footer barrio={title} />
 </Layout>
 
 
