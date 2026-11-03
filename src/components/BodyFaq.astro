@@ -5,25 +5,40 @@
 // rather than "fixed" here). Uses id="faq-barrio" and item ids
 // "${index}-faq-barrio" so nothing collides with #faq or its
 // servicios-faq/pago-faq/presupuesto-faq/clientes-faq ids on the same
-// page. No per-item icon chip — that omission is the density difference
-// against #faq, which carries one Lucide icon per question.
+// page.
+//
+// Per #999 point 6, each question now gets a 48px bg-blue-100 icon chip
+// (without it the section read "too sober") and the chevron moves to the
+// right of the question text. First item's blue soft-shadow already comes
+// from the wrapper's `accordion-item-active:shadow-blue-500/20`, unchanged.
+//
+// Icon is content-driven per item (#1003 fix), same pattern as
+// BodyCauses.astro: each barrio's questions differ in topic and count, so
+// an icon assigned by array position desyncs the moment a barrio's
+// questions don't match the topic order another barrio happened to use.
+// The icon travels with its question in frontmatter instead. Falls back to
+// a generic icon only for a legacy item that predates the `icon` field.
+import { Icon } from "astro-icon/components";
+
+const FALLBACK_ICON = "akar-icons:question";
+
 interface Props {
   heading: string;
   lead?: string[];
-  items: { question: string; answer: string }[];
+  items: { question: string; answer: string; icon?: string }[];
   note?: string[];
 }
 
 const { heading, lead, items, note } = Astro.props as Props;
 ---
 
-<section id="faq-barrio" class="relative py-24 bg-slate-50 scroll-mt-24">
+<section id="faq" class="relative py-14 md:py-20 bg-slate-50 scroll-mt-24">
   <div class="max-w-4xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
         class="text-3xl md:text-4xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
@@ -41,7 +56,7 @@ const { heading, lead, items, note } = Astro.props as Props;
         return (
           <div
             class:list={[
-              "accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-white rounded-xl border border-slate-700 hover:border-slate-600 view-animate-single animate-zoom-in animate-duration-400 animate-range-[entry_10%_contain_10%]",
+              "accordion-item accordion-item-active:scale-[1.05] accordion-item-active:my-3 transition-all ease-in duration-300 bg-white rounded-xl border border-slate-700 hover:border-slate-600 view-animate-single animate-fill-both animate-zoom-in animate-duration-400 animate-range-[entry_0%_contain_10%]",
               { active: isFirst },
             ]}
             id={itemId}
@@ -51,9 +66,16 @@ const { heading, lead, items, note } = Astro.props as Props;
               aria-controls={`${itemId}-collapse`}
               aria-expanded={isFirst ? "true" : "false"}
             >
+              <span class="shrink-0 w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700">
+                <Icon name={item.icon ?? FALLBACK_ICON} class="w-7 h-7" />
+              </span>
               <span class="flex-1 text-lg font-semibold text-slate-900">
                 {item.question}
               </span>
+              <Icon
+                name="akar-icons:chevron-down"
+                class="w-5 h-5 shrink-0 text-slate-400 transition-transform duration-300 accordion-item-active:rotate-180"
+              />
             </button>
 
             <div
