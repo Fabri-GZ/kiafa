@@ -30,13 +30,13 @@ interface Props {
 const { heading, lead, items, note } = Astro.props as Props;
 ---
 
-<section id="por-que-se-tapan" class="relative py-24 bg-white scroll-mt-24">
+<section id="por-que-se-tapan" class="relative py-14 md:py-20 bg-white scroll-mt-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-14">
       <h2
         class="text-4xl md:text-5xl font-extrabold text-slate-900
-               view-animate-single animate-fade-in-up animate-duration-500
-               animate-range-[entry_10%_contain_10%]"
+               view-animate-single animate-fill-both animate-fade-in-up animate-duration-500
+               animate-range-[entry_0%_contain_10%]"
       >
         {heading}
       </h2>
@@ -48,11 +48,18 @@ const { heading, lead, items, note } = Astro.props as Props;
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {/* h-full + mt-auto iguala el ALTO de las tarjetas y pega el pie abajo, pero
+        eso solo no alinea la línea: un dataText de dos renglones hace un pie más
+        alto, y la línea vive en su borde superior. El min-h le da al pie la
+        altura de dos renglones siempre, así los bordes quedan a la misma altura.
+        Un dataText de tres renglones volvería a desalinear: es un piso, no un
+        tope. El comentario va ACÁ y no adentro del map: el callback devuelve un
+        solo nodo raíz y un hermano lo rompe. */}
       {items.map((item) => (
         <div
-          class="rounded-2xl bg-slate-50 border border-slate-200 p-7
-                 view-animate-single animate-fade-in-up animate-duration-400
-                 animate-range-[entry_10%_contain_10%]"
+          class="rounded-2xl bg-slate-50 border border-slate-200 p-7 flex flex-col h-full
+                 view-animate-single animate-fill-both animate-fade-in-up animate-duration-400
+                 animate-range-[entry_0%_contain_10%]"
         >
           <span class="inline-flex w-14 h-14 rounded-2xl bg-blue-100 items-center justify-center text-blue-700">
             <Icon name={item.icon} class="w-7 h-7" />
@@ -61,9 +68,9 @@ const { heading, lead, items, note } = Astro.props as Props;
             {item.eyebrow}
           </p>
           <h3 class="mt-2 text-[22px] font-bold text-slate-900">{item.title}</h3>
-          <p class="mt-3 text-base text-slate-600 leading-relaxed">{item.cause}</p>
+          <p class="mt-3 mb-6 text-base text-slate-600 leading-relaxed">{item.cause}</p>
 
-          <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
+          <div class="mt-auto pt-5 border-t border-slate-200 flex items-start gap-3 min-h-[3.8rem]">
             <Icon name={item.dataIcon} class="w-[22px] h-[22px] text-slate-500 shrink-0" />
             <span class="text-sm text-slate-500">{item.dataText}</span>
           </div>
