@@ -1,9 +1,28 @@
 ---
 import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
+
+// `sections` comes from deriveBodySections() in src/lib/bodySections.ts — the
+// curated four-entry subset, filtered to the ones the page actually declares.
+// It is empty on the home and on every landing without structured body fields,
+// and an empty array renders NOTHING extra, so those pages keep the navbar they
+// already had, byte for byte.
+//
+// On a barrio page the dropdown REPLACES the standalone "Servicios" link and
+// nothing else: BODY_SECTIONS publishes the id `servicios`, which is exactly
+// what that link targets, so keeping both would put two entries on one anchor.
+// "Preguntas frecuentes" stays top level on every page — it is the one section
+// a visitor looks for by name — which is also why `bodyFaq` is not in the
+// dropdown's subset.
+interface Props {
+  barrio?: string;
+  sections?: { id: string; label: string }[];
+}
+const { barrio, sections = [] } = Astro.props as Props;
+const hasDropdown = sections.length > 0 && Boolean(barrio);
 ---
 
 <header class="fixed top-0 inset-x-0 z-50" id="header-nav">
-  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper view-animate-single animate-fade-in-down animate-duration-500">
+  <nav class="max-w-screen-2xl mx-auto px-10 h-22 flex items-center justify-between navbar-wrapper view-animate-single animate-fill-both animate-fade-in-down animate-duration-500">
 
     <a href="/" class="flex items-center">
       <img src="/logo-kiafa-black.webp" alt="Kiafa Destapaciones" class="h-12 w-auto object-contain" loading="eager" />
@@ -12,7 +31,35 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
     <ul class="hidden md:flex items-center gap-8 font-medium text-lg text-black">
       <li><a href="#inicio" class="hover:text-blue-600 transition duration-150 ease-in">Inicio</a></li>
       <li><a href="#nosotros" class="hover:text-blue-600 transition duration-150 ease-in">Sobre nosotros</a></li>
-      <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
+      {hasDropdown ? (
+        <li class="relative">
+          <details class="group" data-nav-dropdown>
+            <summary
+              class="flex items-center gap-1.5 cursor-pointer list-none [&::-webkit-details-marker]:hidden
+                     hover:text-blue-600 transition duration-150 ease-in"
+            >
+              {barrio}
+              <svg class="w-4 h-4 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <ul class="absolute left-0 top-full mt-4 min-w-60 rounded-2xl border border-slate-200 bg-white p-2 shadow-xl shadow-slate-900/10">
+              {sections.map((section) => (
+                <li>
+                  <a
+                    href={`#${section.id}`}
+                    class="block rounded-xl px-4 py-2.5 text-base text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors"
+                  >
+                    {section.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </li>
+      ) : (
+        <li><a href="#servicios" class="hover:text-blue-600 transition duration-150 ease-in">Servicios</a></li>
+      )}
       <li><a href="#faq" class="hover:text-blue-600 transition duration-150 ease-in">Preguntas frecuentes</a></li>
 
       <li>
@@ -67,12 +114,30 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
         </a>
       </li>
 
-      <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
-        <a href="#servicios" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
-          <Wrench class="w-5 h-5 text-blue-600" />
-          Servicios
-        </a>
-      </li>
+      {hasDropdown ? (
+        <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
+          <span class="flex items-center gap-3 text-base font-bold uppercase tracking-[.07em] text-blue-600">
+            <Wrench class="w-5 h-5" />
+            {barrio}
+          </span>
+          <ul class="mt-3 ml-8 flex flex-col gap-3 border-l border-slate-200 pl-4">
+            {sections.map((section) => (
+              <li>
+                <a href={`#${section.id}`} class="block menu-link hover:text-blue-600 transition-colors">
+                  {section.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ) : (
+        <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-150" data-menu-item>
+          <a href="#servicios" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
+            <Wrench class="w-5 h-5 text-blue-600" />
+            Servicios
+          </a>
+        </li>
+      )}
 
       <li class="opacity-0 -translate-x-5 transition-all duration-300 delay-200" data-menu-item>
         <a href="#faq" class="flex items-center gap-3 menu-link hover:text-blue-600 transition-colors">
@@ -91,6 +156,20 @@ import { Menu, X, House, Users, Wrench, Info } from "@lucide/astro";
 </div>
 
 <script>
+  // <details> no se cierra solo al seguir un ancla ni al clickear afuera.
+  const navDropdown = document.querySelector("[data-nav-dropdown]");
+  if (navDropdown) {
+    navDropdown.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => navDropdown.removeAttribute("open"))
+    );
+    document.addEventListener("click", (event) => {
+      if (!navDropdown.contains(event.target as Node)) navDropdown.removeAttribute("open");
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") navDropdown.removeAttribute("open");
+    });
+  }
+
   const menuButton = document.getElementById("menu-button");
   const overlay = document.getElementById("mobile-overlay");
   const menu = document.getElementById("mobile-menu");
