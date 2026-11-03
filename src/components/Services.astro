@@ -19,18 +19,18 @@ const iconMap = {
 // like `animate-delay-${index * 100}` never compiles (see #990). Cards past
 // the array length reuse the last entry instead of breaking.
 const CARD_RANGE = [
-  "animate-range-[entry_10%_contain_10%]",
-  "animate-range-[entry_10%_contain_10%]",
-  "animate-range-[entry_10%_contain_10%]",
-  "animate-range-[entry_10%_contain_10%]",
-  "animate-range-[entry_10%_contain_10%]",
-  "animate-range-[entry_10%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
+  "animate-range-[entry_0%_contain_10%]",
 ];
 ---
 
 <section
   id="servicios"
-  class="relative py-24 bg-white"
+  class="relative py-14 md:py-20 bg-white"
 >
   <div class="max-w-6xl mx-auto px-6">
 
@@ -38,10 +38,10 @@ const CARD_RANGE = [
       <h2
         class="
           text-5xl md:text-6xl font-extrabold text-slate-900
-          view-animate-single
+          view-animate-single animate-fill-both
           animate-fade-in-up
           animate-duration-500
-          animate-range-[entry_10%_contain_10%]
+          animate-range-[entry_0%_contain_10%]
         "
       >
         Servicios
@@ -50,10 +50,10 @@ const CARD_RANGE = [
       <p
         class="
           mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto
-          view-animate-single
+          view-animate-single animate-fill-both
           animate-fade-in-up
           animate-duration-500
-          animate-range-[entry_10%_contain_10%]
+          animate-range-[entry_0%_contain_10%]
         "
       >
         Brindamos soluciones profesionales en destapaciones y mantenimiento de cañerías en Capital Federal, Zona Norte, Sur y Oeste.
@@ -69,7 +69,7 @@ const CARD_RANGE = [
         return (
           <div
             class={`
-              view-animate-single
+              view-animate-single animate-fill-both
               animate-slide-up-fade
               animate-duration-400
               ${CARD_RANGE[index] ?? CARD_RANGE.at(-1)}
