@@ -1,5 +1,11 @@
+---
+import { whatsappHref } from "../lib/whatsapp";
+
+// `barrio` is optional: the home passes nothing and gets the generic message.
+const { barrio } = Astro.props as { barrio?: string };
+---
 <a
-  href="https://wa.me/541154298197"
+  href={whatsappHref(barrio)}
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Contactar por WhatsApp"

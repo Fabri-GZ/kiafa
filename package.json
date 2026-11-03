@@ -21,6 +21,9 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^9.0.2"
+    "@astrojs/vercel": "^9.0.2",
+    "@iconify-json/akar-icons": "^1.2.7",
+    "@iconify-json/mdi": "^1.2.3",
+    "astro-icon": "^1.2.0"
   }
 }

@@ -72,3 +72,38 @@ html {
   bottom: auto;
   margin-top: 1.5rem;
 }
+
+/* Location body: markdown rendered from the locations collection.
+   Tailwind's preflight strips heading and list styles, so the long-form
+   body needs its own scale. Kept scoped to avoid touching component markup. */
+#location-body h2 {
+  @apply text-3xl md:text-4xl font-extrabold text-slate-900 mt-16 mb-6 scroll-mt-24;
+}
+
+#location-body h2:first-child {
+  @apply mt-0;
+}
+
+#location-body h3 {
+  @apply text-xl md:text-2xl font-semibold text-slate-900 mt-10 mb-4;
+}
+
+#location-body p {
+  @apply text-lg text-slate-600 leading-relaxed mb-5;
+}
+
+#location-body ul {
+  @apply list-disc ps-6 mb-6 space-y-2 marker:text-blue-500;
+}
+
+#location-body li {
+  @apply text-lg text-slate-600 leading-relaxed;
+}
+
+#location-body strong {
+  @apply font-semibold text-slate-900;
+}
+
+#location-body a {
+  @apply text-blue-600 underline underline-offset-2 hover:text-blue-700;
+}
